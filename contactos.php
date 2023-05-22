@@ -67,12 +67,11 @@
                             
                         </form>
                     </div>
-
-                    <div class="column-6 main_avatar">
-                        <img class="avatar2" src="img/mapa.png">
-                    </div>
-
                 </aside>
+
+                <div class="contact_map">
+                    <img  src="img/mapa.png">
+                </div>
             </div>
         </section>
     </main>

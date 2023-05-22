@@ -98,24 +98,24 @@
 .navegacion_website ul li a:hover{
     color: var(--color_ter);
 }
-/* 2.2 Cuerpo del website */
+/* Avatar */
 
-.main_avatar{
-    position: initial;
+.article_avatar{
+    padding: 3rem 1rem;
 }
-.main_avatar .avatar1{
-    position: absolute;
+.avatar1{
+    position: relative;
     bottom: 0;
     left: 0;
-    max-height: 90vh;
     z-index: -1;
+    margin-bottom: -0.3rem;
 }
-.main_avatar .avatar2{
-    position: absolute;
+.avatar2{
+    position: relative;
     bottom: 0;
     right: 0;
-    max-height: 90vh;
     z-index: -1;
+    margin-bottom: -0.3rem;
 }
 
 /*-------
@@ -262,17 +262,6 @@
     margin-bottom: 2rem;
 }
 
-.contender_tabla {
-    display: flow-root;
-    text-align: center;
-}
-
-.contender_tabla th,
-.contender_tabla td {
-    padding: 0.7rem;
-    outline: 2px solid #FFF;
-}
-
 /*-- 4. Articulo Perrfil --*/
 
 .article_perfil {
@@ -292,7 +281,12 @@
 .article_perfil figure img {
     border-radius: 50%;
 }
-
+.contact_map{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+}
 /*-- 4. Footer --*/
 footer {
     padding: 3rem 2rem;

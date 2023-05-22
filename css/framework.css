@@ -76,6 +76,9 @@ header {
     position: fixed;
     z-index: 2;
 }
+main{
+    position: relative;
+}
 .main{
     position: relative;
     align-content: center;

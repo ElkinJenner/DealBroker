@@ -61,6 +61,8 @@ Smartphone(Grande):
         width: 50%;
     }
     .car{bottom: 24%!important;}
+    .contact_map, .avatar1, .avatar2{display: none;}
+    .article_avatar{padding: 1.5rem 1rem;}
     
 }
 /*-------
@@ -91,7 +93,6 @@ Smartphone(Medio Grande):
     h2{font-size: 2.3rem; line-height: 2.8rem;}
     h3{font-size: 1.8rem; line-height: 2rem;}
     .main{min-height: inherit;}
-    .main_avatar{opacity: 0;}
     .nave_humo{width: 205.5px!important; height: 28.5px!important; left:0%!important;}
     .nave{width: 141px!important; height: 64px!important;}
     .car{width: 148px!important; height: 76.8px!important; bottom: 18%!important;}

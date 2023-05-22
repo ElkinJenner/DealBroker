@@ -35,22 +35,22 @@
         </div>
     </main>
     <!--Infografia-->
-    <main class="main">
+    <main>
         <aside class="column">
-            <div class="column-6 main_avatar">
+            <div class="column-3">
                 <img class="avatar1" src="img/gamer1.png">
             </div>
-    
-            <div class="contender_center">
-                <h1 class="h1 f_weight color_w t_c">
-                    <img src="img/strellas_layout.png"><br>
-                    ENFRENTA ADVERSARIOS Y GANA MONEDAS
-                </h1><br>
-                <h3 class="f_weight color_s t_c">RESPONDE PREGUNTAS DE TUS ADVERSARIOS Y GANA MONEDAS, RECOLECTA Y HAZ LO
-                    QUE QUIERAS CON ELLAS.</h3>
+
+            <div class="column-6">
+                <article class="article_avatar">
+                    <h1 class="h1 f_weight color_w t_c">
+                        <img src="img/strellas_layout.png"><br>
+                        ENFRENTA ADVERSARIOS Y GANA MONEDAS</h1><br>
+                    <h3 class="f_weight color_s t_c">RESPONDE PREGUNTAS DE TUS ADVERSARIOS Y GANA MONEDAS, RECOLECTA Y HAZ LO QUE QUIERAS CON ELLAS.</h3>
+                </article>
             </div>
-    
-            <div class="column-6 main_avatar">
+
+            <div class="column-3">
                 <img class="avatar2" src="img/gamer2.png">
             </div>
         </aside>
