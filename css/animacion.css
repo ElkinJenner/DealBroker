@@ -1,0 +1,141 @@
+.nube {
+    position: absolute;
+    background: url(../img/nube.png) no-repeat;
+    background-size: contain;
+    background-position: top;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: animation_nube 5s linear infinite;
+}
+.nave {
+    position: absolute;
+    background: url(../img/nave.png) no-repeat;
+    background-size: contain;
+    background-position: top;
+    left: 45%;
+    top: 35%;
+    width: 282px;
+    height: 128px;
+    animation: animation_nave 5s linear infinite;
+    z-index: -1;
+}
+.nave_humo{
+    position: absolute;
+    background: url(../img/nave_humo.png) no-repeat;
+    background-size: contain;
+    background-position: top;
+    left: 20%;
+    top: 38.4%;
+    max-width: 411px;
+    max-height: 57px;
+    width: 50%;
+    height: 50%;
+    animation: animation_nave_humo 5s linear infinite;
+    z-index: -2;
+}
+.car {
+    position: absolute;
+    background: url(../img/car.png) no-repeat;
+    animation: animation_car 6s linear infinite;
+    background-size: contain;
+    background-position: top;
+    right: 0;
+    bottom: 23%;
+    width: 370px;
+    height: 192px;
+}
+.tablero {
+    position: absolute;
+    background: url(../img/tablero.png) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    right: 0;
+    width: 20%;
+    height: 20%;
+    animation: animation_tablero 5s linear;
+}
+
+@keyframes animation_nube {
+    0% {transform: translateY(-50px); opacity: 0.9;}
+    95% {transform: translateY(1%);}
+    100% {opacity: 0;}
+}
+@keyframes animation_nave {
+    0% {transform: translateX(-50px); opacity: 0.9;}
+    95% {transform: translateX(40%); opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes animation_nave_humo {
+    0% {transform: translateX(100px); opacity: 0.9;}
+    95% {transform: translateX(60%);}
+    100% {opacity: 0;}
+}
+@keyframes animation_tablero {
+    0% {transform: translateY(-100px); opacity: 0.9;}
+    95% {transform: translateY(6%);}
+}
+@keyframes animation_car {
+    0%{transform: translateX(0%); }
+    95%{transform: translateX(-400%); opacity: 1;}
+    100%{transform: translateX(300%); opacity: 0;}
+}
+
+
+/*------ ANIMACION Y TRANSICIONES ------ */
+.player {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.player img {
+    max-width: 420px;
+}
+.starwave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/stars.png) no-repeat;
+    background-position: left;
+    background-size: cover;
+    animation: animacion_starwave 8s linear infinite;
+}
+@keyframes animacion_starwave {
+    0% {transform: translateY(-500px);}
+    95% {transform: translateY(400px);}
+    100% {opacity: 0;}
+}
+
+.transicion{
+    animation-name: transicion_1;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.transicion:nth-child(1) {animation-delay: 0.5s;}
+.transicion:nth-child(2) {animation-delay: 1s;}
+.transicion:nth-child(3) {animation-delay: 2s;}
+.transicion:nth-child(4) {animation-delay: 3s;}
+
+@keyframes transicion_1 {
+    0% {opacity: 0;filter: grayscale(100%) blur(12px);}
+    100% {opacity: 1;filter: grayscale(0%) blur(0);}
+}
+.transicion2{
+    animation-name: transicion_2;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-left: -100%;
+}
+.transicion2:nth-child(1) {animation-delay: 0.5s;}
+.transicion2:nth-child(2) {animation-delay: 1s;}
+.transicion2:nth-child(3) {animation-delay: 2s;}
+.transicion2:nth-child(4) {animation-delay: 3s;}
+
+@keyframes transicion_2 {
+    0% {opacity: 0;filter: grayscale(100%) blur(12px); margin-left: -100%;}
+    100% {opacity: 1;filter: grayscale(0%) blur(0); margin-left: 0%;}
+}

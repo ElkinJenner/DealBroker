@@ -1,0 +1,125 @@
+/*-------
+PC de escritorio Medianamente grande:
+1600px x 900px
+-------*/
+@media only screen and (max-width: 1600px) {
+    .container{max-width: 1500px;}
+    .container_website{max-width: 1400px;}
+    .main_page{min-height: 240vh;}
+  }
+/*-------
+PC de escritorio mediano:
+1440px x 900px
+-------*/
+@media screen and (max-width: 1440px) {
+    .container{max-width: 1340px;}
+    .container_website{max-width: 1240px;}
+    .main_page{min-height: 200vh;}
+}
+/*-------
+Laptop:
+1280 x 1024 px
+-------*/
+@media screen and (max-width: 1280px) {
+    .container{max-width: 1180px;}
+    .container_website{max-width: 1100px;}
+    .main_page{min-height: 150vh;}
+}
+/*-------
+Laptop (Pequeño) o Tablet (Grande):
+1024px x 768px
+-------*/
+@media screen and (max-width: 1024px) {
+    .logo img{width:250px;}
+    .big {font-size: 8rem; line-height: 8.5rem; font-weight: 100;}
+    .h1 {font-size: 4.1rem; line-height: 5rem; font-weight: 100;}
+    h1 {font-size: 3.5rem; line-height: 3.5rem;}
+    h2 {font-size: 3rem; line-height: 3.1rem;} 
+    h3 {font-size: 2.4rem; line-height: 2.5rem;}
+    h4 {font-size: 1.9rem; line-height: 2rem;}
+    .container{max-width: 980px;}
+    .container_website{max-width: 940px;}
+    .main_page{min-height: 100vh;}
+    .column-4, .column-3, .column-2{
+        width: 50%;
+    }
+    .boletin-footer{padding-top: 2rem; padding-bottom: 2rem;}
+    .nave_humo{width: 205.5px!important; height: 28.5px!important;}
+    .nave{width: 169.2px!important; height: 115.2px!important;}
+    .car{width: 222px!important; height: 115.2px!important; bottom: 21%!important;}
+}
+/*-------
+Smartphone(Grande):
+720 x 1280 px
+-------*/
+@media screen and (max-width: 720px) {
+    .container{max-width: 700px;}
+    .container_website{max-width: 680px;}
+    .column-11, .column-10, .column-9, .column-8,
+    .column-7, .column-6, .column-5, .column-4,
+    .column-3, .column-2{
+        width: 50%;
+    }
+    .car{bottom: 24%!important;}
+    
+}
+/*-------
+Smartphone(Medio Grande):
+640 x 1024px
+-------*/
+@media screen and (max-width: 640px) {
+    .logo img{width:200px;}
+    .navegacion_contender_icono{margin-top: 1rem; padding: 0.4rem;}
+    .menu_cerrar::after{top: 35%;}
+    .menu_cerrar, .navegacion_contender_icono h5{font-size: 1.3rem;}
+    .icono_open,.icono_open2{width:30px;}
+    .icono_close .icono_open, .icono_close .icono_open2{width:30px;}
+    .navegacion_website ul li a{font-size: 3rem;}
+    .container{max-width: 580px;}
+    .container_website{max-width: 540px;}
+    .column-11, .column-10, .column-9, .column-8,
+    .column-7, .column-6, .column-5, .column-4,
+    .column-3, .column-2, .column-1{
+        width: 100%;
+    }
+    .article_item{max-width: 100%; margin-bottom: 2rem;}
+    .title_item_faq h2{width: 90%;}
+    .title_item_faq .plus{width: 40px; height:40px;}
+    .big{font-size: 4rem; line-height: 4rem;}
+    .h1{font-size: 3.2rem; line-height: 3.5rem; margin-bottom:2rem;}
+    h1{font-size: 2.8rem; line-height: 3rem; margin-bottom: 2rem;}
+    h2{font-size: 2.3rem; line-height: 2.8rem;}
+    h3{font-size: 1.8rem; line-height: 2rem;}
+    .main{min-height: inherit;}
+    .main_avatar{opacity: 0;}
+    .nave_humo{width: 205.5px!important; height: 28.5px!important; left:0%!important;}
+    .nave{width: 141px!important; height: 64px!important;}
+    .car{width: 148px!important; height: 76.8px!important; bottom: 18%!important;}
+    .footer_navegacion li a{font-size: 1.4rem;}
+}
+/*-------
+Smartphone(Medio):
+480px x 960px
+-------*/
+@media only screen and (max-width: 480px) {
+    .container{max-width: 440px;}
+    .container_website{max-width: 400px;}
+}
+/*-------
+Smartphone(Pequeño):
+360px x 960px
+-------*/
+@media screen and (max-width: 360px) {
+    .logo img{width:140px;}
+    .icono_open{margin-bottom: 0.5rem;}
+    .icono_open,.icono_open2{width:20px;}
+    .icono_close .icono_open, .icono_close .icono_open2{width:20px;}
+    .menu_cerrar, .navegacion_contender_icono h5{font-size: 1.1rem;}
+    .container{max-width: 330px;}
+    .container_website{max-width: 300px;}
+    .big{font-size: 3rem; line-height: 3rem;}
+    .h1{font-size: 2.2rem; line-height: 2.2rem; margin-bottom:1.5rem;}
+    h1{font-size: 2rem; line-height: 2rem; margin-bottom: 1rem;}
+    h2{font-size: 1.9rem; line-height: 1.9rem;}
+    h3{font-size: 1.6rem; line-height: 1.6rem;}
+}

@@ -1,0 +1,252 @@
+/* 1. Navegacion del Juego/Left */
+
+.navegacion_game_left {
+    float: left;
+    max-width: 300px;
+    margin-top: 2.1rem;
+}
+
+.navegacion_game_left ul {
+    padding: 1rem;
+}
+
+.navegacion_game_left a {
+    font-family: var(--font_s);
+    font-size: 2.8rem;
+    text-shadow: 0em 0.15em 0.1em var(--color_ter);
+}
+
+.navegacion_game_left a:hover {
+    color: var(--color_ter);
+}
+
+.navegacion_game_right {
+    /* Right */
+    float: right;
+    margin-top: 2.1rem;
+}
+
+.navegacion_game_right .n_botones {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.navegacion_game_right .n_botones li {
+    height: 42px;
+    width: 42px;
+    background: var(--color_sec);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 0.3rem;
+    box-shadow: 0.1em 0.3em 0.1em rgb(42, 92, 255);
+}
+
+.navegacion_game_right .n_botones_c {
+    margin: 1rem 0rem 1rem 0rem;
+    background: #1830484a;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.navegacion_game_right .n_botones_c h5 {
+    line-height: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.navegacion_game_right .n_botones_c img {
+    display: block;
+    margin: 0 auto;
+}
+/* 1.3 Navegacion de Menu Game (Play) */
+
+.menu_game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu_game img {
+    width: 400px;
+    margin-bottom: 1rem;
+}
+
+.menu_game button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    color: var(--color_white);
+    background: var(--color_sec);
+    font-family: var(--font_s);
+    box-shadow: 0em 0.1em 0em rgb(42, 92, 255);
+    font-size: 4rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.menu_game button:hover {
+    box-shadow: 0em 0.15em 0.6em rgb(42, 92, 255);
+}
+/* 1.2 Navegacion del Registro/Login */
+
+.navegacion_form {
+    padding: 1rem;
+    text-align: center;
+}
+
+.navegacion_form a:first-child {
+    border-right: 2px solid var(--color_sec);
+    margin-right: 0.4rem;
+}
+
+/* 1.4 Navegacion de Mi Cuenta */
+
+.navegacion_micuenta {
+    position: relative;
+    background: var(--color_quin);
+    width: 400px;
+    height: 100%;
+    border-right: 5px solid #00000014;
+}
+
+.navegacion_micuenta ul {
+    padding-top: 1rem;
+}
+
+.navegacion_micuenta ul li {
+    margin-bottom: 0.4rem;
+    padding: 0.4rem;
+}
+
+.navegacion_micuenta ul li a {
+    display: block;
+    text-align: center;
+    color: var(--color_dark);
+    font-size: 2rem;
+}
+
+.navegacion_micuenta ul li a:hover {
+    color: var(--color_white);
+}
+
+.perfil_gamer {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.perfil_gamer figure {
+    max-width: 350px;
+    margin: 0 auto;
+    background: var(--color_sec);
+    margin-bottom: 1rem;
+}
+
+.perfil_gamer figure img {
+    margin: 0 auto;
+    display: block;
+}
+
+/*-------
+2. CUERPOS DEL VIDEOJUEGO
+-------*/
+
+.content_game {
+    position: relative;
+    height: 950px;
+    display: flex;
+}
+
+/* 2.1 Cuerpo de Mi Cuenta */
+.cuerpo_micuenta {
+    width: 80%;
+    height: 100%;
+    background: var(--color_quin);
+}
+
+.cuerpo_micuenta_content {
+    padding: 1rem;
+}
+
+.content_hight {
+    height: 800px;
+    overflow-y: scroll;
+}
+
+.content_hight::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 2rem;
+}
+
+.content_hight::-webkit-scrollbar-thumb:hover {
+    background: rgba(21, 25, 36, 0.205);
+}
+
+.card_game {
+    background: #ffe18a;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    max-width: 94%;
+}
+/*-------
+FORMULARIOS
+--------*/
+
+.form_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form_login {
+    width: 100%;
+    max-width: 450px;
+}
+
+.form_login input[type="text"],
+.form_login input[type="email"],
+.form_login input[type="password"],
+.form_login button {
+    width: 100%;
+    color: var(--color_sec);
+    margin: 0.3em 0;
+    border-radius: 0.3rem;
+    padding: 0.4em 1em 0.6em 2em;
+    border: 2px solid var(--color_sec);
+    font-size: 30px;
+}
+
+.form_login input[type="text"] {
+    background: url(../img/icons2.png) no-repeat 14px 26px;
+    background-size: 26px;
+}
+
+.form_login input[type="email"] {
+    background: url(../img/icons.png) no-repeat 14px 26px;
+    background-size: 26px;
+}
+
+.form_login input[type="password"] {
+    background: url(../img/icons.png) no-repeat 13px -38px;
+    background-size: 26px;
+}
+
+.form_login button {
+    border: 3px solid var(--color_sec);
+    background: var(--color_sec);
+    color: var(--color_dark);
+    border-radius: 3em;
+    padding: 1.1rem;
+    padding-left: 0rem;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form_login button:hover {
+    box-shadow: 0 6px 18px -1px rgb(21 25 36 / 92%);
+}
