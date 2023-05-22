@@ -291,6 +291,16 @@ textarea {
     font-size: 30px;
     color: var(--color_white);
 }
+ol.lista_enumerada{
+    display: block;
+    padding: 1rem 2rem;
+}
+.lista_enumerada li{
+    list-style: inherit;
+    color: var(--color_white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 button{
 font-size: 1rem;
 padding: 1rem 2.4rem;
