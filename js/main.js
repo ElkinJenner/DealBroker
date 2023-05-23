@@ -22,26 +22,6 @@ function navegar_menu(){
 }
 icono_h.addEventListener('click', navegar_menu, true);
 
-//Validar formulario
-function validarFormContact(){
-    let nombres = document.getElementById("nombres").value;
-    let email = document.getElementById("email").value;
-    let categoria = document.getElementById("categoria").value;
-    let mensaje = document.getElementById("mensaje").value;
-
-    let c_formContact = document.querySelector("#r_contact");
-    c_formContact.innerHTML = `
-    <h2 class="color_w">${nombres}</h2>
-    <h2 class="color_w">${email}</h2>
-    <h2 class="color_w">${categoria}</h2>
-    <h2 class="color_w">${mensaje}</h2>
-    `;
-    return false;
-}
-nombres.addEventListener('keyup'), (e) =>{
-   nombres = e.target.value;
-}
-
 //Conteo Lanzamiento
 const getRemainingTime = deadline => {
     let now = new Date(),
