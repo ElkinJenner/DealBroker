@@ -17,10 +17,10 @@
         <div class="container">
             <ul>
                 <li><a href="./">Inicio</a></li>
-                <li><a href="videojuego">Sobre el Videojuego</a></li>
-                <li><a href="empresa">Empresa</a></li>
-                <li><a href="noticias">Noticias</a></li>
-                <li><a href="contactos">Contactos</a></li>
+                <li><a href="videojuego.php">Sobre el Videojuego</a></li>
+                <li><a href="empresa.php">Empresa</a></li>
+                <li><a href="noticias.php">Noticias</a></li>
+                <li><a href="contactos.php">Contactos</a></li>
             </ul>
         </div>
     </nav>

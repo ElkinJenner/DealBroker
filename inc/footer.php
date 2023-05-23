@@ -12,13 +12,13 @@
                 </div>
                 <div class="column-2">
                     <ul class="footer_navegacion">
-                        <li><a href="faq" target="_blank">FAQ</a></li>
-                        <li><a href="insights">Insights</a></li>
-                        <li><a href="soporte" target="_blank">Soporte</a></li>
-                        <li><a href="noticias">Noticias</a></li>
-                        <li><a href="privacidad">Privacidad</a></li>
-                        <li><a href="carreras">Carreras</a></li>
-                        <li><a href="legal">Legal</a></li>
+                        <li><a href="faq.php" target="_blank">FAQ</a></li>
+                        <li><a href="insights.php">Insights</a></li>
+                        <li><a href="soporte.php" target="_blank">Soporte</a></li>
+                        <li><a href="noticias.php">Noticias</a></li>
+                        <li><a href="privacidad.php">Privacidad</a></li>
+                        <li><a href="carreras.php">Carreras</a></li>
+                        <li><a href="legal.php">Legal</a></li>
                     </ul>
                 </div>
             
