@@ -38,6 +38,9 @@ function validarFormContact(){
     `;
     return false;
 }
+nombres.addEventListener('keyup'), (e) =>{
+   nombres = e.target.value;
+}
 
 //Conteo Lanzamiento
 const getRemainingTime = deadline => {
