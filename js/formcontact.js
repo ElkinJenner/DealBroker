@@ -1,7 +1,3 @@
-const formulario = document.getElementById('FormContact');
-const inputs = document.querySelectorAll('#FormContact input');
-
-
 //Creamos la clase y atributos con constructor
 class DatosF {
     constructor(nombres, email, categoria, mensaje) {
@@ -29,11 +25,14 @@ validarForm.addEventListener('keyup', (event) => {
     categoria = event.target.value;
     let mensaje = document.getElementById("mensaje");
     mensaje = event.target.value;
+    let boton_s = document.getElementById("boton_s");
+    boton_s = event.target.value;
+    //Capturando las respuestas con el innerHTML
     let c_nombres = document.querySelector("#r_nombres");
     let c_email = document.querySelector("#r_email");
     let c_mensaje = document.querySelector("#r_mensaje");
 
-    switch (event.target.name){
+    switch (event.target.id){
         case "nombres":
             if(nombres != "") {
                 c_nombres.innerHTML = ``;
@@ -74,7 +73,7 @@ validarForm.addEventListener('keyup', (event) => {
             }
             else {
                 c_mensaje.innerHTML = `
-                <h6 class="color_danger"> Debe llenar los campos</h6>
+                <h6 class="color_danger"> Debes de llenar el campo mensaje</h6>
                 `;
                 document.getElementById("mensaje").classList.remove('verify');
                 document.getElementById("mensaje").classList.add('danger');

@@ -18,7 +18,7 @@
                 <h3 class="f_weight color_s">Llena el formulario y recibe información</h3><br><br>
                 <aside class="column">
                     <div class="column-6">
-                        <form method="POST" autocomplete="off"  action="action/registrarContactForm.php" id="FormContact">
+                        <form method="POST" autocomplete="off" action="action/registrarContactForm.php" id="FormContact">
                             
                             <article>
                                 <input type="text" name="nombres" id="nombres" placeholder="Nombres Completos">
@@ -65,7 +65,7 @@
                             </article>
                             
                             <article>
-                                <button class="bg_s color_w f_r" type="submit">ENVIAR</button>
+                                <button class="bg_s color_w f_r" id="boton_e" type="submit">ENVIAR</button>
                             </article>
                             
                         </form>

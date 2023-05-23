@@ -30,10 +30,15 @@
                         $cat = $_POST["categoria"];
                         $men = $_POST["mensaje"];
 
+                        if( !empty($nom) && !empty($ema) && !empty($men)){
                         echo ("<h1 class='big color_s'>$nom</h1>");
                         echo ("<h3 class='f_weight color_w'> Muchas Gracias por enviar, <br> nos comunicaremos contigo lo más pronto posible...</h3><br>");
+                        echo "<a class='boton bg_s color_w' href='../contactos'>← Regresar </a>";
+                        }
+                        else{
+                            echo ("<script>alert('Los datos no se han enviado correctamente'); window.location.href = '../contactos.php'</script>");
+                       }
                         ?>
-                        <a class="boton bg_s color_w" href="../contactos">← Regresar </a>
                     </div>
                 </aside>
             </div>

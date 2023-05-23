@@ -15,10 +15,11 @@
             <a href="./"><img src="img/logo_w.png" id="logo"></a>
         </figure>
             <article class="content_faq">
-            <form class="buscador_faq" onsubmit="return preguntaf();" autocomplete="off">
-                <input type="search" placeholder="Buscar pregunta" id="bpregunta">
-                <button><img class="img25" src="img/icons/buscador_icono.png"></button>
-            </form>
+                <div class="bg_w" id="respuesta"></div>
+            <div class="buscador_faq">
+                <input type="search" placeholder="Buscar pregunta" id="bpregunta" value="">
+                <button type="submit" onclick="evaluarPreguntas()"><img class="img25" src="img/icons/buscador_icono.png"></button>
+            </div>
             </article>
         </div>
     </header>
