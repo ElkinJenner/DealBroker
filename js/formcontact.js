@@ -1,11 +1,3 @@
-//Expresiones Regulares
-const expresiones = {
-    nombres: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    categoria: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    mensaje: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-}
-
 const formulario = document.getElementById('FormContact');
 const inputs = document.querySelectorAll('#FormContact input');
 
@@ -37,10 +29,6 @@ validarForm.addEventListener('keyup', (event) => {
     categoria = event.target.value;
     let mensaje = document.getElementById("mensaje");
     mensaje = event.target.value;
-    
-    let e_email = !(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test());
-
-
     let c_nombres = document.querySelector("#r_nombres");
     let c_email = document.querySelector("#r_email");
     let c_mensaje = document.querySelector("#r_mensaje");
@@ -53,7 +41,7 @@ validarForm.addEventListener('keyup', (event) => {
             }
             else {
                 c_nombres.innerHTML = `
-                <h6 class="color_danger f_r"> Debe llenar los campos</h6>
+                <h6 class="color_danger f_r"> Debes escribir nombres</h6>
                 `;
                 document.getElementById("nombres").classList.remove('verify');
                 document.getElementById("nombres").classList.add('danger');
@@ -65,11 +53,11 @@ validarForm.addEventListener('keyup', (event) => {
                 c_email.innerHTML = ``;
                 document.getElementById("email").classList.add('verify');
 
-                    if (email != e_email.test(email)) {
-                        c_email.innerHTML = `<h6 class="color_alert f_r">Debes contener un @</h6>`;
+                    if (email.indexOf('@',0) ==-1) {
+                        c_email.innerHTML = `<h6 class="color_alert f_r">No es una dirección de email correcta</h6>`;
                     }
                     else {
-                        c_email.innerHTML = `<h6 class="color_w f_r">Listo</h6>`;
+                        c_email.innerHTML = ``;
                     }
             }
             else {

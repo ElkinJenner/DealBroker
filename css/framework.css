@@ -335,6 +335,9 @@ font-family: var(--font_m);
     color: var(--color_danger)!important;;
     border: 2px solid var(--color_danger)!important;
 }
+.danger::placeholder{
+    color: var(--color_danger) !important;
+}
 .verify {
     color: var(--color_verify) !important;
     border: 2px solid var(--color_verify) !important;
