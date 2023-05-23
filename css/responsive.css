@@ -79,7 +79,7 @@ Smartphone(Medio Grande):
     .navegacion_website ul li a{font-size: 3rem;}
     .container{max-width: 580px;}
     .container_website{max-width: 540px;}
-    .column-11, .column-10, .column-9, .column-8,
+    .subcolumn .left, .subcolumn .right, .column-11, .column-10, .column-9, .column-8,
     .column-7, .column-6, .column-5, .column-4,
     .column-3, .column-2, .column-1{
         width: 100%;

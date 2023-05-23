@@ -7,7 +7,7 @@
     <title>Soporte Tecnico | Deal Broker</title>
     <?php include "inc/link.php"?>
 </head>
-<body class="bg_w">
+<body class="bg_w bgbody">
     <header class="header_website bg_d">
         <div class="container container_website">
         <!--Logo-->
@@ -16,6 +16,9 @@
         </figure>
         </div>
     </header>
+            <article class="bg_s">
+            <h1 class="h1 color_d t_c">SOPORTE TI</h1><br>
+        </article>
 
     <section>
         <div class="container">
@@ -23,52 +26,74 @@
 
                 <div class="column-5">
                     <figure>
-                        <img src="img/soporte.png">
+                        <img src="img/soporteti.png">
                     </figure>
                 </div>
 
                 <div class="column-7 faq">
-                    <h1 class="h1 color_d">SOPORTE TI</h1><br>
 
-                    <article class="faq_item">
-                        <input type="checkbox" id="rd1" checked="">
-                    <label class="title_item_faq" for="rd1">
-                        <h2 class="f_weight color_w">Perdida de Cuenta</h2>
-                    <div class="plus"></div>
-                    </label>
+                    <aside class="subcolumn">
 
-                    <div class="content_item_faq">
-                        <h3 class="f_weight color_d">La plataforma puede recuperar tu cuenta de usuario, contraseña, solo escribenos desde
-                            la página contacto en la categoria 'Soy Usuario'. Inmediatamente te mandaremos un enlace para renovar tu cuenta</h3>
-                    </div>
-                    </article>
+                        <article class="left">
+                            <div class="article_faq bg_d">
+                                <figure>
+                                    <img class="img100 filter_i" src="img/icons/game_icono.png">
+                                </figure>
+                                <h4 class="f_weight color_q">Pérdida de Cuenta</h4><br>
+                                <p class="f_weight color_w">
+                                    La plataforma puede recuperar tu cuenta de usuario, contraseña, solo escribenos desde la página
+                                    contacto en la categoria 'Soy Usuario'. Inmediatamente te mandaremos un enlace para recuperar tu cuenta.
+                                </p>
 
-                    <article class="faq_item">
-                    <input type="checkbox" id="rd2">
-                    <label class="title_item_faq" for="rd2">
-                        <h2 class="f_weight color_w">Conexión Fallida</h2>
-                    <div class="plus"></div>
-                    </label>
+                            </div>
+                        </article>
 
-                    <div class="content_item_faq">
-                        <h3 class="f_weight color_m">Es importante saber que el videojuego usa buffers y cache. Si vacias o eliminas, la plataforma reiniciará algunos
-                            datos temporales en el videojuego.
-                        </h3>
-                    </div>
-                    </article>
+                        <article class="right">
+                            <div class="article_faq bg_d">
+                                <figure>
+                                    <img class="img100 filter_i" src="img/icons/game_icono2.png">
+                                </figure>
+                                <h4 class="f_weight color_q">Bloqueo de Cuenta</h4><br>
+                                    <p class="f_weight color_w">
+                                    Nuestras politicas permiten el bloqueo temporal o permanente en caso se cometan
+                                    irregularidades del usuario en el sistema intranet.<br>
+                                    Algunas faltas pueden ser spam, contenido obsceno, insultos o grocerias.
+                                </p>
+                            </div>
+                        </article>
 
-                    <article class="faq_item">
-                    <input type="checkbox" id="rd3">
-                    <label class="title_item_faq" for="rd3">
-                        <h2 class="f_weight color_w">Navegador Incompatible</h2>
-                    <div class="plus"></div>
-                    </label>
+                        <article class="left">
+                            <div class="article_faq bg_d">
+                                <figure>
+                                    <img class="img100 filter_i" src="img/icons/game_icono3.png">
+                                </figure>
+                                <h4 class="f_weight color_q">Perdida Temporal</h4><br>
+                                <p class="f_weight color_w">
+                                    Nuestro sistema alamacena buffers y caches. En caso de eliminar o vaciar de tu navegador. Tambien
+                                    se eliminarán los datos almacenados temporalmente. <br><i class="color_alert"> No te preocupes, pues no es grave </i>
+                                </p><br>
+                            </div>
+                        </article>
 
-                    <div class="content_item_faq">
-                        <h3 class="f_weight color_m">Si usas navegadores desactualizados con versiones obsoletos, no podrás jugar.</h3>
-                    </div>
-                    </article>
-                                        
+                        <article class="right">
+                            <div class="article_faq bg_d">
+                                <figure>
+                                <img class="img100 filter_i" src="img/icons/game_icono4.png">
+                                </figure>
+                                <h4 class="f_weight color_q">Navegadores Compatibles</h4>
+                                <p class="f_weight color_w">
+                                    Algunos navegadores que son compatibles con el videojuego:
+                                    <small>Google Chrome<br>
+                                         Opera<br>
+                                        Microsoft Edge<br>
+                                        Brave<br>
+                                        Safari
+                                    </small>
+                                </p>
+                            </div>
+                        </article>
+
+                    </aside>                 
                 </div>
             
                 <div class="column-3">
@@ -76,7 +101,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono.png">
                         </figure>
-                        <h5 class="f_weight color_w">Cancelación de Cuenta</h5>
+                        <h5 class="f_weight color_q">Cancelación de Cuenta</h5>
                     </article>
                 </div>
         
@@ -85,7 +110,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono2.png">
                         </figure>
-                        <h5 class="f_weight color_w">Bloqueo de Cuenta</h5>
+                        <h5 class="f_weight color_q">Bloqueo de Cuenta</h5>
                     </article>
                 </div>
         
@@ -94,7 +119,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono3.png">
                         </figure>
-                        <h5 class="f_weight color_w">Registro de información</h5>
+                        <h5 class="f_weight color_q">Registro de información</h5>
                     </article>
                 </div>
         
@@ -103,7 +128,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono4.png">
                         </figure>
-                        <h5 class="f_weight color_w">Politicas de privacidad</h5>
+                        <h5 class="f_weight color_q">Politicas de privacidad</h5>
                     </article>
                 </div>
 
@@ -112,7 +137,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono5.png">
                         </figure>
-                        <h5 class="f_weight color_w">Pagos y Suscripciones</h5>
+                        <h5 class="f_weight color_q">Pagos y Suscripciones</h5>
                     </article>
                 </div>
 
@@ -121,7 +146,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono6.png">
                         </figure>
-                        <h5 class="f_weight color_w">Conexión de internet</h5>
+                        <h5 class="f_weight color_q">Conexión de internet</h5>
                     </article>
                 </div>
 
@@ -130,7 +155,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono7.png">
                         </figure>
-                        <h5 class="f_weight color_w">Bugs por Corregir</h5>
+                        <h5 class="f_weight color_q">Bugs por Corregir</h5>
                     </article>
                 </div>
 
@@ -139,7 +164,7 @@
                         <figure>
                             <img class="img100 filter_i" src="img/icons/game_icono8.png">
                         </figure>
-                        <h5 class="f_weight color_w">Funcionamiento Incorrecto</h5>
+                        <h5 class="f_weight color_q">Funcionamiento Incorrecto</h5>
                     </article>
                 </div>
                 
