@@ -16,6 +16,12 @@
     font-style: normal;
     font-weight: 100;
 }
+@font-face {
+    font-family: 'Ds-Digit';
+    src: url('../fonts/Ds-Digit.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
 :root {
     --color_white:#fff;
     --color_dark: #000;
@@ -32,6 +38,7 @@
     --font_m: 'TT Marxiana Trial Grotesque';
     --font_s: 'TT Berlinerins Trial Grotesk';
     --font_t: 'Air Semibold';
+    --font_r: 'Ds-Digit';
 }
 *,
 ::after,
@@ -128,7 +135,7 @@ h4,
 h5{
     font-family: var(--font_m);
 }
-.big {font-size: 12rem; line-height: 12.5rem; font-weight: 100;}
+.big {font-size: 14rem; line-height: 14rem; font-weight: 100;}
 .h1 {font-size: 6.5rem; line-height: 6.5rem; font-weight: 100;}
 h1 {font-size: 5rem; line-height: 5rem;}
 h2 {font-size: 4rem; line-height: 4.5rem;} 
@@ -143,7 +150,7 @@ small {font-size: 1.45rem; font-weight: 100; letter-spacing: 2px;}
 .font_m {font-family: var(--font_m);}
 .font_s {font-family: var(--font_s); font-weight: 100;}
 .font_t {font-family: var(--font_t);}
-.font_c {font-family: var(--font_c);}
+.font_r {font-family: var(--font_r);}
 
 .f_weight{font-weight: 100;}
 
