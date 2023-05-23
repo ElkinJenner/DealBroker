@@ -7,7 +7,7 @@
     <title>Soporte Tecnico | Deal Broker</title>
     <?php include "inc/link.php"?>
 </head>
-<body class="bg_w bgbody">
+<body class="bg_w">
     <header class="header_website bg_d">
         <div class="container container_website">
         <!--Logo-->
