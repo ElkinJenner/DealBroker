@@ -31,7 +31,7 @@
         <div class="container container_website">
             <h1 class="h1 color_w t_c">UNA EXPERIENCIA ÚNICA, DONDE PODRÁS CONOCER NUEVOS RETOS E INTERACTUAR CONTIGO MISMO</h1>
             <h1 class="color_q t_c">PRÓXIMO LANZAMIENTO</h1>
-            <h1 id="conteo" class="big color_q t_c"></h1>
+            <h1 id="conteo" class="font_r big color_q t_c"></h1>
         </div>
     </main>
     <!--Infografia-->

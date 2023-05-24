@@ -1,31 +1,26 @@
 var cadena, cod, responder;
-var tiempo = RegExp("(CUANDO|EN QUE MOMENTO|Cuando)");
-var lugar = RegExp("(DONDE|POR DONDE|Dónde|Donde)");
-var causa = RegExp("(POR QUÉ|Por que|CÓMO|Cómo|HAS)");
-var participantes = RegExp("(QUIENES|Quien|QUIENES)");
-var years = /AÑOS/;
+let saludar = RegExp("(HOLA|HI|QUE TAL)");
+let nombre = RegExp("(LLAMAS|TU NOMBRE|QUIEN ERES)");
+let tener = RegExp("(TENER|TENGO|TIENES|HAVE|HAS)");
+let edad = /AÑOS/;
 
 function evaluarPreguntas() {
     cadena = document.getElementById('bpregunta').value;
     //cadena = cadena.toUppercase();
 
-    document.getElementById('bpregunta').innerHTML = tiempo.test(cadena);
-    document.getElementById('bpregunta').innerHTML = years.test(cadena);
-    document.getElementById('bpregunta').innerHTML = lugar.test(cadena);
-    document.getElementById('bpregunta').innerHTML = causa.test(cadena);
-    document.getElementById('bpregunta').innerHTML = participantes.test(cadena);
+    document.getElementById('bpregunta').innerHTML = tener.test(cadena);
+    document.getElementById('bpregunta').innerHTML = edad.test(cadena);
+    document.getElementById('bpregunta').innerHTML = saludar.test(cadena);
+    document.getElementById('bpregunta').innerHTML = nombre.test(cadena);
 
-    if (tiempo.test(cadena) == true && years.test(cadena) == true) {
+    if (tener.test(cadena) == true && edad.test(cadena) == true) {
         cod = 4;
     }
-    else if (tiempo.test(cadena) == true) {
+    else if (saludar.test(cadena) == true) {
         cod = 1;
     }
-    else if (lugar.test(cadena) == true) {
+    else if (nombre.test(cadena) == true) {
         cod = 2;
-    }
-    else if (causa.test(cadena) == true) {
-        cod = 3;
     }
     responder();
 }
@@ -33,18 +28,15 @@ function evaluarPreguntas() {
 function responder() {
     switch (cod) {
         case 1:
-            mensaje = "El lanzamiento del videojuego es el 20 de Junio del 2023"
+            mensaje = "Hola que tal"
             break;
         case 2:
-            mensaje = "Se juega desde un navegador web, con conexión a internet"
-            break;
-        case 3:
-            mensaje = "El videojuego te permite interactuar con desafios, retos y preguntas"
+            mensaje = "No puedo decirte mi nombre"
             break;
         case 4:
-            mensaje = "El videojuego es gratuito, pero posiblemente tenga funcionalidades premium en el futuro"
+            mensaje = "Yo tengo X años"
             break;
         default:
     }
-    document.getElementById('respuesta').innerHTML = mensaje;
+    document.getElementById('respuesta_faq').innerHTML = mensaje;
 }

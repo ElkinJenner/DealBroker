@@ -21,7 +21,6 @@
         </figure>
         <section>
             <div class="container container_website">
-                <h5 class="color_w t_c">DATOS ENVIADOS CORRECTAMENTE POR:</h5>
                 <aside class="column">
                     <div class="column-12 t_c">
                         <?php
@@ -31,11 +30,13 @@
                         $men = $_POST["mensaje"];
 
                         if( !empty($nom) && !empty($ema) && !empty($men)){
+                        echo ("<h5 class='color_w t_c'>DATOS ENVIADOS CORRECTAMENTE POR:</h5>");
                         echo ("<h1 class='big color_s'>$nom</h1>");
                         echo ("<h3 class='f_weight color_w'> Muchas Gracias por enviar, <br> nos comunicaremos contigo lo más pronto posible...</h3><br>");
-                        echo "<a class='boton bg_s color_w' href='../contactos'>← Regresar </a>";
+                        echo "<a class='boton bg_s color_w' href='../contactos.php'>← Regresar </a>";
                         }
                         else{
+                            echo ("<h5 class='color_w t_c'>Hubo un problema:</h5>");
                             echo ("<script>alert('Los datos no se han enviado correctamente'); window.location.href = '../contactos.php'</script>");
                        }
                         ?>
