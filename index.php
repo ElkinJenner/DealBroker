@@ -12,7 +12,6 @@
     <!--Main(Principal)-->
     <main class="main">
         <?php include "inc/logo.php" ?>
-        <div class="starwave"></div>
         <div class="tablero"></div>
         <div class="nube"></div>
         <div class="nave"></div>

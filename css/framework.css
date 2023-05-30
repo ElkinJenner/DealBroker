@@ -145,6 +145,7 @@ h5 {font-size: 1.8rem; line-height: 2.2rem; font-weight: 100;}
 h6 {font-size: 1.45rem;}
 p {font-size: 1.5rem; letter-spacing: 1px;}
 small {font-size: 1.45rem; font-weight: 100; letter-spacing: 2px;}
+code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .title_g{font-size: 10rem;}
 
 .font_m {font-family: var(--font_m);}
@@ -159,6 +160,7 @@ small {font-size: 1.45rem; font-weight: 100; letter-spacing: 2px;}
 .color_danger {color: var(--color_danger);}
 .color_alert{color: var(--color_alert);}
 .color_verify{color: var(--color_verify);}
+.color_dashboard{color: var(--color_dashboard);}
 .color_m {color: var(--color_main);}
 .color_s {color: var(--color_sec);}
 .color_t {color: var(--color_ter);}
@@ -172,6 +174,7 @@ small {font-size: 1.45rem; font-weight: 100; letter-spacing: 2px;}
 .bg_danger {background: var(--color_danger);}
 .bg_alert {background: var(--color_alert);}
 .bg_verify{background: var(--color_verify);}
+.bg_verify{background: var(--color_dashboard);}
 .bg_m {background: var(--color_main);}
 .bg_s {background: var(--color_sec);}
 .bg_t {background: var(--color_ter);}
