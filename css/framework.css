@@ -174,7 +174,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bg_danger {background: var(--color_danger);}
 .bg_alert {background: var(--color_alert);}
 .bg_verify{background: var(--color_verify);}
-.bg_verify{background: var(--color_dashboard);}
+.bg_dashboard{background: var(--color_dashboard);}
 .bg_m {background: var(--color_main);}
 .bg_s {background: var(--color_sec);}
 .bg_t {background: var(--color_ter);}
@@ -287,7 +287,6 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="url"],
-input[type="search"],
 select,
 textarea{
     outline: none;
@@ -303,6 +302,33 @@ textarea{
     margin-bottom: 1rem;
     cursor: url(../img/icons/cursor4.png) 10 2, text;
 }
+input[type="search"]{
+    width: 100%;
+    border: none;
+    flex: 1;
+    outline: none;
+    padding: 0.7rem;
+    font-size: 1.4rem;
+    font-family: var(--font_m);
+    border-radius: 1rem;
+    background-color: var(--color_default);
+    color: var(--color_white);
+    background-image: url(../img/icons/buscador_icono.png);
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 96%;
+}
+input[type="search"]::placeholder{
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: var(--color_sext);
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
 select{
 cursor: pointer;
 }
@@ -310,7 +336,6 @@ input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="password"]::placeholder,
 input[type="url"]::placeholder,
-input[type="search"]::placeholder,
 textarea::placeholder {
     color: var(--color_white);
     font-size: 30px;

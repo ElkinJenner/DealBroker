@@ -1,24 +1,29 @@
 :root {
-    --color_dashboard: #f3f6fd;
-    --color_default: #353340;
+    --color_default: #1b2336;
     --color_primary: #ff7551;
     --color_secundary: #569aff;
     --color_tercer: #6c5ecf;
     --color_cuarto: #ff6a8f;
-    --color_nav: #1f1d2b;
+    --color_panel: #0b1224;
+    --color_subpanel: #1f2937;
 }
 body{
-    background: var(--color_dashboard);
+    background: var(--color_panel);
 }
 .color_1{color: var(--color_primary)!important;}
 .color_2{color: var(--color_secundary)!important;}
 .color_3{color: var(--color_tercer)!important;}
 .color_4{color: var(--color_cuarto)!important}
+.color_panel{color: var(--color_panel)!important}
+.color_subpanel {color: var(--color_subpanel) !important
+}
 
 .bgcolor_1{background: var(--color_primary)!important;}
 .bgcolor_2{background: var(--color_secundary)!important;}
-.bgcolor_3{background: var(--color_tercer)!important}
-.bgcolor_4{background: var(--color_cuarto)!important}
+.bgcolor_3{background: var(--color_tercer)!important;}
+.bgcolor_4{background: var(--color_cuarto)!important;}
+.bgcolor_panel{background: var(--color_panel)!important;}
+.bgcolor_subpanel{background: var(--color_subpanel)!important;}
 
 .main_dashboard{
     display: flex;
@@ -34,16 +39,18 @@ body{
     transition-duration: 0.2s;
     overflow-y: auto;
     overflow-x: hidden;
+    background: var(--color_default);
 }
 .wrapper{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    background: var(--color_panel);
 }
 .nav_dashboard{
     position: fixed;
-    background: var(--color_nav);
-    width: 250px;
+    background: var(--color_panel);
+    width: 275px;
     height: 100%;
     min-height: 100vh;
     top: 0;
@@ -55,7 +62,7 @@ body{
     visibility: visible;
 }
 .nav_dashboard ul{
-    margin: 4rem 1rem 1rem 1rem;
+    margin: 4rem 1rem 1rem 2rem;
 }
 .nav_dashboard ul code{
     margin-top: 1rem;
@@ -68,7 +75,7 @@ body{
 .nav_dashboard ul li a{
     position: relative;
     font-size: 1.3rem;
-    color: #808191;
+    color: #b0b1c2;
 }
 .nav_dashboard ul li a:hover{
     color: var(--color_white);
@@ -91,4 +98,38 @@ body{
     border: 1px solid var(--color_default);
     margin-bottom: 2rem;
     margin-top: 2rem;
+}
+.perfil_admin{
+    display: inline-flex;
+    cursor: pointer;
+}
+.perfil_admin img {
+    width: 45px;
+    height: 45px;
+    float: left;
+    border-radius: 50%;
+}
+.perfil_admin small {
+    margin: 0.6rem 1rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.widgets{
+    background: var(--color_default);
+    padding: 2rem;
+    margin-left: 1rem;
+    margin-bottom:1rem;
+    height: 650px;
+    border-radius: 32px;
+}
+.widgets_head{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0rem;
+    top: 0;
+    background: var(--color_default);
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid #5969818c;
 }

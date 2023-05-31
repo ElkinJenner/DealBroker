@@ -44,9 +44,20 @@ Laptop (Pequeño) o Tablet (Grande):
         width: 50%;
     }
     .boletin-footer{padding-top: 2rem; padding-bottom: 2rem;}
+    /*--Animacion.css--*/
     .nave_humo{width: 205.5px!important; height: 28.5px!important;}
     .nave{width: 169.2px!important; height: 115.2px!important;}
     .car{width: 222px!important; height: 115.2px!important; bottom: 21%!important;}
+    /*--Dashboard.css--*/
+    .main_dashboard{display: inherit;}
+    .sidebar{width: 100%; height: inherit;
+        min-height: inherit;}
+    .nav_dashboard{width: 100%; height: inherit;
+        min-height: inherit;}
+    .nav_dashboard ul{display: flex; margin: 2rem 1rem 0rem 1rem}
+    .nav_dashboard ul li {margin-right: 1rem;}
+    .nav_dashboard ul code{display: none!important;}
+    .widget {margin-left: 1rem;}
 }
 /*-------
 Smartphone(Grande):
@@ -71,9 +82,9 @@ Smartphone(Medio Grande):
 -------*/
 @media screen and (max-width: 640px) {
     .logo img{width:200px;}
-    .navegacion_contender_icono{margin-top: 1rem; padding: 0.4rem;}
+    .navegacion_contender_right{margin-top: 1rem; padding: 0.4rem;}
     .menu_cerrar::after{top: 35%;}
-    .menu_cerrar, .navegacion_contender_icono h5{font-size: 1.3rem;}
+    .menu_cerrar, .navegacion_contender_right h5{font-size: 1.3rem;}
     .icono_open,.icono_open2{width:30px;}
     .icono_close .icono_open, .icono_close .icono_open2{width:30px;}
     .navegacion_website ul li a{font-size: 3rem;}
@@ -115,7 +126,7 @@ Smartphone(Pequeño):
     .icono_open{margin-bottom: 0.5rem;}
     .icono_open,.icono_open2{width:20px;}
     .icono_close .icono_open, .icono_close .icono_open2{width:20px;}
-    .menu_cerrar, .navegacion_contender_icono h5{font-size: 1.1rem;}
+    .menu_cerrar, .navegacion_contender_right h5{font-size: 1.1rem;}
     .container{max-width: 330px;}
     .container_website{max-width: 300px;}
     .big{font-size: 3rem; line-height: 3rem;}

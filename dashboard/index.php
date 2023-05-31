@@ -16,11 +16,25 @@
         <!--Contenido Derecha-->
         <aside class="wrapper">
             <?php include "inc/header.php" ?>
-            <section>
+            <main class="contender_dashboard">
                 <div class="container">
-                    <h4>Dashboard</h4>
+                    <aside class="column">
+                        <div class="column-8">
+                            <article class="widgets">
+                            </article>
+                        </div>
+                        <div class="column-4">
+                            <article class="widgets">
+                                <div class="widgets_head">
+                                    <h5 class="f_weight color_w">Chat Online</h5>
+                                </div>
+
+                            </article>
+                        </div>
+        
+                    </aside>
                 </div>
-            </section>
+            </main>
         </aside>
     </main>
     
