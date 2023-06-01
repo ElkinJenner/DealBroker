@@ -11,7 +11,7 @@
                     <path d="M20 6L9 17l-5-5"></path>
                 </svg>
             </figure>
-            <div class="mensajes_chat_word">
+            <div class="mensajes_chat_word bg_chat">
                 <h6 class="color_w">Carlos Anders</h6>
                 <span class="color_w">Hey, can tell me about progress of project? I'm waiting for your response.</span>
                 <small class="color_s">Dec, 12</small>
@@ -25,7 +25,7 @@
                     <path d="M20 6L9 17l-5-5"></path>
                 </svg>
             </figure>
-            <div class="mensajes_chat_word">
+            <div class="mensajes_chat_word bg_chat">
                 <h6 class="color_w">Marcos Beltrán</h6>
                 <span class="color_w">I got your first assignment. It was quite good. 🥳 We can continue with the next assignment.</span>
                 <small class="color_s">Dec, 11</small>
@@ -39,7 +39,7 @@
                     <path d="M20 6L9 17l-5-5"></path>
                 </svg>
             </figure>
-            <div class="mensajes_chat_word">
+            <div class="mensajes_chat_word bg_chat">
                 <h6 class="color_w">Elkin Jenner</h6>
                 <span class="color_w">Awesome! 🤩 I like it. We can schedule a meeting for the next one.</span>
                 <small class="color_s">Dec, 10</small>
@@ -48,7 +48,7 @@
     </div>
     <div class="widgets_footer">
         <div class="chat_widgets">
-            <input type="text" placeholder="Write your message">
+            <input class="bg_chat" type="text" placeholder="Write your message">
         </div>
      </div>
 </article>

@@ -32,6 +32,7 @@
 
 :root {
     --color_white:#fff;
+    --color_gris: #CCC;
     --color_dark: #000;
     --color_danger: #FF0000;
     --color_alert: #FF0;
@@ -48,8 +49,10 @@
     --color_secundary: #569aff;
     --color_tercer: #6c5ecf;
     --color_cuarto: #ff6a8f;
+    --color_navpanel: #0a1020;
     --color_panel: #0b1224;
     --color_subpanel: #1f2937;
+    --color_chat: #222b3e;
     --color_inputs: #596b97;
     --font_m: 'TT Marxiana Trial Grotesque';
     --font_s: 'TT Berlinerins Trial Grotesk';
@@ -178,9 +181,10 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .color_danger {color: var(--color_danger);}
 .color_alert{color: var(--color_alert);}
 .color_verify{color: var(--color_verify);}
-.color_dashboard{color: var(--color_dashboard);}
 .color_def{color: var(--color_default);}
+.color_navp{color: var(--color_navpanel);}
 .color_panel{color: var(--color_panel);}
+.color_chat{color: var(--color_chat);}
 .color_m {color: var(--color_main);}
 .color_s {color: var(--color_sec);}
 .color_t {color: var(--color_ter);}
@@ -190,13 +194,15 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .color_sp{ color: var(--color_sep);}
 
 .bg_w {background: var(--color_white);}
+.bg_g {background: var(--color_gris);}
 .bg_d {background: var(--color_dark);}
 .bg_danger {background: var(--color_danger);}
 .bg_alert {background: var(--color_alert);}
 .bg_verify{background: var(--color_verify);}
-.bg_dashboard{background: var(--color_dashboard);}
 .bg_def{background: var(--color_default);}
+.bg_navp{background: var(--color_navpanel);}
 .bg_panel{background: var(--color_panel);}
+.bg_chat{background-color: var(--color_chat)!important;}
 .bg_m {background: var(--color_main);}
 .bg_s {background: var(--color_sec);}
 .bg_t {background: var(--color_ter);}

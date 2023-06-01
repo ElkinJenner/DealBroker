@@ -1,4 +1,4 @@
-<nav class="nav_dashboard">
+<nav class="nav_dashboard bg_navp">
     <ul>
         <code class="color_w">MENU</code>
         <li><a href="./"><i class="bgcolor_2 color_w fi-box"></i><span>Dashboard</span></a></li>
