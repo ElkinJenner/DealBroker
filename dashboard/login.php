@@ -8,9 +8,9 @@
      <?php include "inc/link.php" ?>
 </head>
 <body class="bg_m">
-    <main class="main bg_main">
+    <main class="main">
         <div class="container">
-            <aside class="contender_right">
+            <aside class="contender_center">
                 <!--Logo Form-->
                 <figure class="logo_form">
                     <img src="../img/logo.png">
@@ -19,11 +19,13 @@
                 <!--Formulario-->
                 <form class="form_login" method="POST" action="action/validarLogin.php" autocomplete="off">
                     <article>
-                        <input type="text" name="usuario" placeholder="Usuario" required="">
+                        <label>Usuario</label>
+                        <input type="text" name="usuario">
                     </article>
                 
                     <article>
-                        <input type="password" name="contrasena" placeholder="Contraseña">
+                        <label>Contraseña</label>
+                        <input type="password" name="contrasena">
                     </article>
                 
                     <article>

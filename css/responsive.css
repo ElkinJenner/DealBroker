@@ -56,6 +56,8 @@ Laptop (Pequeño) o Tablet (Grande):
         min-height: inherit;}
     .nav_dashboard ul{display: flex; margin: 2rem 1rem 0rem 1rem}
     .nav_dashboard ul li {margin-right: 1rem;}
+    .nav_dashboard ul li a span {display: none;}
+    .nav_dashboard ul li a i{margin-right: 0.4rem;}
     .nav_dashboard ul code{display: none!important;}
     .widget {margin-left: 1rem;}
 }
@@ -74,6 +76,11 @@ Smartphone(Grande):
     .car{bottom: 24%!important;}
     .contact_map, .avatar1, .avatar2{display: none;}
     .article_avatar{padding: 1.5rem 1rem;}
+    /*--Dashboard.css--*/
+    .wrapper .header_static{width: 96%; margin: 0 auto;}
+    .contender_buscador{min-width: 350px; width: 90%;}
+    .header_contender-right{float: inherit;}
+    .widgets{width: 98%; width: 96%; margin: 1rem auto;}
     
 }
 /*-------
@@ -108,6 +115,9 @@ Smartphone(Medio Grande):
     .nave{width: 141px!important; height: 64px!important;}
     .car{width: 148px!important; height: 76.8px!important; bottom: 18%!important;}
     .footer_navegacion li a{font-size: 1.4rem;}
+     /*--Dashboard.css--*/
+    .contender_buscador{min-width: 100px; width: 80%;}
+    .header_contender-right ul li a{padding: 0rem;}
 }
 /*-------
 Smartphone(Medio):

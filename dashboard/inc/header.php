@@ -1,4 +1,4 @@
-<header class="header_static">
+<header class="header_sticky bg_panel">
     <div class="container">
         <article class="header_contender-left">
             <div class="contender_buscador">

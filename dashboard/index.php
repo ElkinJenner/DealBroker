@@ -20,16 +20,19 @@
                 <div class="container">
                     <aside class="column">
                         <div class="column-8">
-                            <article class="widgets">
+                            <article class="widgets bg_def">
+                                <div class="widgets_head">
+                                    <h5 class="font_d color_w">Gráfica de usuarios registrados</h5>
+                                </div><br>
+                                <img src="../img/grafica.png">
                             </article>
                         </div>
                         <div class="column-4">
-                            <article class="widgets">
-                                <div class="widgets_head">
-                                    <h5 class="f_weight color_w">Chat Online</h5>
-                                </div>
+                            <?php require_once "modules/chat.php" ?>
+                        </div>
 
-                            </article>
+                        <div class="column-12">
+                            
                         </div>
         
                     </aside>
@@ -37,6 +40,6 @@
             </main>
         </aside>
     </main>
-    
+    <?php include "inc/footer.php" ?>
 </body>
 </html>

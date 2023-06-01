@@ -22,12 +22,20 @@
     font-style: normal;
     font-weight: 100;
 }
+@font-face {
+    font-family: 'ACTexto-Medium';
+    src: url('../fonts/ACTexto-Medium.otf') format('opentype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+
 :root {
     --color_white:#fff;
     --color_dark: #000;
     --color_danger: #FF0000;
     --color_alert: #FF0;
-    --color_verify: #00ff37;
+    --color_verify: #15cf5f;
     --color_main: #101022;
     --color_sec: #36a2fa;
     --color_ter: #ec1e71;
@@ -35,10 +43,19 @@
     --color_quin: #ffd452;
     --color_sext:#aeafaf;
     --color_sep: #62aea4;
+    --color_default: #192030;
+    --color_primary: #ff7551;
+    --color_secundary: #569aff;
+    --color_tercer: #6c5ecf;
+    --color_cuarto: #ff6a8f;
+    --color_panel: #0b1224;
+    --color_subpanel: #1f2937;
+    --color_inputs: #596b97;
     --font_m: 'TT Marxiana Trial Grotesque';
     --font_s: 'TT Berlinerins Trial Grotesk';
     --font_t: 'Air Semibold';
     --font_r: 'Ds-Digit';
+    --font_dashboard: 'ACTexto-Medium';
 }
 *,
 ::after,
@@ -152,6 +169,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .font_s {font-family: var(--font_s); font-weight: 100;}
 .font_t {font-family: var(--font_t);}
 .font_r {font-family: var(--font_r);}
+.font_d {font-family: var(--font_dashboard);}
 
 .f_weight{font-weight: 100;}
 
@@ -161,6 +179,8 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .color_alert{color: var(--color_alert);}
 .color_verify{color: var(--color_verify);}
 .color_dashboard{color: var(--color_dashboard);}
+.color_def{color: var(--color_default);}
+.color_panel{color: var(--color_panel);}
 .color_m {color: var(--color_main);}
 .color_s {color: var(--color_sec);}
 .color_t {color: var(--color_ter);}
@@ -175,6 +195,8 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bg_alert {background: var(--color_alert);}
 .bg_verify{background: var(--color_verify);}
 .bg_dashboard{background: var(--color_dashboard);}
+.bg_def{background: var(--color_default);}
+.bg_panel{background: var(--color_panel);}
 .bg_m {background: var(--color_main);}
 .bg_s {background: var(--color_sec);}
 .bg_t {background: var(--color_ter);}
