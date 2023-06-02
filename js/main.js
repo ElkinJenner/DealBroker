@@ -1,6 +1,3 @@
-//Nigh Mode /Light Mode
-document.querySelector('.switch_content').addEventListener('click', _ => document.body.classList.toggle('light_mode'));
-
 //Menu de navegacion
 let icono_h = document.getElementById("icono_navegacion");
 let navegacion_w = document.getElementById("navegacion_website");

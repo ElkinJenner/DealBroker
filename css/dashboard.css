@@ -12,6 +12,9 @@ body.light_mode .switch {
 body.light_mode .bg_panel, body.light_mode .bg_navp{
     background: var(--color_white);
 }
+body.light_mode .header_sticky{
+background: #f3f6fd;
+}
 body.light_mode .bg_default{
     background: var(--color_white);
 }
