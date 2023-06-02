@@ -22,7 +22,7 @@
                         <div class="column-8">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h5 class="font_d color_w">GRÁFICA DE DOBLE ESCALA</h5>
+                                    <h5 class="font_d color_w">GRÁFICA DE USUARIOS ( PLAYERS )</h5>
                                 </div><br>
                                <canvas id="linechart"></canvas>
                             </article>

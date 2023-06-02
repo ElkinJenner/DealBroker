@@ -31,32 +31,59 @@
                             <article class="column">
 
                             <div class="column-6">
-                                <label class="color_w">Nombres Completos</label>
+                                <small class="color_w">Nombres Completos</small>
                                 <input type="text" >
                             </div>
 
                             <div class="column-6">
-                                <label class="color_w">Usuario</label>
+                                <small class="color_w">Usuario</small>
                                 <input type="text" >
                             </div>
 
                             <div class="column-6">
-                                <label class="color_w">Cargo</label>
+                     
+                                <article class="article_form">
+                                <br><h5 class="color_w f_weight"> Cargo</h5>
+
+                                <label class="color_w">
+                                    <input id="categoria" name="categoria" type="radio" value="Informes" checked="">
+                                    <i class="bg_s"></i>Computer programming
+                                </label>
+
+                                <label class="color_w">
+                                    <input id="categoria" name="categoria" type="radio" value="Reclamo">
+                                    <i class="bg_s"></i>Database Designer
+                                </label>
+
+                                <label class="color_w">
+                                    <input id="categoria" name="categoria" type="radio" value="Soy Colaborador">
+                                    <i class="bg_s"></i>3D Designer
+                                </label>
+
+                                <label class="color_w">
+                                    <input id="categoria" name="categoria" type="radio" value="Quiero colaborar con ustedes!">
+                                    <i class="bg_s"></i>System Analyst
+                                </label>
+                                    
+                                <label class="color_w">
+                                    <input id="categoria" name="categoria" type="radio" value="Otro">
+                                    <i class="bg_s"></i>Otro
+                                </label>
+                                </article>
+                            </div>
+
+                            <div class="column-6">
+                                <small class="color_w">Email</small>
                                 <input type="text" >
                             </div>
 
                             <div class="column-6">
-                                <label class="color_w">Email</label>
-                                <input type="text" >
-                            </div>
-
-                            <div class="column-6">
-                                <label class="color_w">Contraseña</label>
+                                <small class="color_w">Contraseña</small>
                                 <input class="input"  type="password" name="usuario_clave_1" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
                             </div>
 
                             <div class="column-6">
-                                <label class="color_w">Repetir Contraseña</label>
+                                <small class="color_w">Repetir Contraseña</small>
                                 <input class="input" type="password" name="usuario_clave_2" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
                             </div>
 
