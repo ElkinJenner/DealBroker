@@ -22,6 +22,7 @@ function navegar_menu(){
 }
 icono_h.addEventListener('click', navegar_menu, true);
 
+
 //Conteo Lanzamiento
 const getRemainingTime = deadline => {
     let now = new Date(),

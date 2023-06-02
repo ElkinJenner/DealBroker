@@ -1,6 +1,6 @@
 <article class="widgets bg_def">
     <div class="widgets_head">
-        <h5 class="font_d color_w">Chat Online</h5>
+        <h5 class="font_d color_w">CHAT ONLINE</h5>
      </div>
     <div class="widgets_body">
         <!--Mensaje-->

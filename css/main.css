@@ -379,6 +379,13 @@
 .form_login button:hover {
     box-shadow: 0 6px 18px -1px rgb(21 25 36 / 92%);
 }
+.form_register{
+    max-width: 1200px!important;
+    margin: 0 auto;
+}
+.form_register input{
+    width: 96%!important;
+}
 /*-- 5. Footer --*/
 
 footer {
