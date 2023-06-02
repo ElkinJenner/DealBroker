@@ -22,9 +22,9 @@
                         <div class="column-8">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h5 class="font_d color_w">Gráfica de usuarios registrados</h5>
+                                    <h5 class="font_d color_w">Gráfica de doble escala</h5>
                                 </div><br>
-                                <img src="../img/grafica.png">
+                               <canvas id="linechart"></canvas>
                             </article>
                         </div>
                         <div class="column-4">
