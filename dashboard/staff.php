@@ -20,7 +20,7 @@
                 <div class="container">
                     <article class="color_def title_dashboard">
                     <h5 class="f_weight color_w">STAFF / DASHBOARD</h5>
-                    <button class="bg_verify" id="open"><i class="icon-plus2"></i> Nuevo</button>
+                    <button class="bg_verify color_w" id="open"><i class="icon-plus2"></i> Nuevo</button>
                     </article>
                     <aside class="column">
                         <?php require_once "modules/staff_m.php" ?>
@@ -43,7 +43,7 @@
                             <div class="column-6">
                      
                                 <article class="article_form">
-                                <br><h5 class="color_w f_weight"> Cargo</h5>
+                                <br><h6 class="color_w f_weight">CARGO</h6>
 
                                 <label class="color_w">
                                     <input id="categoria" name="categoria" type="radio" value="Informes" checked="">

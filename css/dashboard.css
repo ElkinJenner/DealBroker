@@ -33,7 +33,7 @@ body.light_mode .nav_dashboard ul li a{
 body.light_mode .nav_dashboard ul li a i{
     background: #FFF!important;
 }
-body.light_mode input[type="search"]{
+body.light_mode input[type="search"], body.light_mode .form_login input{
     background-color: #FFF;
     box-shadow: 0 2px 6px 0 rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
     color: #7a7a7a;
@@ -182,6 +182,7 @@ body.light_mode .bline{
     position: absolute;
     right: 0;
     font-size: 1.5rem;
+    padding: 0.5rem 1.4rem;
     border-radius: 1rem;
 }
 .perfil_admin{
@@ -321,7 +322,6 @@ body.light_mode .bline{
     float: right;
     margin-top: 1rem;
 }
-
 .modal {
     position: fixed;
     top: 0;
@@ -330,4 +330,49 @@ body.light_mode .bline{
     width: 100%;
     min-height: 100vh;
     display: none;
+}
+.lista {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    overflow: auto;
+}
+.lista_item:nth-child(1){
+    margin-right: 100px;
+}
+.lista_item:nth-child(2) {
+    margin-left: -100px;
+}
+.lista_item{
+    text-align: center;
+    padding: 14px 16px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    box-sizing: border-box;
+    align-content: center;
+    display: grid;
+}
+.lista_item h6{
+    font-family: var(--font_dashboard);
+    font-size: 1.35rem;
+    font-weight: 100;
+}
+.status_active {
+    background-color: rgb(84 255 205 / 30%);
+    color: #69e1be;
+    border-radius: 0.25rem;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.status_active:before {
+    content: "\e61d";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
 }
