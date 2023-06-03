@@ -45,7 +45,13 @@
                         </div>
                     </aside>
                    <!--Contenido de Lista -->
-                    <aside class="lista border_1 color_def">
+                   <div id="lista_c"></div>
+                   <script>
+                    let content_l = document.querySelector("#lista_c");
+                    let i =0;
+                    while(i<2){
+                    content_l.innerHTML +=`
+                     <aside class="lista border_1 color_def">
                         <div class="lista_item ">
                             <div class="perfil_admin m_c">
                                 <img src="../img/person2.jpg">
@@ -69,8 +75,37 @@
                         <div class="lista_item border_1">
                             <span class="color_w">Bloqueado</span>
                         </div>
-
                     </aside>
+                    <!--Contenido de Lista -->
+                    <aside class="lista border_1 color_def">
+                        <div class="lista_item ">
+                            <div class="perfil_admin m_c">
+                                <img src="../img/person3.jpg">
+                            </div>
+                        </div>
+                        <div class="lista_item ">
+                            <span class="color_w">Luis Gabriel Tiznado</span>
+                        </div>
+                        <div class="lista_item border_1">
+                            <span class="color_w">@LuisM</span>
+                        </div>
+
+                        <div class="lista_item border_1">
+                            <span class="color_w">11/06/2023</span>
+                        </div>
+
+                         <div class="lista_item border_1">
+                            <span class="status_active">Activo</span>
+                        </div>
+
+                        <div class="lista_item border_1">
+                            <span class="color_w">Bloqueado</span>
+                        </div>
+                    </aside>
+                    `;
+                    i++;
+                    }
+                    </script>
                 </div>
             </main>
         </aside>

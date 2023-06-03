@@ -83,20 +83,6 @@ body.light_mode .bline{
     transition: transform 0.5s, background-color 0.5s;
     will-change: transform;
 }
-.color_1{color: var(--color_primary)!important;}
-.color_2{color: var(--color_secundary)!important;}
-.color_3{color: var(--color_tercer)!important;}
-.color_4{color: var(--color_cuarto)!important}
-.color_panel{color: var(--color_panel)!important}
-.color_subpanel {color: var(--color_subpanel) !important
-}
-
-.bgcolor_1{background: var(--color_primary)!important;}
-.bgcolor_2{background: var(--color_secundary)!important;}
-.bgcolor_3{background: var(--color_tercer)!important;}
-.bgcolor_4{background: var(--color_cuarto)!important;}
-.bgcolor_panel{background: var(--color_panel)!important;}
-.bgcolor_subpanel{background: var(--color_subpanel)!important;}
 
 .main_dashboard{
     display: flex;
@@ -208,8 +194,7 @@ body.light_mode .bline{
     padding: 2rem;
     margin-right: 1rem;
     margin-bottom:1rem;
-    height: 650px;
-    border-radius: 32px;
+    border-radius: 1rem;
 }
 .widgets_head{
     display: flex;
@@ -231,7 +216,7 @@ body.light_mode .bline{
 }
 .widgets_footer{
     display: flex;
-    height: 100px;
+    height: 90px;
 }
 .chat_widgets{
     display: flex;
@@ -271,7 +256,7 @@ body.light_mode .bline{
     padding: 12px;
     border-radius: 50%;
     right: 16px;
-    top: 30px;
+    top: 25px;
 }
 .mensajes_chat{
     display: flex;

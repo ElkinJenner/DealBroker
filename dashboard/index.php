@@ -30,7 +30,14 @@
                         <div class="column-4">
                             <?php require_once "modules/chat_m.php" ?>
                         </div>
-                        <?php require_once "modules/staff_m.php" ?>
+                        <div class="column-8">
+                            <article class="widgets bg_def">
+                                <div class="widgets_head">
+                                    <h5 class="font_d color_w">GRÁFICA DOBLE</h5>
+                                </div>
+                                <canvas id="barchart"></canvas>
+                            </article>
+                        </div>
                     </aside>
                 </div>
             </main>

@@ -212,6 +212,25 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bg_sp{background: var(--color_sep);}
 .filter_i{filter: invert(1);}
 
+
+/*------Colores de Dashboarad ---*/
+.color_1{color: var(--color_primary)!important;}
+.color_2{color: var(--color_secundary)!important;}
+.color_3{color: var(--color_tercer)!important;}
+.color_4{color: var(--color_cuarto)!important}
+.color_panel{color: var(--color_panel)!important}
+.color_subpanel {color: var(--color_subpanel) !important}
+.bg_p1{background: #d53d3c!important;}
+.bg_p2{background: #2e8fdc!important;}
+.bg_p3{background: #868686!important;}
+.bg_p4{background: #bfb361!important;}
+.bgcolor_1{background: var(--color_primary)!important;}
+.bgcolor_2{background: var(--color_secundary)!important;}
+.bgcolor_3{background: var(--color_tercer)!important;}
+.bgcolor_4{background: var(--color_cuarto)!important;}
+.bgcolor_panel{background: var(--color_panel)!important;}
+.bgcolor_subpanel{background: var(--color_subpanel)!important;}
+
 /*------
 COLUMNAS
 ------ */
