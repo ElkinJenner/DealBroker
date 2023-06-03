@@ -22,27 +22,26 @@
                     <h5 class="f_weight color_w">PLAYERS / DASHBOARD</h5>
                     </article>
                     <!--Title Lista -->
-                    <aside class="lista border_1 color_def bg_sp">
+                    <aside class="lista border_1 color_def bgcolor_subpanel">
                         <div class="lista_item">
-                            <h6 class="color_m"></h6>
                         </div>
                         <div class="lista_item">
-                            <h6 class="color_m">Nombres Completos <i class="color_m icon-arrow-down4"></i></h6>
+                            <h6 class="color_w">Nombres Completos <i class="color_w icon-arrow-down4"></i></h6>
                         </div>
                         <div class="lista_item">
-                            <h6 class="color_m">Usuario</h6>
+                            <h6 class="color_w">Usuario</h6>
                         </div>
 
                         <div class="lista_item">
-                            <h6 class="color_m">Registro</h6>
+                            <h6 class="color_w">Registro</h6>
                         </div>
 
                          <div class="lista_item">
-                            <h6 class="color_m">Status</h6>
+                            <h6 class="color_w">Status</h6>
                         </div>
 
                         <div class="lista_item">
-                            <h6 class="color_m">Obs</h6>
+                            <h6 class="color_w">Obs</h6>
                         </div>
                     </aside>
                    <!--Contenido de Lista -->
@@ -53,22 +52,22 @@
                             </div>
                         </div>
                         <div class="lista_item ">
-                            <h6 class="color_w">Ulises Miranda Vega</h6>
+                            <span class="color_w">Ulises Miranda Vega</span>
                         </div>
                         <div class="lista_item border_1">
-                            <h6 class="color_w">@UlisesM</h6>
+                            <span class="color_w">@UlisesM</span>
                         </div>
 
                         <div class="lista_item border_1">
-                            <h6 class="color_w">12/06/2023</h6>
+                            <span class="color_w">12/06/2023</span>
                         </div>
 
                          <div class="lista_item border_1">
-                            <h6 class="status_active">Activo</h6>
+                            <span class="status_active">Activo</span>
                         </div>
 
                         <div class="lista_item border_1">
-                            <h6 class="color_w">Bloqueado</h6>
+                            <span class="color_w">Bloqueado</span>
                         </div>
 
                     </aside>

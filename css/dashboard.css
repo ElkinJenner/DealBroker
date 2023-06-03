@@ -16,7 +16,10 @@ body.light_mode .bg_panel, body.light_mode .bg_navp{
     background: var(--color_white);
 }
 body.light_mode .modal{
-    background: #f3f6fd;
+    background: #f3f6fd!important;
+}
+body.light_mode .bgcolor_subpanel{
+    background: #bbc4d1!important;
 }
 body.light_mode .header_sticky{
 background: #f3f6fd;
@@ -352,9 +355,13 @@ body.light_mode .bline{
     align-content: center;
     display: grid;
 }
-.lista_item h6{
+.lista_item h6 {
     font-family: var(--font_dashboard);
     font-size: 1.35rem;
+}
+.lista_item span{
+    font-family: var(--font_dashboard);
+    font-size: 1.28rem;
     font-weight: 100;
 }
 .status_active {
