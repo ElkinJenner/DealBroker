@@ -386,3 +386,34 @@ body.light_mode .bline{
 .dropdow_menu ul li a{
     font-size: 1.1rem;
 }
+.product_item{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.acciones{
+    position: absolute;
+    cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
+    top: 0;
+    right: 0;
+    width: 50px;
+    margin: 1rem;
+    font-size: 2rem;
+}
+.product_item figure{
+    box-shadow: 0 0 0.95rem rgba(237, 241, 245, 0.308);
+    border-radius: 3rem 3rem 0rem 0rem;
+}
+.description{
+    padding: 0.5rem 0rem 2rem;
+    border-radius: 0rem 0rem 2rem 2rem;
+}
+.precio_products{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.precio_products img{
+    width: 40px;
+    margin-right: 0.4rem;
+}

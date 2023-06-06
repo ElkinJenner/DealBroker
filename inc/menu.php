@@ -3,7 +3,7 @@
             <article class="navegacion_contender_left">
                 <a href="#"><img class="img25 filter_i" src="img/icons/instagram_icono.png"></a>
             </article>
-            <article class="navegacion_contender_right" id="icono_navegacion">
+            <article class="navegacion_contender_right bg_m" id="icono_navegacion">
                 <h5 class="color_w">Menu</h5>
                 <div class="navegacion_icono">
                     <div class="icono_open bg_w"></div>

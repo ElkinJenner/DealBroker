@@ -17,7 +17,7 @@
                 </figure>
                 
                 <!--Formulario-->
-                <form class="form_login" method="POST" action="action/validarLogin.php" autocomplete="off">
+                <form class="form_login" method="POST" action="../action/LoginAdmin.php" autocomplete="off">
                     <article>
                         <label>Usuario</label>
                         <input type="text" name="usuario">
@@ -30,10 +30,6 @@
                 
                     <article>
                         <button type="submit">INICIAR SESIÓN</button>
-                    </article>
-
-                    <article class="article">
-                        <a href="restaurar_clave.html"><p class="color_s">Olvidaste tu contraseña</p></a>
                     </article>
                 </form>
             </aside>
