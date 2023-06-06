@@ -129,6 +129,7 @@ body.light_mode .bline{
 }
 .nav_dashboard ul li a{
     display: flex;
+    cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
     font-size: 1.3rem;
     color: #b0b1c2;
 }
@@ -176,7 +177,7 @@ body.light_mode .bline{
 }
 .perfil_admin{
     display: inline-flex;
-    cursor: pointer;
+    cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
 }
 .perfil_admin img {
     width: 45px;
@@ -317,7 +318,6 @@ body.light_mode .bline{
     bottom: 0;
     width: 100%;
     min-height: 100vh;
-    display: none;
 }
 .lista {
     display: grid;
@@ -367,4 +367,22 @@ body.light_mode .bline{
     width: 7px;
     height: 7px;
     border-radius: 50%;
+}
+.dropdow_menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: scale(1);
+    margin: 0rem 0.2rem;
+    box-shadow: 0 0 1.25rem rgb(31 45 61 / 9%);
+    padding: 0;
+    border-radius: 0 0 0.7em 0.7em;
+    z-index: 100;
+}
+.dropdow_menu ul {
+    display: grid;
+    margin: 1rem;
+}
+.dropdow_menu ul li a{
+    font-size: 1.1rem;
 }

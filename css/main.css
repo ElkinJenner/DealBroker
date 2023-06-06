@@ -33,7 +33,6 @@
     cursor: pointer;
     margin-top: 2rem;
     float: right;
-    background: var(--color_main);
     border-radius: 10%;
     padding: 1rem;
 }
@@ -309,6 +308,11 @@
     margin-bottom: 2rem;
     text-align: center;
     background: #2d3b508c;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.article_perfil figure:hover{
+    transform: rotateY(-180deg);
 }
 
 .article_perfil figure {

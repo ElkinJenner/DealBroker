@@ -5,8 +5,8 @@
     font-weight: normal;
 }
 @font-face {
-    font-family: 'TT Berlinerins Trial Grotesk';
-    src: url('../fonts/TTBerlinerinsTrialGrotesk.otf') format('opentype');
+    font-family: 'SittingDuckDEMO Regular';
+    src: url('../fonts/SittingDuckDEMO-Regular.otf') format('opentype');
     font-style: normal;
     font-weight: 100;
 }
@@ -55,7 +55,7 @@
     --color_chat: #222b3e;
     --color_inputs: #596b97;
     --font_m: 'TT Marxiana Trial Grotesque';
-    --font_s: 'TT Berlinerins Trial Grotesk';
+    --font_s: 'SittingDuckDEMO Regular';
     --font_t: 'Air Semibold';
     --font_r: 'Ds-Digit';
     --font_dashboard: 'ACTexto-Medium';
@@ -96,7 +96,7 @@ body {
     font-family: var(--font_t);
     position: relative;
     background: var(--color_main);
-    cursor: url(../img/icons/cursor3.png) 10 2, default;
+    cursor: url(../img/icons/cursor_default.svg) 10 2, default;
 }
 header {
     width: 100%;
@@ -125,7 +125,7 @@ section{
 .underline{text-decoration: underline;}
 li{list-style: none;}
 a{text-decoration: none;
-    cursor: pointer;
+    cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
     color: var(--color_sec);
     font-family: var(--font_m);
     text-transform: uppercase;

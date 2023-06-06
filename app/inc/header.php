@@ -17,8 +17,8 @@
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
                         <ul>
-                            <li><a href="cuenta.php"><i class="icon-user"></i> Mi Cuenta</a></li>
-                            <li><a href=""><i class="icon-logout"></i> Cerrar Sesión</a></li>
+                            <li><a href="perfil.php"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
+                            <li><a href=""><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a></li>
                         </ul>
                     </div>
                 </li>
