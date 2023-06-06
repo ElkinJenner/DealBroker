@@ -23,19 +23,33 @@
                     </article>
                     <aside class="column" >
                     <!--Ventana Modal-->
-                    <div class="modal bg_panel">
-                        <form class="form_register form_login contender_center">
+                    <div class="bg_panel">
+                        <form class="form_register form_login">
                             <article class="column">
+       
+                            <div class="column-6">
+                                <img class="img200 b_r_50" src="../upload/img/user.png"><br>
+                                  <div class="form_register_file color_def">
+                                    <input type='file'>
+                                    <span class='bg_input button'><h5 class="color_w fi-upload"></h5></span>
+                                    <p class='color_w label' data-js-label>No ha seleccionado ningun archivo</p>
+                                </div>
+                            </div>
+
+                           
 
                             <div class="column-6">
                                 <small class="color_w">Nombres Completos</small>
-                                <input type="text" >
+                                <input type="text" value="Administrador General">
+
+                                <small class="color_w">Usuario</small>
+                                <input type="text" value="Admin">
+
+                                <small class="color_w">Email</small>
+                                <input type="email" value="info@artigames.com" >
                             </div>
 
-                            <div class="column-6">
-                                <small class="color_w">Usuario</small>
-                                <input type="text" >
-                            </div>
+                       
 
                             <div class="column-6">
                      
@@ -67,20 +81,17 @@
                                 </label>
                             </div>
 
-                            <div class="column-6">
-                                <small class="color_w">Email</small>
-                                <input type="text" >
-                            </div>
+                    
 
                             <div class="column-6">
                                 <small class="color_w">Contraseña</small>
                                 <input class="input"  type="password" name="usuario_clave_1" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
-                            </div>
 
-                            <div class="column-6">
-                                <small class="color_w">Repetir Contraseña</small>
+                                 <small class="color_w">Repetir Contraseña</small>
                                 <input class="input" type="password" name="usuario_clave_2" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
                             </div>
+
+                     
 
                             <div class="column-2">
                                 <button class="bg_verify color_w" type="submit"><i class="icon-checkmark"></i> GUARDAR</button>

@@ -18,6 +18,9 @@
             <?php include "inc/header.php" ?>
             <main class="contender_dashboard">
                 <div class="container">
+                    <article class="color_def title_dashboard">
+                        <h5 class="f_weight color_w"><span class="icon-house"></span> / DASHBOARD</h5>
+                    </article>
                     <aside class="column">
                         <div class="column-8">
                             <article class="widgets bg_def">
@@ -43,6 +46,10 @@
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
                                     <h5 class="font_d color_w">MONEDAS TOTALES</h5>
+                                </div>
+                                <div class="monedas_totales">
+                                         <img class="img100" src="../img/icons/monedas_icon.png"> 
+                                        <h5 class="f_weight color_w">15 monedas</h5>
                                 </div>
                             </article>
                         </div>

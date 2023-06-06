@@ -2,6 +2,7 @@
 //Nigh Mode /Light Mode
 document.querySelector('.switch_content').addEventListener('click', _ => document.body.classList.toggle('light_mode'));
 
+//Menu despegable Cuenta
 let dropdow_toogle = document.getElementById("dropdow_toogle");
 let dropdow_menu = document.getElementById("dropdow_menu");
 let count = 0;
@@ -32,4 +33,25 @@ btnOpen.onclick = function () {
 btnClose.onclick = function () {
     modal.style.display = "none";
 
+}
+
+//File Input
+let inputf = document.querySelectorAll('.form_register_file');
+
+for (let i = 0, len = inputs.length; i < len; i++) {
+    customInput(inputf[i])
+}
+
+function customInput(el) {
+    const fileInput = el.querySelector('[type="file"]');
+    const label = el.querySelector('[data-js-label]');
+
+    fileInput.onchange =
+        fileInput.onmouseout = function () {
+            if (!fileInput.value) return
+
+            let value = fileInput.value.replace(/^.*[\\\/]/, '');
+            el.className += ' -chosen';
+            label.innerText = value;
+        }
 }

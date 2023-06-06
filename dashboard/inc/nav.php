@@ -8,8 +8,8 @@
         <li><a href="mensajes.php"><i class="fi-mail"></i><span>Mensajes</span></a></li>
         <div class="bline"></div>
         <code class="color_w">PÁGINA WEB</code>
-        <li><a href="./"><i class="icon-bookmarks"></i><span>Empresa</span></a></li>
-        <li><a href="./"><i class="fi-paper-stack"></i><span>Noticias</span></a></li>
+        <li><a href="./"><i class="icon-statistics"></i><span>Empresa</span></a></li>
+        <li><a href="./"><i class="icon-pictures"></i><span>Noticias</span></a></li>
         <li><a href="./"><i class="icon-users"></i><span>Contactos</span></a></li>
     </ul>
 </nav>

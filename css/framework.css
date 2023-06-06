@@ -203,6 +203,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bg_navp{background: var(--color_navpanel);}
 .bg_panel{background: var(--color_panel);}
 .bg_chat{background-color: var(--color_chat)!important;}
+.bg_input{background-color: var(--color_inputs)!important;}
 .bg_m {background: var(--color_main);}
 .bg_s {background: var(--color_sec);}
 .bg_t {background: var(--color_ter);}

@@ -78,7 +78,7 @@
                             <div class="table_item">
                                 <p>
                                     <i class="color_w fi-eye"></i>
-                                    <i class="color_w fi-link"></i>
+                                    <i class="color_w icon-brush"></i>
                                     <i class="color_w fi-trash"></i>
                                 </p>
                             </div>

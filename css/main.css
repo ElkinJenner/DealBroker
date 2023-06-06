@@ -391,8 +391,51 @@
 .form_register input{
     width: 96%!important;
 }
+.form_register_file {
+    margin-top: 0.5rem;
+    display: inline-flex;
+    text-align: left;
+    padding: 16px;
+    min-width: 450px;
+    width: 96%;
+    position: relative;
+    border-radius: 3px;
+    border: 4px dashed;
+}
+.form_register_file>[type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.form_register_file .button {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+.form_register_file:hover>.button {
+    background: dodgerblue;
+    color: white;
+}
+
+.form_register_file >.label {
+    white-space: nowrap;
+    opacity: .3;
+}
+.form_register_file .-chosen>.label {
+    opacity: 1;
+}
 .form_register label {
     margin: 1rem;
+    padding-left: 2rem;
 }
 /*-- 5. Footer --*/
 
