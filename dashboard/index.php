@@ -30,14 +30,31 @@
                         <div class="column-4">
                             <?php require_once "modules/chat_m.php" ?>
                         </div>
-                        <div class="column-8">
+                        <div class="column-5">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h5 class="font_d color_w">GRÁFICA DOBLE</h5>
+                                    <h5 class="font_d color_w">USUARIOS TOTALES</h5>
                                 </div>
                                 <canvas id="barchart"></canvas>
                             </article>
                         </div>
+                                  
+                        <div class="column-3">
+                            <article class="widgets bg_def">
+                                <div class="widgets_head">
+                                    <h5 class="font_d color_w">MONEDAS TOTALES</h5>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="column-4">
+                            <article class="widgets bg_def">
+                                <div class="widgets_head">
+                                    <h5 class="font_d color_w">RANKING PLAYERS</h5>
+                                </div>
+                            </article>
+                        </div>
+                        
                     </aside>
                 </div>
             </main>
