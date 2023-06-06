@@ -28,7 +28,7 @@
                                 <figure class="bgcolor_1">
                                     <img src="../upload/img/products/playera.png">
                                 </figure>
-                                <div class="acciones"><i class="color_w icon-dots"></i></div>
+                                <div class="acciones"><i class="color_w icon-ellipsis"></i></div>
                                 <div class="description bg_def">
                                     <h3 class="f_weight t_c color_w"> Playera Trust me</h3>
                                     <div class="precio_products">
@@ -46,7 +46,7 @@
                                 <figure class="bgcolor_3">
                                     <img src="../upload/img/products/facemask.png">
                                 </figure>
-                                <div class="acciones"><i class="color_w icon-dots"></i></div>
+                                <div class="acciones"><i class="color_w icon-ellipsis"></i></div>
                                 <div class="description bg_def">
                                     <h3 class="f_weight t_c color_w"> Mascarilla anti-covid</h3>
                                     <div class="precio_products">
@@ -64,7 +64,7 @@
                                 <figure class="bgcolor_4">
                                     <img src="../upload/img/products/house.png">
                                 </figure>
-                                <div class="acciones"><i class="color_w icon-dots"></i></div>
+                                <div class="acciones"><i class="color_w icon-ellipsis"></i></div>
                                 <div class="description bg_def">
                                     <h3 class="f_weight t_c color_w"> Casa - Propiedad</h3>
                                     <div class="precio_products">

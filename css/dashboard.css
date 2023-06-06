@@ -311,6 +311,15 @@ body.light_mode .bline{
     float: right;
     margin-top: 1rem;
 }
+.pie_chart{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.pie_chart img{
+    margin-right: 0.5rem;
+}
 .modal {
     position: fixed;
     top: 0;

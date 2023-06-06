@@ -25,7 +25,7 @@
                         <div class="column-8">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h5 class="font_d color_w">GRÁFICA DE USUARIOS ( PLAYERS )</h5>
+                                    <h6 class="font_d f_weight color_w">GRÁFICA DE USUARIOS ( PLAYERS )</h6>
                                 </div><br>
                                <canvas id="linechart"></canvas>
                             </article>
@@ -36,7 +36,7 @@
                         <div class="column-5">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h5 class="font_d color_w">USUARIOS TOTALES</h5>
+                                    <h6 class="font_d f_weight color_w">PLAYERS TOTAL</h6>
                                 </div>
                                 <canvas id="barchart"></canvas>
                             </article>
@@ -45,11 +45,18 @@
                         <div class="column-3">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h5 class="font_d color_w">MONEDAS TOTALES</h5>
+                                    <h6 class="font_d f_weight color_w"> MONEDAS TOTALES</h6>
                                 </div>
                                 <div class="monedas_totales">
                                          <img class="img100 m_c" src="../img/icons/monedas_icon.png"> 
                                         <h5 class="f_weight t_c color_w">25mil monedas</h5>
+                                </div>
+                            </article>
+
+                            <article class="widgets bg_def">
+                                <div class="pie_chart">
+                                        <img src="../img/pie-chart.png"> 
+                                        <h6 class="f_weight t_c color_w"> 1,555k <i class="fi-layers"></i> (3.56)</h6>
                                 </div>
                             </article>
                         </div>
@@ -57,7 +64,23 @@
                         <div class="column-4">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h5 class="font_d color_w">RANKING PLAYERS</h5>
+                                    <h6 class="font_d f_weight color_w">RANKING PLAYERS</h6>
+                                </div>
+                                <div class="table_item perfil_admin m_c">
+                                    <img src="../img/person2.jpg">
+                                    <h6 class="color_w">John Marcos Valderrama</h6>
+                                </div>
+                                    <div class="table_item perfil_admin m_c">
+                                    <img src="../img/person3.jpg">
+                                    <h6 class="color_w">John Marcos Valderrama</h6>
+                                </div>
+                                    <div class="table_item perfil_admin m_c">
+                                    <img src="../img/person4.jpg">
+                                    <h6 class="color_w">John Marcos Valderrama</h6>
+                                </div>
+                                    <div class="table_item perfil_admin m_c">
+                                    <img src="../img/person1.jpg">
+                                    <h6 class="color_w">John Marcos Valderrama</h6>
                                 </div>
                             </article>
                         </div>
