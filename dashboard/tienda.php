@@ -17,7 +17,10 @@
         <aside class="wrapper">
             <?php include "inc/header.php" ?>
             <main class="contender_dashboard">
-                <div class="container">
+                <div class="container">                   
+                    <article class="color_def title_dashboard">
+                        <h5 class="f_weight color_w">TIENDA / DASHBOARD</h5>
+                    </article>
                     <aside class="column">
                         <div class="column-4">
                             <article class="product_item">
@@ -66,7 +69,7 @@
                                     <div class="precio_products">
                                          <img src="../img/icons/moneda_icon.png"> 
                                         <h5 class="f_weight  color_w">
-                                           2000 monedas
+                                           20000 monedas
                                         </h5>
                                     </div>
                                 </div>
