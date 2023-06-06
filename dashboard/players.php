@@ -22,90 +22,70 @@
                     <h5 class="f_weight color_w">PLAYERS / DASHBOARD</h5>
                     </article>
                     <!--Title Lista -->
-                    <aside class="lista border_1 color_def bgcolor_subpanel">
-                        <div class="lista_item">
+                    <aside class="column color_def">
+                        <div class="column-1">
+                            <article class="table bgcolor_subpanel">
+                                 <h5 class="color_w">#</h5>
+                            </article>
+                             <div class="table_item">
+                                <h6 class="color_w">1</h6>
+                            </div>
                         </div>
-                        <div class="lista_item">
-                            <h6 class="color_w">Nombres Completos <i class="color_w icon-arrow-down4"></i></h6>
+                        <div class="column-3">
+                            <article class="table bgcolor_subpanel">
+                                <h5 class="color_w">Nombres Completos <i class="color_w icon-arrow-down4"></i></h5>
+                            </article>
+
+                            <div class="table_item perfil_admin m_c">
+                                <img src="../img/person2.jpg">
+                                <h6 class="color_w">John Marcos Valderrama</h6>
+                            </div>
                         </div>
-                        <div class="lista_item">
-                            <h6 class="color_w">Usuario</h6>
+                        <div class="column-2">
+                            <article class="table bgcolor_subpanel">
+                                <h5 class="color_w">Usuario</h5>
+                            </article>
+
+                            <div class="table_item">
+                                <h6 class="color_w">@JohnV</h6>
+                            </div>
                         </div>
 
-                        <div class="lista_item">
-                            <h6 class="color_w">Registro</h6>
+                        <div class="column-2">
+                            <article class="table bgcolor_subpanel">
+                            <h5 class="color_w">Registro</h5>
+                            </article>
+                            <div class="table_item">
+                                <h6 class="color_w">12/05/2023</h6>
+                            </div>
                         </div>
 
-                         <div class="lista_item">
-                            <h6 class="color_w">Status</h6>
+                         <div class="column-2">
+                            <article class="table bgcolor_subpanel">
+                                <h5 class="color_w">Status</h5>
+                            </article>
+
+                            <div class="table_item">
+                                <h6 class="color_w">Activo</h6>
+                            </div>
                         </div>
 
-                        <div class="lista_item">
-                            <h6 class="color_w">Obs</h6>
+                        <div class="column-2">
+                            <article class="table bgcolor_subpanel">
+                            <h5 class="color_w">Acciones</h5>
+                            </article>
+
+                            <div class="table_item">
+                                <p>
+                                    <i class="color_w fi-eye"></i>
+                                    <i class="color_w fi-link"></i>
+                                    <i class="color_w fi-trash"></i>
+                                </p>
+                            </div>
                         </div>
                     </aside>
                    <!--Contenido de Lista -->
-                   <div id="lista_c"></div>
-                   <script>
-                    let content_l = document.querySelector("#lista_c");
-                    let i =0;
-                    while(i<2){
-                    content_l.innerHTML +=`
-                     <aside class="lista border_1 color_def">
-                        <div class="lista_item ">
-                            <div class="perfil_admin m_c">
-                                <img src="../img/person2.jpg">
-                            </div>
-                        </div>
-                        <div class="lista_item ">
-                            <span class="color_w">Ulises Miranda Vega</span>
-                        </div>
-                        <div class="lista_item border_1">
-                            <span class="color_w">@UlisesM</span>
-                        </div>
-
-                        <div class="lista_item border_1">
-                            <span class="color_w">12/06/2023</span>
-                        </div>
-
-                         <div class="lista_item border_1">
-                            <span class="status_active">Activo</span>
-                        </div>
-
-                        <div class="lista_item border_1">
-                            <span class="color_w">Bloqueado</span>
-                        </div>
-                    </aside>
-                    <!--Contenido de Lista -->
-                    <aside class="lista border_1 color_def">
-                        <div class="lista_item ">
-                            <div class="perfil_admin m_c">
-                                <img src="../img/person3.jpg">
-                            </div>
-                        </div>
-                        <div class="lista_item ">
-                            <span class="color_w">Luis Gabriel Tiznado</span>
-                        </div>
-                        <div class="lista_item border_1">
-                            <span class="color_w">@LuisM</span>
-                        </div>
-
-                        <div class="lista_item border_1">
-                            <span class="color_w">11/06/2023</span>
-                        </div>
-
-                         <div class="lista_item border_1">
-                            <span class="status_active">Activo</span>
-                        </div>
-
-                        <div class="lista_item border_1">
-                            <span class="color_w">Bloqueado</span>
-                        </div>
-                    </aside>
-                    `;
-                    i++;
-                    }
-                    </script>
+            
                 </div>
             </main>
         </aside>

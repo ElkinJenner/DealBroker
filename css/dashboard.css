@@ -319,35 +319,15 @@ body.light_mode .bline{
     width: 100%;
     min-height: 100vh;
 }
-.lista {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(6, minmax(200px, 1fr));
-    overflow: auto;
-}
-.lista_item:nth-child(1){
-    margin-right: 100px;
-}
-.lista_item:nth-child(2) {
-    margin-left: -100px;
-}
-.lista_item{
+.table{
+    padding: 0.8rem;
     text-align: center;
-    padding: 14px 16px;
-    letter-spacing: 1px;
-    font-size: 12px;
-    box-sizing: border-box;
-    align-content: center;
-    display: grid;
 }
-.lista_item h6 {
-    font-family: var(--font_dashboard);
-    font-size: 1.35rem;
-}
-.lista_item span{
-    font-family: var(--font_dashboard);
-    font-size: 1.28rem;
-    font-weight: 100;
+.table_item{
+    border: 1px solid #5969818c;
+    text-align: center;
+    padding: 0.8rem 3rem 1.5rem;
+    display: inherit;
 }
 .status_active {
     background-color: rgb(84 255 205 / 30%);
