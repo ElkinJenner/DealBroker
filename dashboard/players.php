@@ -19,7 +19,7 @@
             <main class="contender_dashboard">
                 <div class="container">
                     <article class="color_def title_dashboard">
-                    <h5 class="f_weight color_w">PLAYERS / DASHBOARD</h5>
+                    <h5 class="f_weight color_w"><span class="icon-vcard"></span> PLAYERS / DASHBOARD</h5>
                     </article>
                     <!--Title Lista -->
                     <aside class="column color_def">

@@ -19,7 +19,7 @@
             <main class="contender_dashboard">
                 <div class="container">
                     <article class="color_def title_dashboard">
-                    <h5 class="f_weight color_w">MI CUENTA / DASHBOARD</h5>
+                    <h5 class="f_weight color_w"><span class="icon-user"></span> MI CUENTA / DASHBOARD</h5>
                     </article>
                     <aside class="column" >
                     <!--Ventana Modal-->

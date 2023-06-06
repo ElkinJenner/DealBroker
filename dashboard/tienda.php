@@ -20,6 +20,7 @@
                 <div class="container">                   
                     <article class="color_def title_dashboard">
                         <h5 class="f_weight color_w"><span class="icon-bag"></span> TIENDA / DASHBOARD</h5>
+                         <button class="bg_verify color_w" id="open"><i class="icon-plus2"></i> Nuevo</button>
                     </article>
                     <aside class="column">
                         <div class="column-4">

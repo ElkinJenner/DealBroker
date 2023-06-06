@@ -19,7 +19,7 @@
             <main class="contender_dashboard">
                 <div class="container">
                     <article class="color_def title_dashboard">
-                    <h5 class="f_weight color_w">STAFF / DASHBOARD</h5>
+                    <h5 class="f_weight color_w"><span class="icon-users"></span> STAFF / DASHBOARD</h5>
                     <button class="bg_verify color_w" id="open"><i class="icon-plus2"></i> Nuevo</button>
                     </article>
                     <aside class="column" >

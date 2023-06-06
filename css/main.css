@@ -437,6 +437,15 @@
     margin: 1rem;
     padding-left: 2rem;
 }
+.form_pages{
+    padding: 1rem;
+}
+.form_pages input{
+    border: none;
+    background: var(--color_default);
+    border-bottom: 1px solid;
+    border-radius: 0;
+}
 /*-- 5. Footer --*/
 
 footer {
