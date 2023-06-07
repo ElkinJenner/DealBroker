@@ -444,7 +444,8 @@ font-family: var(--font_m);
 /*------
 ESPACIOS Y TAMAÑOS
 ------ */
-
+.p_1{padding: 1rem;}
+.p_2{padding: 2rem;}
 .pt_cero{padding-top: 0rem!important;}
 .pt_5{padding-top: 5rem;}
 .pt_10{padding-top: 10rem;}

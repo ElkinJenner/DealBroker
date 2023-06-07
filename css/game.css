@@ -46,3 +46,73 @@ MENU DE NAVEGACIÓN
 .navegacion_game ul li a:hover{
     color: var(--color_ter);
 }
+.iconos_gamers li{
+    margin: 0.1rem 0.2rem;
+}
+.iconos_gamers li a{
+    background: var(--color_sec);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 0.1rem 0.7rem !important;
+    box-shadow: 0.1em 0.2em 0.1em rgb(42, 92, 255);
+}
+.iconos_gamers img{
+width: 35px;
+height: 35px;
+}
+.nav_botones{
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-top: 2px dashed #FFF;
+    border-bottom: 2px dashed #FFF;
+}
+/*-------
+VENTANA MODAL
+--------*/
+.modal {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    display: flex;
+    animation: modal .1s .5s forwards;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10000;
+}
+#cerrar {
+    display: none;
+}
+
+#cerrar+label {
+    position: fixed;
+    padding-left: 0rem;
+    border-radius: 0.5rem;
+    right: 150px;
+    top: 150px;
+    cursor: pointer;
+    animation: modal 1s 2s forwards;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10001;
+}
+
+#cerrar:checked+label,
+#cerrar:checked~.modal {
+    display: none;
+}
+.transicion {
+    animation: transicion .35s ease-out;
+}
+
+@keyframes modal {
+    100% {visibility: visible;opacity: 1;}}
+     
+@keyframes transicion {
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(0%);}
+}
