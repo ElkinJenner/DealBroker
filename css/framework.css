@@ -5,10 +5,9 @@
     font-weight: normal;
 }
 @font-face {
-    font-family: 'SittingDuckDEMO Regular';
-    src: url('../fonts/SittingDuckDEMO-Regular.otf') format('opentype');
+    font-family: 'Southpole Explorer';
+    src: url('../fonts/Southpole-Explorer.ttf') format('opentype');
     font-style: normal;
-    font-weight: 100;
 }
 @font-face {
     font-family: 'Air Semibold';
@@ -55,7 +54,7 @@
     --color_chat: #222b3e;
     --color_inputs: #596b97;
     --font_m: 'TT Marxiana Trial Grotesque';
-    --font_s: 'SittingDuckDEMO Regular';
+    --font_s: 'Southpole Explorer';
     --font_t: 'Air Semibold';
     --font_r: 'Ds-Digit';
     --font_dashboard: 'ACTexto-Medium';

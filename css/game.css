@@ -41,7 +41,7 @@ MENU DE NAVEGACIÓN
     font-size: 2.5rem;
     font-family: var(--font_s);
     color: var(--color_white);
-    text-shadow: 0em 0.15em 0.1em var(--color_ter);
+    /*text-shadow: 0em 0.10em 0.1em var(--color_ter);*/
 }
 .navegacion_game ul li a:hover{
     color: var(--color_ter);
