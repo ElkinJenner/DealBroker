@@ -5,9 +5,10 @@
     font-weight: normal;
 }
 @font-face {
-    font-family: 'Southpole Explorer';
-    src: url('../fonts/Southpole-Explorer.ttf') format('opentype');
+    font-family: 'TT Firs Neue Trial Bold';
+    src: url('../fonts/TTFirsNeueTrialBold.ttf') format('truetype');
     font-style: normal;
+    font-weight: normal;
 }
 @font-face {
     font-family: 'Air Semibold';
@@ -54,7 +55,7 @@
     --color_chat: #222b3e;
     --color_inputs: #596b97;
     --font_m: 'TT Marxiana Trial Grotesque';
-    --font_s: 'Southpole Explorer';
+    --font_s: 'TT Firs Neue Trial Bold';
     --font_t: 'Air Semibold';
     --font_r: 'Ds-Digit';
     --font_dashboard: 'ACTexto-Medium';
@@ -437,9 +438,7 @@ font-family: var(--font_m);
     color: var(--color_verify) !important;
     border: 2px solid var(--color_verify) !important;
 }
-.border_1 {
-    border: 1px solid rgba(166, 168, 179, 0.42);
-}
+.border_1 {border: 1px solid rgba(166, 168, 179, 0.42);}
 /*------
 ESPACIOS Y TAMAÑOS
 ------ */

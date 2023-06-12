@@ -8,14 +8,37 @@
     <?php include "inc/link.php" ?>
 </head>
 <body>
+   <?php require_once "modules/loading.php" ?>
+
+   <div class="game_antesala" id="game_antesala">
+    <h4 class="color_w">Press <img src="../img/icons/cursor3.png">Click To Start</h4>
+   </div>
+
     <header>
         <div class="container container_game">
             <article class="navegacion_contender_left navegacion_game">
                 <ul>
-                    <li><a href="./">MI CUENTA </a></li>
-                    <li><a href="./">PLAYERS </a></li>
-                    <li><a href="./">TIENDA </a></li>
-                    <li><a href="./">SALIR </a></li>
+                    <li><a onclick="play(1)">MI CUENTA </a></li>
+                    <li><a onclick="play(2)">PLAYERS </a></li>
+                    <li><a onclick="play(3)">TIENDA </a></li>
+                    <li><a onclick="play(4)">SALIR </a></li>
+                </ul>
+            </article>
+            <article class="navegacion_contender_right navegacion_game">
+                <ul class="iconos_gamers">
+                <li>
+                    <div class="monedas">
+                        <img src="../img/icons/moneda_icon.png">
+                        <span class="color_w">15</span>
+                    </div>
+                </li>
+                <li>
+                    <a id="btnMusic">
+                        <img id="sound_icon" src="../img/icons/sound_icon.gif">
+                        <img id="mute_icon" class="hidden" src="../img/icons/mute_icon.png">
+                    </a>
+                </li>
+                <li><a id="fullscreen"><img src="../img/icons/fullscreen_icon.png"></a></li>
                 </ul>
             </article>
          

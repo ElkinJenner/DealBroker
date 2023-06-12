@@ -1,4 +1,49 @@
 /*-------
+LOADING
+--------*/
+#loading_game{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    z-index: 9999;
+    background: #0e2238;
+    align-content: center;
+    justify-items: center;
+}
+@property --num {
+    syntax: "<integer>";
+    initial-value: 100;
+    inherits: false;
+}
+.loading_percent {
+    animation: counter 10s ease-in-out;
+    counter-reset: num var(--num);
+    font-family: var(--font_m);
+    font-size: 4rem;
+    padding: 2rem;
+}
+
+.loading_percent::before {
+    content: counter(num);
+}
+
+@keyframes counter {
+    from {
+        --num: 0;
+    }
+
+    to {
+        --num: 100;
+    }
+}
+ .hidden {
+     display: none!important;
+ }
+
+/*-------
 ESCENARIOS
 --------*/
 .bg_escenario {
@@ -8,7 +53,7 @@ ESCENARIOS
 }
 .bg_escenario::before {
     content: "";
-    background: url(../img/Escena1.jpg);
+    background: url(../img/Escena3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -19,12 +64,26 @@ ESCENARIOS
     bottom: 0;
     top: 0;
     z-index: -1;
-    pointer-events: none;
     opacity: 0.9;
 }
 .logo_game{
     margin-top: 2rem;
     text-align: center;
+}
+.game_antesala{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    min-height: 100vh;
+    background: #0e2238;
+    width: 100%;
+    display: grid;
+    z-index: 11;
+    align-content: center;
+    justify-items: center;
+}
+.game_antesala h4{
+    font-family: (var(--font_s));
 }
 
 /*-------
@@ -38,8 +97,9 @@ MENU DE NAVEGACIÓN
     margin-top: -1rem;
 }
 .navegacion_game ul li a{
-    font-size: 2.5rem;
+    font-size: 2.15rem;
     font-family: var(--font_s);
+    font-style: italic;
     color: var(--color_white);
     /*text-shadow: 0em 0.10em 0.1em var(--color_ter);*/
 }
@@ -47,26 +107,50 @@ MENU DE NAVEGACIÓN
     color: var(--color_ter);
 }
 .iconos_gamers li{
+    display: grid;
     margin: 0.1rem 0.2rem;
 }
 .iconos_gamers li a{
-    background: var(--color_sec);
-    border-radius: 1.5rem;
-    cursor: pointer;
-    margin-left: 15px;
-    padding: 0.1rem 0.7rem !important;
-    box-shadow: 0.1em 0.2em 0.1em rgb(42, 92, 255);
+    display: flex;
+    background: #00000045;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem 0.6rem !important;
+    width: 50px;
+    height: 50px;
 }
-.iconos_gamers img{
-width: 35px;
-height: 35px;
+.monedas{
+    position: relative;
+    display: flex;
+    background: #00000045;
+    width: 150px;
+    border-radius: 0.5rem 1rem;
+}
+.monedas img{
+    position: absolute;
+    max-width: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    float: left;
+    margin-right: 2rem;
+}
+.monedas span{
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    font-family: var(--font_s);
+    display: grid;
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
 }
 .nav_botones{
     text-align: center;
     padding: 1rem;
     margin-bottom: 1rem;
-    border-top: 2px dashed #FFF;
-    border-bottom: 2px dashed #FFF;
 }
 /*-------
 VENTANA MODAL

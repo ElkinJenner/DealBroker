@@ -22,17 +22,12 @@
         </div>
     </header>
     <!--Ventana Modal sin Sesion-->
-
 		<div class="modal">
-            <aside class="bg_m p_2 contender_center">
-                <!--Logo Form-->
-                <figure class="logo_form">
-                    <img src="../img/logo.png">
-                </figure>
-
+            <aside class="bg_w p_2 contender_center">
+    
                 <article class=" nav_botones">
-                    <a class="color_w" id="btnl">Iniciar Sesión / </a>
-                    <a class="color_w" id="btnr">Registrarse</a>
+                    <a class="color_d" id="btnl">Iniciar Sesión / </a>
+                    <a class="color_d" id="btnr">Registrarse</a>
                 </article>
 
                 <article class="content">
