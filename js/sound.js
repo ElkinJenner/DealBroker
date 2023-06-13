@@ -12,7 +12,7 @@ let mute_icon = document.getElementById("mute_icon");
 
 
 let music= new Audio();
-music.src = "../sound/bgmusic.mp3";
+music.src = "../sound/bgmusic2.mp3";
 music.volume = 0.6;
 music.loop = Infinity;
 let contador = 0;

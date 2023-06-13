@@ -231,6 +231,10 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bgcolor_4{background: var(--color_cuarto)!important;}
 .bgcolor_panel{background: var(--color_panel)!important;}
 .bgcolor_subpanel{background: var(--color_subpanel)!important;}
+.bg_degr1{
+    background-image:
+    radial-gradient(circle at 50% 50%, #ffff72 0, #ffff66 16.67%, #fff15b 33.33%, #ffd351 50%, #e8b648 66.67%, #d29c40 83.33%, #bd8639 100%);
+}
 
 /*------
 COLUMNAS

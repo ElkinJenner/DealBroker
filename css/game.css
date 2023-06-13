@@ -205,7 +205,8 @@ VENTANA MODAL
 VIDEOJUEGO CUERPO
 --------*/
 .game_main {
-    width: 100%;
+    width: 97%;
+    margin: 2rem;
     min-height: 100vh;
     position: fixed;
     top: 0;
@@ -216,18 +217,20 @@ VIDEOJUEGO CUERPO
 .cerrar_game_main{
     position: fixed;
     top: 0;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     font-size: 25px;
     z-index: 50;
     height: 40px;
     width: 40px;
     line-height: 40px;
-    right: 50px;
+    right: 40px;
     border-radius: 0.4rem;
+    background: var(--color_danger);
+    box-shadow: 0em 0.1em 0.1em var(--color_main);
 }
 /*Izquierda*/
 .game_main_sidebar{
-    width: 280px;
+    width: 400px;
     height: 100%;
     min-height: 100vh;
     padding: 30px;
@@ -247,8 +250,9 @@ VIDEOJUEGO CUERPO
 }
 .game_main_head {
     position: sticky;
-    padding: 1.4rem;
-    height: 50px;
+    margin: 1.4rem;
+    height: 80px;
+    border-bottom: 3px solid #00000014;
 }
 
 .game_main_body {
@@ -257,3 +261,14 @@ VIDEOJUEGO CUERPO
 /*-------
 VIDEOJUEGO PERFIL MENU
 --------*/
+.nav_profile_game ul{
+    margin-top: 3rem;
+}
+.nav_profile_game ul li{
+    margin: 0.4rem;
+    padding: 0.4rem;
+    box-shadow: 0em 0.1em 0.1em var(--color_default);
+}
+.nav_profile_game ul li a {
+    font-size: 2rem;
+}
