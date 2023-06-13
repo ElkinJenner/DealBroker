@@ -8,46 +8,37 @@
     <?php include "inc/link.php" ?>
 </head>
 <body>
-   <?php require_once "modules/loading.php" ?>
-
-   <div class="game_antesala" id="game_antesala">
-    <h4 class="color_w">Press <img src="../img/icons/cursor3.png">Click To Start</h4>
-   </div>
-
-    <header>
-        <div class="container container_game">
-            <article class="navegacion_contender_left navegacion_game">
-                <ul>
-                    <li><a onclick="play(1)">MI CUENTA </a></li>
-                    <li><a onclick="play(2)">PLAYERS </a></li>
-                    <li><a onclick="play(3)">TIENDA </a></li>
-                    <li><a onclick="play(4)">SALIR </a></li>
-                </ul>
-            </article>
-            <article class="navegacion_contender_right navegacion_game">
-                <ul class="iconos_gamers">
-                <li>
-                    <div class="monedas">
-                        <img src="../img/icons/moneda_icon.png">
-                        <span class="color_w">15</span>
-                    </div>
-                </li>
-                <li>
-                    <a id="btnMusic">
-                        <img id="sound_icon" src="../img/icons/sound_icon.gif">
-                        <img id="mute_icon" class="hidden" src="../img/icons/mute_icon.png">
-                    </a>
-                </li>
-                <li><a id="fullscreen"><img src="../img/icons/fullscreen_icon.png"></a></li>
-                </ul>
-            </article>
-         
-        </div>
-    </header>
+   <?php
+   require_once "modules/loading.php";
+   require_once "modules/press.php";
+   require_once "inc/header.php";
+   ?>
+   <!--Escenario principal -->
     <main class="bg_escenario">
         <figure class="logo_game">
             <img src="../img/logo_game.png">
         </figure>
+    </main>
+    <!--Escenario Páginas -->
+    <main id="page_micuenta" class="bg_q game_main hidden">
+         <a onclick="play(1)" class="cerrar_game_main bg_m"><img id="close" src="../img/icons/close_icon.png"></a>
+            <aside class="game_main_sidebar">
+                <nav>
+                    <ul>
+                        <li onclick="play(1)"><a class="color_d">ADQUISICIONES </a></li>
+                        <li onclick="play(2)"><a class="color_d">PREGUNTAS </a></li>
+                        <li onclick="play(3)"><a class="color_d">RETOS </a></li>
+                        <li onclick="play(4)"><a class="color_d">CONFIGURACIÓN </a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <aside class="game_main_wrapper">
+                <div class="container container_game">
+                    <article class="game_main_head">
+                        <h3 class="t_c">ADQUISICIONES</h3>
+                    </article>
+                </div>
+            </aside>
     </main>
     <?php include "inc/footer.php" ?>
 </body>

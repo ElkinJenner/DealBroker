@@ -66,6 +66,12 @@ Smartphone(Grande):
 720 x 1280 px
 -------*/
 @media screen and (max-width: 720px) {
+    .logo_game img{width:200px;}
+    .navegacion_game ul li a{font-size: 1.45rem!important;}
+    .navegacion_contender_right ul {
+        display: block;
+        margin-top: 2rem !important;
+    }
     .container{max-width: 700px;}
     .container_website{max-width: 680px;}
     .column-11, .column-10, .column-9, .column-8,

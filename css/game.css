@@ -166,7 +166,7 @@ VENTANA MODAL
     animation: modal .1s .5s forwards;
     visibility: hidden;
     opacity: 0;
-    z-index: 10000;
+    z-index: 10;
 }
 #cerrar {
     display: none;
@@ -200,3 +200,60 @@ VENTANA MODAL
     0% {transform: translateY(100%);}
     100% {transform: translateY(0%);}
 }
+
+/*-------
+VIDEOJUEGO CUERPO
+--------*/
+.game_main {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 10;
+}
+.cerrar_game_main{
+    position: fixed;
+    top: 0;
+    margin-top: 1.5rem;
+    font-size: 25px;
+    z-index: 50;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    right: 50px;
+    border-radius: 0.4rem;
+}
+/*Izquierda*/
+.game_main_sidebar{
+    width: 280px;
+    height: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition-duration: 0.2s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: 3px solid #00000014;
+}
+/*Derecha*/
+.game_main_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.game_main_head {
+    position: sticky;
+    padding: 1.4rem;
+    height: 50px;
+}
+
+.game_main_body {
+    height: 700px;
+}
+/*-------
+VIDEOJUEGO PERFIL MENU
+--------*/

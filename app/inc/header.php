@@ -1,28 +1,30 @@
-<header class="header_sticky bg_panel">
-    <div class="container">
-        <article class="header_contender-left">
-            <div class="contender_buscador">
-                <input type="search" placeholder="Buscar">
-            </div>
-        </article>
-
-        <article class="header_contender-right">
-            <ul>
-                <li><a href="./"><i class="fi-mail"></i></a></li>
-                <li><a class="switch_content bgcolor_subpanel b_r color_w"><div class="switch"></div></a></li>
+    <header>
+        <div class="container container_game">
+            <article class="navegacion_contender_left navegacion_game">
+                <ul>
+                    <li onclick="play(1)"><a id="micuenta">MI CUENTA</a></li>
+                    <li onclick="play(2)"><a id="players">PLAYERS </a></li>
+                    <li onclick="play(3)"><a id="tienda">TIENDA </a></li>
+                    <li onclick="play(4)"><a id="salir">SALIR </a></li>
+                </ul>
+            </article>
+            <article class="navegacion_contender_right navegacion_game">
+                <ul class="iconos_gamers">
                 <li>
-                    <div class="perfil_admin" id="dropdow_toogle">
-                        <img src="../upload/img/user.png">
-                        <small class="color_w">Admin<i class="color_w icon-arrow-down6"></i></small>
-                    </div>
-                    <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
-                        <ul>
-                            <li><a href="perfil.php"><i class="fa-solid fa-user"></i> Mi Cuenta</a></li>
-                            <li><a href=""><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a></li>
-                        </ul>
+                    <div class="monedas">
+                        <img src="../img/icons/moneda_icon.png">
+                        <span class="color_w">15</span>
                     </div>
                 </li>
-            </ul>
-         </article>
-    </div>
-</header>
+                <li>
+                    <a id="btnMusic">
+                        <img id="sound_icon" src="../img/icons/sound_icon.gif">
+                        <img id="mute_icon" class="hidden" src="../img/icons/mute_icon.png">
+                    </a>
+                </li>
+                <li><a id="fullscreen"><img src="../img/icons/fullscreen_icon.png"></a></li>
+                </ul>
+            </article>
+         
+        </div>
+    </header>

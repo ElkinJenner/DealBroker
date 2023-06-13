@@ -9,7 +9,9 @@ function play(num) {
 let btnMusic = document.getElementById("btnMusic");
 let sound_icon = document.getElementById("sound_icon");
 let mute_icon = document.getElementById("mute_icon");
-let music = new Audio();
+
+
+let music= new Audio();
 music.src = "../sound/bgmusic.mp3";
 music.volume = 0.6;
 music.loop = Infinity;
@@ -32,7 +34,7 @@ function reproducirAudio() {
 }
 btnMusic.addEventListener('click', reproducirAudio, true);
 
-//Press Disk To Start
+//Press Click To Start
 let game_antesala = document.getElementById("game_antesala");
 function antesala() {
     if(contador==0){

@@ -34,24 +34,3 @@ btnClose.onclick = function () {
     modal.style.display = "none";
 
 }
-
-//File Input
-let inputf = document.querySelectorAll('.form_register_file');
-
-for (let i = 0, len = inputs.length; i < len; i++) {
-    customInput(inputf[i])
-}
-
-function customInput(el) {
-    const fileInput = el.querySelector('[type="file"]');
-    const label = el.querySelector('[data-js-label]');
-
-    fileInput.onchange =
-        fileInput.onmouseout = function () {
-            if (!fileInput.value) return
-
-            let value = fileInput.value.replace(/^.*[\\\/]/, '');
-            el.className += ' -chosen';
-            label.innerText = value;
-        }
-}

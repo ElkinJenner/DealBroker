@@ -8,19 +8,11 @@
     <?php include "inc/link.php" ?>
 </head>
 <body>
-    <header>
-        <div class="container container_game">
-            <article class="navegacion_contender_left navegacion_game">
-                <ul>
-                    <li><a href="./">MI CUENTA </a></li>
-                    <li><a href="./">PLAYERS </a></li>
-                    <li><a href="./">TIENDA </a></li>
-                    <li><a href="./">SALIR </a></li>
-                </ul>
-            </article>
-         
-        </div>
-    </header>
+    <?php
+   require_once "modules/loading.php";
+   require_once "modules/press.php";
+   require_once "inc/header.php";
+   ?>
     <!--Ventana Modal sin Sesion-->
 		<div class="modal">
             <aside class="bg_w p_2 contender_center">
