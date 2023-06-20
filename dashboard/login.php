@@ -7,7 +7,7 @@
     <title>Login | Deal Broker</title>
      <?php include "inc/link.php" ?>
 </head>
-<body class="bg_m">
+<body>
     <main class="main">
         <div class="container">
             <aside class="contender_center">

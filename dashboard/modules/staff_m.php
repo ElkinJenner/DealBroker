@@ -1,39 +1,59 @@
 <div class="column-3">
-    <article class="article_perfil bg_p1">
+    <article class="article_perfil article_staff bg_def">
          <figure>
               <img src="../img/person1.jpg">
          </figure>
-            <h5 class="f_weight color_w">Elkin Jenner Rivera</h5>
-            <h6 class="f_weight color_w">Programador - Fullstack Developer </h6>
+            <h5 class="f_weight color_w">ELKIN JENNER RIVERA</h5>
+            <small class="f_weight color_w">Computer programming</small>
+            <p class="redes_s">
+                <a href=""><i class="color_w bx bxl-facebook"></i></a>
+                <a href=""><i class="color_w bx bxl-linkedin"></i></a>
+                <a href=""><i class="color_w bx bxl-discord"></i></a>
+            </p>
      </article>
 </div>
 
  <div class="column-3">
-    <article class="article_perfil bg_p2">
+    <article class="article_perfil article_staff bg_def">
         <figure>
             <img src="../img/person2.jpg">
         </figure>
-        <h5 class="f_weight color_w">Ulises Miranda Vega</h5>
-        <h6 class="f_weight color_w">Programador - Database Developer </h6>
+        <h5 class="f_weight color_w">ULISES MIRANDA VEGA</h5>
+        <small class="f_weight color_w">Database Designer</small>
+        <p class="redes_s">
+            <a href=""><i class="color_w bx bxl-facebook"></i></a>
+            <a href=""><i class="color_w bx bxl-linkedin"></i></a>
+            <a href=""><i class="color_w bx bxl-discord"></i></a>
+        </p>
     </article>
 </div>
 
  <div class="column-3">
-     <article class="article_perfil bg_p3">
+     <article class="article_perfil article_staff bg_def">
         <figure>
              <img src="../img/person3.jpg">
         </figure>
-        <h5 class="f_weight color_w">Luis Gabriel Tiznado</h5>
-        <h6 class="f_weight color_w">Programador - Javascript Developer </h6>
+        <h5 class="f_weight color_w">LUIS GABRIEL TIZNADO</h5>
+        <small class="f_weight color_w">System Analyst</small>
+        <p class="redes_s">
+            <a href=""><i class="color_w bx bxl-facebook"></i></a>
+            <a href=""><i class="color_w bx bxl-linkedin"></i></a>
+            <a href=""><i class="color_w bx bxl-discord"></i></a>
+        </p>
     </article>
   </div>
 
 <div class="column-3">
-    <article class="article_perfil bg_p4">
+    <article class="article_perfil article_staff bg_def">
         <figure>
             <img src="../img/person4.jpg">
         </figure>
-        <h5 class="f_weight color_w">Marco Antonio Farfán</h5>
-        <h6 class="f_weight color_w">Programador - Frontend Developer </h6>
+        <h5 class="f_weight color_w">MARCO ANTONIO FARFÁN</h5>
+        <small class="f_weight color_w">3D Designer</small>
+        <p class="redes_s">
+            <a href=""><i class="color_w bx bxl-facebook"></i></a>
+            <a href=""><i class="color_w bx bxl-linkedin"></i></a>
+            <a href=""><i class="color_w bx bxl-discord"></i></a>
+        </p>
     </article>
 </div>

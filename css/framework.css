@@ -44,16 +44,17 @@
     --color_quin: #ffd452;
     --color_sext:#aeafaf;
     --color_sep: #62aea4;
-    --color_default: #192030;
     --color_primary: #ff7551;
     --color_secundary: #569aff;
     --color_tercer: #6c5ecf;
     --color_cuarto: #ff6a8f;
-    --color_navpanel: #0a1020;
-    --color_panel: #0b1224;
+    --color_panel: #151521;
+    --color_navpanel: #191928;
     --color_subpanel: #1f2937;
-    --color_chat: #222b3e;
-    --color_inputs: #596b97;
+    --color_chat: #29293c;
+    --color_inputs: #212130;
+    --color_default: #1f1f2f;
+    --color_labels: #454564;
     --font_m: 'TT Marxiana Trial Grotesque';
     --font_s: 'TT Firs Neue Trial Bold';
     --font_t: 'Air Semibold';
@@ -164,7 +165,7 @@ h4 {font-size: 2.4rem; line-height: 3rem;}
 h5 {font-size: 1.8rem; line-height: 2.2rem; font-weight: 100;}
 h6 {font-size: 1.45rem;}
 p {font-size: 1.5rem; letter-spacing: 1px;}
-small {font-size: 1.45rem; font-weight: 100; letter-spacing: 2px;}
+small {font-size: 1.3rem; font-weight: 100;}
 code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .title_g{font-size: 10rem;}
 
@@ -332,7 +333,7 @@ label>i:before {
     position: absolute;
     width: 22px;
     height: 100%;
-    border: 2px solid rgba(172, 213, 255, 0.384);
+    border:2px solid var(--color_labels);
     border-radius: 2px;
 }
 input[type="text"],
@@ -348,7 +349,6 @@ textarea{
     background: transparent;
     padding: 1rem;
     font-family: var(--font_m);
-    color: var(--color_white);
     font-size: 30px;
     padding-left: 1.8rem;
     margin-bottom: 1rem;

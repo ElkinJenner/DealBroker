@@ -8,7 +8,7 @@
 /*-------
 1. HEADERS
 -------*/
-.header_sticky {position: sticky; width: 100%; top: 0; padding-bottom: 1.6rem;}
+.header_sticky {position: sticky; width: 100%; top: 0; padding-bottom: 1rem; margin-bottom: 1rem;}
 .header_contender-left{float: left;}
 .header_contender-right {float: right;}
 .header_contender-right ul {display: flex;}
@@ -298,7 +298,7 @@
     margin-top: 0.5rem;
 }
 
-/*-- 4. Articulo Perrfil --*/
+/*-- 4. Articulo Perfil --*/
 
 .article_perfil {
     padding: 2rem;
@@ -307,7 +307,7 @@
     align-items: center;
     margin-bottom: 2rem;
     text-align: center;
-    background: #2d3b508c;
+    /*background: #2d3b508c;*/
     transition: transform 1s;
     transform-style: preserve-3d;
 }
@@ -321,6 +321,16 @@
 
 .article_perfil figure img {
     border-radius: 50%;
+}
+.article_staff{
+    padding: 0.8rem;
+
+}
+.article_staff figure img{
+    border-radius: 2rem;
+}
+.redes_s{
+    margin-top: 1rem;
 }
 .contact_map{
     position: absolute;
@@ -337,10 +347,11 @@
     font-family: var(--font_m);
 }
 .form_login small {
-    color: var(--color_inputs);
+    color: var(--color_labels);
+    font-size: 1.45rem;
 }
 .form_login label{
-    color: var(--color_inputs);
+    color: var(--color_labels);
     margin: 0;
     padding: 0;
 }
@@ -353,31 +364,26 @@
     margin: 0.3em 0;
     border-radius: 0.3rem;
     padding: 0.5em 1em 0.5em 1em;
-    border: none;
+    color: var(--color_labels);
+    border: 2px solid var(--color_inputs);
+    background: var(--color_inputs);
     font-size: 1.5rem;
 }
-
-.form_login input[type="text"] {
-    background-color: var(--color_inputs);
+.form_login input[type="text"]:focus,
+.form_login input[type="email"]:focus,
+.form_login input[type="password"]:focus{
+    background: #363650;
+    color: #b0b1c2;
 }
-
-.form_login input[type="email"] {
-    background-color: var(--color_inputs);
-}
-
-.form_login input[type="password"] {
-    background-color: var(--color_inputs);
-}
-
 .form_login button {
     border: 3px solid var(--color_sec);
     background: var(--color_sec);
     color: var(--color_white);
-    border-radius: 3em;
-    padding: 1.1rem;
+    border-radius: 1em;
+    padding: 1rem;
     padding-left: 0rem;
     margin-top: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 100;
     letter-spacing: 1px;
 }
@@ -385,53 +391,11 @@
     box-shadow: 0 6px 18px -1px rgb(21 25 36 / 92%);
 }
 .form_register{
-    max-width: 1200px!important;
+    max-width: inherit;
     margin: 0 auto;
 }
 .form_register input{
     width: 96%!important;
-}
-.form_register_file {
-    margin-top: 0.5rem;
-    display: inline-flex;
-    text-align: left;
-    padding: 16px;
-    min-width: 450px;
-    width: 96%;
-    position: relative;
-    border-radius: 3px;
-    border: 4px dashed;
-}
-.form_register_file>[type='file'] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.form_register_file .button {
-    display: inline-block;
-    cursor: pointer;
-    padding: 8px 16px;
-    border-radius: 2px;
-    margin-right: 8px;
-}
-
-.form_register_file:hover>.button {
-    background: dodgerblue;
-    color: white;
-}
-
-.form_register_file >.label {
-    white-space: nowrap;
-    opacity: .3;
-}
-.form_register_file .-chosen>.label {
-    opacity: 1;
 }
 .form_register label {
     margin: 1rem;

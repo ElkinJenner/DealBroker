@@ -33,8 +33,7 @@
                         <li onclick="play(1)"><a class="color_d t_c">ADQUISICIONES </a></li>
                         <li onclick="play(2)"><a class="color_d t_c">PREGUNTAS </a></li>
                         <li onclick="play(3)"><a class="color_d t_c">RETOS </a></li>
-                        <li onclick="play(4)"><a class="color_d t_c">MULTIMEDIA </a></li>
-                        <li onclick="play(5)"><a class="color_d t_c">CONFIGURACIÓN </a></li>
+                        <li onclick="play(4)"><a class="color_d t_c">CONFIGURACIÓN </a></li>
                     </ul>
                 </nav>
             </aside>

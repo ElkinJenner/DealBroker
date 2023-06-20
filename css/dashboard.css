@@ -137,16 +137,18 @@ body.light_mode .bline{
     color: var(--color_white);
 }
 .nav_dashboard ul li a i{
+    font-size: 1.5rem;
     width: 40px;
     height: 40px;
-    padding: 0.5rem;
-    margin-right: 1.4rem;
+    padding: 0.6rem;
+    margin-right: 1.2rem;
     border-radius: 10px;
     background: var(--color_default);
     flex-shrink: 0;
 }
 .nav_dashboard ul li a span{
     position: relative;
+    margin: 0.25rem;
 }
 .nav_dashboard ul li:hover:nth-child(1) i{background: var(--color_primary);}
 .nav_dashboard ul li:hover:nth-child(2) i{background: var(--color_secundary);}
@@ -160,19 +162,21 @@ body.light_mode .bline{
     margin-top: 2rem;
 }
 .title_dashboard{
-    padding: 0rem 1rem 1rem 1rem;
-    border-bottom: 1px solid;
-    margin: 0rem 1rem 2rem;
+    padding: 0rem 0rem 1rem 1rem;
+    margin: 0rem 0rem 0.5rem;
     width: 98%;
-    display: flex;
+    display: grid;
     position: relative;
     z-index: 1;
+}
+.title_dashboard code{
+    color: #565674;
 }
 .title_dashboard button{
     position: absolute;
     right: 0;
     font-size: 1.5rem;
-    padding: 0.5rem 1.4rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 1rem;
 }
 .perfil_admin{
@@ -200,7 +204,7 @@ body.light_mode .bline{
 .widgets_head{
     display: flex;
     align-items: center;
-    padding: 1rem 0rem;
+    padding: 0.5rem 0rem 1rem 0rem;
     top: 0;
     left: 0;
     z-index: 1;
@@ -320,12 +324,10 @@ body.light_mode .bline{
 .pie_chart img{
     margin-right: 0.5rem;
 }
-.modal {
-    position: fixed;
+.modal_d {
+    position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    z-index: 1;
     min-height: 100vh;
 }
 .table{
@@ -335,7 +337,7 @@ body.light_mode .bline{
 .table_item{
     border: 1px solid #5969818c;
     text-align: center;
-    padding: 0.8rem 3rem 1.5rem;
+    padding: 0.8rem;
     display: inherit;
 }
 .status_active {
@@ -359,18 +361,22 @@ body.light_mode .bline{
 }
 .dropdow_menu{
     position: absolute;
-    top: 100%;
+    top: 85%;
     right: 0;
     transform: scale(1);
     margin: 0rem 0.2rem;
     box-shadow: 0 0 1.25rem rgb(31 45 61 / 9%);
     padding: 0;
-    border-radius: 0 0 0.7em 0.7em;
+    border-radius: 0.5rem 0.5rem 0.7em 0.7em;
     z-index: 100;
 }
 .dropdow_menu ul {
     display: grid;
-    margin: 1rem;
+    margin: 0.4rem;
+    transition: all 0.3s ease-in-out;
+}
+.dropdow_menu ul li:last-child{
+border-top: 1px solid #5969818c;
 }
 .dropdow_menu ul li a{
     font-size: 1.1rem;
@@ -385,7 +391,7 @@ body.light_mode .bline{
     cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
     top: 0;
     right: 0;
-    width: 50px;
+    width: 40px;
     margin: 1rem;
     font-size: 2rem;
 }
@@ -403,6 +409,6 @@ body.light_mode .bline{
     justify-content: center;
 }
 .precio_products img{
-    width: 40px;
+    width: 30px;
     margin-right: 0.4rem;
 }

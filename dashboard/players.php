@@ -18,22 +18,23 @@
             <?php include "inc/header.php" ?>
             <main class="contender_dashboard">
                 <div class="container">
-                    <article class="color_def title_dashboard">
-                    <h5 class="f_weight color_w"><span class="icon-vcard"></span> PLAYERS / DASHBOARD</h5>
+                   <article class="color_def title_dashboard">
+                        <h6 class="f_weight font_m color_w">PLAYERS</h6>
+                        <code class="f_weight font_m"><span class="bx bx-joystick"></span> PLAYERS / DASHBOARD</code>
                     </article>
                     <!--Title Lista -->
                     <aside class="column color_def">
                         <div class="column-1">
-                            <article class="table bgcolor_subpanel">
-                                 <h5 class="color_w">#</h5>
+                            <article class="table bg_def">
+                                 <h6 class="color_w"><i class="bx bx-hash"></i></h6>
                             </article>
                              <div class="table_item">
                                 <h6 class="color_w">1</h6>
                             </div>
                         </div>
-                        <div class="column-3">
-                            <article class="table bgcolor_subpanel">
-                                <h5 class="color_w">Nombres Completos <i class="color_w icon-arrow-down4"></i></h5>
+                        <div class="column-4">
+                            <article class="table bg_def">
+                                <h6 class="color_w">Nombres Completos <i class="color_w bx bx-stats"></i></h6> 
                             </article>
 
                             <div class="table_item perfil_admin m_c">
@@ -42,8 +43,8 @@
                             </div>
                         </div>
                         <div class="column-2">
-                            <article class="table bgcolor_subpanel">
-                                <h5 class="color_w">Usuario</h5>
+                            <article class="table bg_def">
+                                <h6 class="color_w">Usuario</h6>
                             </article>
 
                             <div class="table_item">
@@ -52,17 +53,17 @@
                         </div>
 
                         <div class="column-2">
-                            <article class="table bgcolor_subpanel">
-                            <h5 class="color_w">Registro</h5>
+                            <article class="table bg_def">
+                            <h6 class="color_w">Registro</h6>
                             </article>
                             <div class="table_item">
                                 <h6 class="color_w">12/05/2023</h6>
                             </div>
                         </div>
 
-                         <div class="column-2">
-                            <article class="table bgcolor_subpanel">
-                                <h5 class="color_w">Status</h5>
+                         <div class="column-1">
+                            <article class="table bg_def">
+                                <h6 class="color_w">Status</h6>
                             </article>
 
                             <div class="table_item">
@@ -71,16 +72,16 @@
                         </div>
 
                         <div class="column-2">
-                            <article class="table bgcolor_subpanel">
-                            <h5 class="color_w">Acciones</h5>
+                            <article class="table bg_def">
+                            <h6 class="color_w">Acciones</h6>
                             </article>
 
                             <div class="table_item">
-                                <p>
-                                    <i class="color_w fi-eye"></i>
-                                    <i class="color_w icon-brush"></i>
-                                    <i class="color_w fi-trash"></i>
-                                </p>
+                                <h6>
+                                    <i class="color_w bx bx-run"></i>
+                                    <i class="color_w bx bx-pencil"></i>
+                                    <i class="color_w bx bx-trash"></i>
+                                </h6>
                             </div>
                         </div>
                     </aside>

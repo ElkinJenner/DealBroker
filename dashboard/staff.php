@@ -19,15 +19,21 @@
             <main class="contender_dashboard">
                 <div class="container">
                     <article class="color_def title_dashboard">
-                    <h5 class="f_weight color_w"><span class="icon-users"></span> STAFF / DASHBOARD</h5>
-                    <button class="bg_verify color_w" id="open"><i class="icon-plus2"></i> Nuevo</button>
+                        <h6 class="f_weight font_m color_w">STAFF</h6>
+                        <code class="f_weight font_m"><span class="bx bx-dice-2"></span> STAFF / DASHBOARD</code>
+                        <button class="bg_verify color_w" id="open"><i class="bx bx-plus"></i></button>
                     </article>
                     <aside class="column" >
                         <?php require_once "modules/staff_m.php" ?>
                     </aside>
                     <!--Ventana Modal-->
-                    <div class="modal bg_panel hidden" id="modal">
-                        <form class="form_register form_login contender_center">
+                    <div class="modal_d bg_panel hidden" id="modal">
+                        <article class="color_def title_dashboard">
+                        <h6 class="f_weight font_m color_w">STAFF</h6>
+                        <code class="f_weight font_m"><span class="bx bx-dice-2"></span> STAFF / DASHBOARD</code>
+                         <button class="bg_danger color_w" id="close"><i class="bx bx-x"></i></button>
+                    </article>
+                        <form class="form_register form_login">
                             <article class="column">
 
                             <div class="column-6">
@@ -86,12 +92,8 @@
                             </div>
 
                             <div class="column-2">
-                                <button class="bg_verify color_w" type="submit"><i class="icon-checkmark"></i> REGISTRAR</button>
+                                <button class="bg_verify color_w" type="submit"><i class="bx bx-check"></i> REGISTRAR</button>
                             </div>
-                            <div class="column-2">
-                                <a id="close" class="boton2 bg_danger color_w"><i class="fi-delete"></i> CANCELAR</a>
-                            </div>
-
                             </article>
                         </form>
                     </div>

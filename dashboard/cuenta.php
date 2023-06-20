@@ -19,24 +19,16 @@
             <main class="contender_dashboard">
                 <div class="container">
                     <article class="color_def title_dashboard">
-                    <h5 class="f_weight color_w"><span class="icon-user"></span> MI CUENTA / DASHBOARD</h5>
+                        <h6 class="f_weight font_m color_w">MI CUENTA</h6>
+                        <code class="f_weight font_m"><span class="bx bx-dice-2"></span> MI CUENTA / DASHBOARD</code>
                     </article>
-                    <aside class="column" >
-                    <!--Ventana Modal-->
-                    <div class="bg_panel">
+                    <div class="widgets">
                         <form class="form_register form_login">
                             <article class="column">
        
                             <div class="column-6">
-                                <img class="img200 b_r_50" src="../upload/img/user.png"><br>
-                                  <div class="form_register_file color_def">
-                                    <input type='file'>
-                                    <span class='bg_input button'><h5 class="color_w fi-upload"></h5></span>
-                                    <p class='color_w label' data-js-label>No ha seleccionado ningun archivo</p>
-                                </div>
+                                <img class="img200" src="../upload/img/user.png"><br>
                             </div>
-
-                           
 
                             <div class="column-6">
                                 <small class="color_w">Nombres Completos</small>
@@ -101,7 +93,6 @@
                             </article>
                         </form>
                     </div>
-                    </aside>
                 </div>
             </main>
         </aside>
