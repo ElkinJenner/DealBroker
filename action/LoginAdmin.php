@@ -1,42 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos enviados</title>
-    <link rel="stylesheet" href="../css/framework.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/animacion.css">
-    <link rel="shortcut icon" href="../favicon.png">
-</head>
-<body>
-    <!--Main Principal-->
-    <main class="main bggame">
-        <div class="starwave"></div>
-        <!--Logo-->
-        <figure class="logo">
-            <img src="../img/logo.png" id="logo">
-        </figure>
-        <section>
-            <div class="container container_website">
-                <aside class="column">
-                    <div class="column-12 t_c">
-                        <?php
-                        $usu = $_POST["usuario"];
-                        $pas = $_POST["contrasena"];
-                        if( !empty($usu) && !empty($pas)){
-                        echo ("<script>alert('Inicio de Sesión correctamente'); window.location.href = '../dashboard/'</script>");
-                        }
-                        else{
-                            echo ("<script>alert('Los datos no se han enviado correctamente'); window.location.href = '../login.php'</script>");
-                       }
-                        ?>
-                    </div>
-                </aside>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+<?php
+$usu = $_POST["usuario"];
+$foto = $_POST["FotoPerfil"];
+$pas = $_POST["contrasena"];
+
+$con = Db::connect();
+$query = "SELECT * FROM Staff WHERE Usuario = '$usu' AND Contrasena = '$pas'";
+$result = mysqli_query($con, $query);
+$row = mysqli_num_rows($result);
+
+if($row > 0){
+    session_start();
+    $_SESSION['usuario']= $usu;
+    $_SESSION['FotoPerfil']= $foto;
+    header("Location: ../dashboard/");
+}
+else{
+    echo '
+	    <div class="notifacion_bottom bg_danger">
+                <p class="color_w t_c f_weight"><i class="bx bx-user-x"></i>Usuario incorrecto</p>
+        </div>
+	';
+}

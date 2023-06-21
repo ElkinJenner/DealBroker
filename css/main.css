@@ -477,3 +477,9 @@ footer {
     margin-left: 5px;
     color: #a7e8e0;
 }
+.notifacion_bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}

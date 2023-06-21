@@ -13,13 +13,13 @@
                 <li>
                     <div class="perfil_admin" id="dropdow_toogle">
                         <img src="../upload/img/user.png">
-                        <small class="color_w">Admin<i class="color_w bx bx-chevron-down"></i></small>
+                        <small class="color_w"><?php echo $_SESSION['usuario']; ?><i class="color_w bx bx-chevron-down"></i></small>
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
                         <ul>
-                            <li><a href="cuenta.php"><i class="bx bx-user"></i> Mi Cuenta</a></li>
+                            <li><a href="cuenta.php?&UserI=<?php echo $_SESSION['usuario']; ?>"><i class="bx bx-user"></i> Mi Cuenta</a></li>
                             <li><a href=""><i class="bx bx-wrench"></i> Configuración</a></li>
-                            <li><a href=""><i class="bx bx-power-off"></i> Cerrar Sesión</a></li>
+                            <li><a href="../action/LogoutAdmin.php"><i class="bx bx-power-off"></i> Cerrar Sesión</a></li>
                         </ul>
                     </div>
                 </li>

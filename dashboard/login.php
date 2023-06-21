@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Deal Broker</title>
-     <?php include "inc/link.php" ?>
+     <?php
+     require_once "inc/link.php";
+     require_once "../action/conexion.php";
+     ?>
 </head>
 <body>
     <main class="main">
@@ -17,15 +20,15 @@
                 </figure>
                 
                 <!--Formulario-->
-                <form class="form_login" method="POST" action="../action/LoginAdmin.php" autocomplete="off">
+                <form class="form_login" method="POST" autocomplete="off">
                     <article>
                         <label>Usuario</label>
-                        <input type="text" name="usuario">
+                        <input type="text" name="usuario" id="usuario">
                     </article>
                 
                     <article>
                         <label>Contraseña</label>
-                        <input type="password" name="contrasena">
+                        <input type="password" name="contrasena" id="contrasena">
                     </article>
                 
                     <article>
@@ -33,8 +36,12 @@
                     </article>
                 </form>
             </aside>
-
         </div>
+        <?php
+            if(isset($_POST['usuario']) && isset($_POST['contrasena'])){
+                require_once "../action/LoginAdmin.php";
+            }
+        ?>
     </main>
 </body>
 </html>

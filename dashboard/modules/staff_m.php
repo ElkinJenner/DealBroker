@@ -1,10 +1,17 @@
+<?php
+    require_once "../action/conexion.php";
+    $staff = "SELECT * FROM staff";
+    $con = Db::connect();
+    $resultado = mysqli_query($con, $staff);
+    while($row=mysqli_fetch_assoc($resultado)){ ?>
+
 <div class="column-3">
     <article class="article_perfil article_staff bg_def">
          <figure>
-              <img src="../img/person1.jpg">
+              <img src="../upload/img/<?php echo $row['FotoPerfil'];?>">
          </figure>
-            <h5 class="f_weight color_w">ELKIN JENNER RIVERA</h5>
-            <small class="f_weight color_w">Computer programming</small>
+            <h5 class="f_weight color_w"><?php echo $row['Nombres'];?></h5>
+            <small class="f_weight color_w"><?php echo $row['NomCargo'];?></small>
             <p class="redes_s">
                 <a href=""><i class="color_w bx bxl-facebook"></i></a>
                 <a href=""><i class="color_w bx bxl-linkedin"></i></a>
@@ -13,47 +20,4 @@
      </article>
 </div>
 
- <div class="column-3">
-    <article class="article_perfil article_staff bg_def">
-        <figure>
-            <img src="../img/person2.jpg">
-        </figure>
-        <h5 class="f_weight color_w">ULISES MIRANDA VEGA</h5>
-        <small class="f_weight color_w">Database Designer</small>
-        <p class="redes_s">
-            <a href=""><i class="color_w bx bxl-facebook"></i></a>
-            <a href=""><i class="color_w bx bxl-linkedin"></i></a>
-            <a href=""><i class="color_w bx bxl-discord"></i></a>
-        </p>
-    </article>
-</div>
-
- <div class="column-3">
-     <article class="article_perfil article_staff bg_def">
-        <figure>
-             <img src="../img/person3.jpg">
-        </figure>
-        <h5 class="f_weight color_w">LUIS GABRIEL TIZNADO</h5>
-        <small class="f_weight color_w">System Analyst</small>
-        <p class="redes_s">
-            <a href=""><i class="color_w bx bxl-facebook"></i></a>
-            <a href=""><i class="color_w bx bxl-linkedin"></i></a>
-            <a href=""><i class="color_w bx bxl-discord"></i></a>
-        </p>
-    </article>
-  </div>
-
-<div class="column-3">
-    <article class="article_perfil article_staff bg_def">
-        <figure>
-            <img src="../img/person4.jpg">
-        </figure>
-        <h5 class="f_weight color_w">MARCO ANTONIO FARFÁN</h5>
-        <small class="f_weight color_w">3D Designer</small>
-        <p class="redes_s">
-            <a href=""><i class="color_w bx bxl-facebook"></i></a>
-            <a href=""><i class="color_w bx bxl-linkedin"></i></a>
-            <a href=""><i class="color_w bx bxl-discord"></i></a>
-        </p>
-    </article>
-</div>
+<?php } mysqli_free_result($resultado);?>

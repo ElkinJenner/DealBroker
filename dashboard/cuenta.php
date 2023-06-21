@@ -1,3 +1,10 @@
+<?php
+require_once "../action/ValidarSesion.php";
+require_once "../action/conexion.php";
+?>
+<?php
+$UserI = (isset($_GET['usuario'])) ? $_GET['usuario'] : 0;
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,23 +32,32 @@
                     <div class="widgets">
                         <form class="form_register form_login">
                             <article class="column">
+                            <?php
+                            $con = Db::connect();
+                            $cuenta= $con->query("SELECT * FROM staff WHERE Usuario='$UserI'");
+                            if($cuenta->rowCount()>0){
+                                $datos=$cuenta->fetch();
+                            ?>
        
                             <div class="column-6">
-                                <img class="img200" src="../upload/img/user.png"><br>
+                                <img class="img200" src="../upload/img/<?php echo $datos['FotoPerfil'];?>"><br>
                             </div>
 
                             <div class="column-6">
                                 <small class="color_w">Nombres Completos</small>
-                                <input type="text" value="Administrador General">
+                                <input type="text" value="<?php echo $datos['Nombres'];?>">
 
                                 <small class="color_w">Usuario</small>
-                                <input type="text" value="Admin">
+                                <input type="text" value="<?php echo $datos['Usuario'];?>">
 
                                 <small class="color_w">Email</small>
-                                <input type="email" value="info@artigames.com" >
+                                <input type="email" value="<?php echo $datos['Email'];?>" >
                             </div>
-
-                       
+                            
+                           <?php
+                           }
+                          
+                           ?>
 
                             <div class="column-6">
                      
@@ -77,10 +93,10 @@
 
                             <div class="column-6">
                                 <small class="color_w">Contraseña</small>
-                                <input class="input"  type="password" name="usuario_clave_1" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
+                                <input class="input"  type="password" name="contrasena">
 
                                  <small class="color_w">Repetir Contraseña</small>
-                                <input class="input" type="password" name="usuario_clave_2" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
+                                <input class="input" type="password" name="contrasena">
                             </div>
 
                      
