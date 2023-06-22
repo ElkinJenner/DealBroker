@@ -329,6 +329,9 @@
 .article_staff figure img{
     border-radius: 2rem;
 }
+.article_staff h5 {
+    font-size: 1.6rem;
+}
 .redes_s{
     margin-top: 1rem;
 }
@@ -350,9 +353,12 @@
     color: var(--color_labels);
     font-size: 1.45rem;
 }
-.form_login label{
+.form_login h5{
     color: var(--color_labels);
     font-family: var(--font_dashboard);
+}
+.form_login label{
+    color: var(--color_labels);
     margin: 0;
     padding: 0;
 }
@@ -388,6 +394,7 @@
     font-size: 1.2rem;
 }
 .form_login button:hover {
+    background: var(--color_ter);
     box-shadow: 0 6px 18px -1px rgb(21 25 36 / 92%);
 }
 .form_register{

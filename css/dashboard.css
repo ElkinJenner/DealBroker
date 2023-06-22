@@ -113,6 +113,9 @@ body.light_mode .bline{
 .sidebar_min .nav_dashboard ul li:hover{
    background: transparent!important;
 }
+.sidebar_min .dropdow_sidebar a {
+    transform: rotate(180deg);
+}
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -200,7 +203,7 @@ body.light_mode .bline{
     width: 45px;
     height: 45px;
     float: left;
-    border-radius: 50%;
+    border-radius: 1rem;
 }
 .perfil_admin small {
     margin: 0.6rem 1rem;
@@ -375,7 +378,7 @@ body.light_mode .bline{
 .dropdow_menu{
     position: absolute;
     top: 85%;
-    right: 0;
+    right: 20px;
     transform: scale(1);
     margin: 0rem 0.2rem;
     box-shadow: 0 0 1.25rem rgb(31 45 61 / 9%);
@@ -392,7 +395,8 @@ body.light_mode .bline{
 border-top: 1px solid #5969818c;
 }
 .dropdow_menu ul li a{
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    font-family: var(--font_dashboard);
 }
 .dropdow_sidebar{
     position: absolute;

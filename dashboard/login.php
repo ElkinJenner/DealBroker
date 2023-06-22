@@ -22,12 +22,12 @@
                 <!--Formulario-->
                 <form class="form_login" method="POST" autocomplete="off">
                     <article>
-                        <label>Usuario</label>
+                        <h5>Usuario</h5>
                         <input type="text" name="usuario" id="usuario">
                     </article>
                 
                     <article>
-                        <label>Contraseña</label>
+                        <h5>Contraseña</h5>
                         <input type="password" name="contrasena" id="contrasena">
                     </article>
                 

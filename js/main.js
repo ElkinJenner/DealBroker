@@ -58,4 +58,4 @@ const conteo = (deadline, elem, finalMessage) => {
     }, 1000)
 };
 
-conteo('Jun 20 2023 00:00:00 GMT-0500', 'conteo', 'Se acabo la espera');
+conteo('Jun 31 2023 00:00:00 GMT-0500', 'conteo', 'Se acabo la espera');

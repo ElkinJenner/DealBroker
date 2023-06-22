@@ -2,7 +2,7 @@
 //Nigh Mode /Light Mode
 document.querySelector('.switch_content').addEventListener('click', _ => document.body.classList.toggle('light_mode'));
 
-//Menu despegable Cuenta
+//Menu despegable Mi Cuenta
 let dropdow_toogle = document.getElementById("dropdow_toogle");
 let dropdow_menu = document.getElementById("dropdow_menu");
 let count = 0;
@@ -25,17 +25,17 @@ let btn_dropdow_sidebar = document.getElementById("btn_dropdow_sidebar");
 let nav_dashboard = document.getElementById("nav_dashboard");
 let sidebar = document.getElementById("sidebar");
 let wrapper = document.getElementById("wrapper");
-let count3 = 0;
+let count_s = 0;
 function dropdow_nav(){
-    if(count3==0){
+    if (count_s ==0){
         wrapper.classList.add("wrapper_max");
         sidebar.classList.add("sidebar_min");
-        count3=1;
+        count_s =1;
     }
     else{
         wrapper.classList.remove("wrapper_max");
         sidebar.classList.remove("sidebar_min");
-        count3 = 0;
+        count_s = 0;
     }
 }
 btn_dropdow_sidebar.addEventListener('click', dropdow_nav, true);
@@ -44,13 +44,17 @@ btn_dropdow_sidebar.addEventListener('click', dropdow_nav, true);
 let btnOpen = document.getElementById("open");
 let btnClose = document.getElementById("close");
 let modal = document.getElementById("modal");
+let count_m=0;
 
-
-btnOpen.onclick = function () {
-    modal.style.display = "block";
+function modale(){
+    if (count_m ==0){
+        modal.classList.remove("hidden");
+        count_m =1;
+    }
+    else{
+        modal.classList.add("hidden");
+        count_m =0;
+    }
 }
-
-btnClose.onclick = function () {
-    modal.style.display = "none";
-
-}
+btnOpen.addEventListener('click', modale, true);
+btnClose.addEventListener('click', modale, true);

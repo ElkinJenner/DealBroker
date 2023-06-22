@@ -1,5 +1,4 @@
 <?php
-    require_once "../action/conexion.php";
     $staff = "SELECT * FROM staff";
     $con = Db::connect();
     $resultado = mysqli_query($con, $staff);
@@ -15,7 +14,7 @@
             <p class="redes_s">
                 <a href=""><i class="color_w bx bxl-facebook"></i></a>
                 <a href=""><i class="color_w bx bxl-linkedin"></i></a>
-                <a href=""><i class="color_w bx bxl-discord"></i></a>
+                <a href=""><i class="color_w bx bxl-instagram"></i></a>
             </p>
      </article>
 </div>

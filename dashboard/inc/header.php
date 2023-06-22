@@ -12,8 +12,8 @@
                 <li><a class="switch_content bgcolor_subpanel b_r color_w"><div class="switch"></div></a></li>
                 <li>
                     <div class="perfil_admin" id="dropdow_toogle">
-                        <img src="../upload/img/user.png">
-                        <small class="color_w"><?php echo $_SESSION['usuario']; ?><i class="color_w bx bx-chevron-down"></i></small>
+                        <img src="../upload/img/admin.jpg">
+                        <!--<small class="color_w"><?php echo $_SESSION['usuario']; ?><i class="color_w bx bx-chevron-down"></i></small>-->
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
                         <ul>
