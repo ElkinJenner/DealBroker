@@ -1,5 +1,5 @@
 <header class="header_sticky bg_panel">
-    <div class="container">
+    <div class="container container_dashboard">
         <article class="header_contender-left">
             <div class="contender_buscador">
                 <input type="search" placeholder="Buscar">

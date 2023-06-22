@@ -14,14 +14,14 @@ require_once "../action/conexion.php";
 <body>
     <main class="main_dashboard">
         <!--Contenido Izquierda-->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <?php include "inc/nav.php" ?>
         </aside>
         <!--Contenido Derecha-->
-        <aside class="wrapper">
+        <aside class="wrapper" id="wrapper">
             <?php include "inc/header.php" ?>
             <main class="contender_dashboard">
-                <div class="container">
+                <div class="container container_dashboard">
                     <article class="color_def title_dashboard">
                         <h6 class="f_weight font_m color_w">STAFF</h6>
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> STAFF / DASHBOARD</code>
@@ -37,17 +37,17 @@ require_once "../action/conexion.php";
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> STAFF / DASHBOARD</code>
                          <button class="bg_danger color_w" id="close"><i class="bx bx-x"></i></button>
                     </article>
-                        <form class="form_register form_login">
+                        <form class="form_register form_login" method="POST" enctype="multipart/form-data" action="../action/registrarStaff.php" methode>
                             <article class="column">
 
                             <div class="column-6">
                                 <small class="color_w">Nombres Completos</small>
-                                <input type="text" >
+                                <input type="text" name="Nombres">
                             </div>
 
                             <div class="column-6">
                                 <small class="color_w">Usuario</small>
-                                <input type="text" >
+                                <input type="text" name="Usuario">
                             </div>
 
                             <div class="column-6">
@@ -55,44 +55,44 @@ require_once "../action/conexion.php";
                                 <br><h6 class="color_w f_weight">CARGO</h6>
 
                                 <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Informes" checked="">
+                                    <input id="categoria" name="NomCargo" type="radio" value="Informes" checked="">
                                     <i class="bg_s"></i>Computer programming
                                 </label>
 
                                 <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Reclamo">
+                                    <input id="categoria" name="NomCargo" type="radio" value="Reclamo">
                                     <i class="bg_s"></i>Database Designer
                                 </label>
 
                                 <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Soy Colaborador">
+                                    <input id="categoria" name="NomCargo" type="radio" value="Soy Colaborador">
                                     <i class="bg_s"></i>3D Designer
                                 </label>
 
                                 <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Quiero colaborar con ustedes!">
+                                    <input id="categoria" name="NomCargo" type="radio" value="Quiero colaborar con ustedes!">
                                     <i class="bg_s"></i>System Analyst
                                 </label>
                                     
                                 <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Otro">
+                                    <input id="categoria" name="NomCargo" type="radio" value="Otro">
                                     <i class="bg_s"></i>Otro
                                 </label>
                             </div>
 
                             <div class="column-6">
                                 <small class="color_w">Email</small>
-                                <input type="text" >
+                                <input type="text" name="Email">
                             </div>
 
                             <div class="column-6">
                                 <small class="color_w">Contraseña</small>
-                                <input class="input"  type="password" name="usuario_clave_1" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
+                                <input class="input"  type="password" name="Contrasena">
                             </div>
 
                             <div class="column-6">
                                 <small class="color_w">Repetir Contraseña</small>
-                                <input class="input" type="password" name="usuario_clave_2" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
+                                <input class="input" type="password" name="Contrasena">
                             </div>
 
                             <div class="column-2">

@@ -352,6 +352,7 @@
 }
 .form_login label{
     color: var(--color_labels);
+    font-family: var(--font_dashboard);
     margin: 0;
     padding: 0;
 }
@@ -367,6 +368,7 @@
     color: var(--color_labels);
     border: 2px solid var(--color_inputs);
     background: var(--color_inputs);
+    font-family: var(--font_dashboard);
     font-size: 1.5rem;
 }
 .form_login input[type="text"]:focus,
@@ -376,7 +378,7 @@
     color: #b0b1c2;
 }
 .form_login button {
-    border: 3px solid var(--color_sec);
+    font-family: var(--font_m);
     background: var(--color_sec);
     color: var(--color_white);
     border-radius: 1em;
@@ -384,8 +386,6 @@
     padding-left: 0rem;
     margin-top: 0.5rem;
     font-size: 1.2rem;
-    font-weight: 100;
-    letter-spacing: 1px;
 }
 .form_login button:hover {
     box-shadow: 0 6px 18px -1px rgb(21 25 36 / 92%);

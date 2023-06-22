@@ -17,14 +17,14 @@ $UserI = (isset($_GET['usuario'])) ? $_GET['usuario'] : 0;
 <body>
     <main class="main_dashboard">
         <!--Contenido Izquierda-->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <?php include "inc/nav.php" ?>
         </aside>
         <!--Contenido Derecha-->
-        <aside class="wrapper">
+        <aside class="wrapper" id="wrapper">
             <?php include "inc/header.php" ?>
             <main class="contender_dashboard">
-                <div class="container">
+                <div class="container container_dashboard">
                     <article class="color_def title_dashboard">
                         <h6 class="f_weight font_m color_w">MI CUENTA</h6>
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> MI CUENTA / DASHBOARD</code>

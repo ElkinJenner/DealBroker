@@ -20,6 +20,26 @@ function menu_overlay(){
 }
 dropdow_toogle.addEventListener('click', menu_overlay, true);
 
+//Dropdow_sidebar
+let btn_dropdow_sidebar = document.getElementById("btn_dropdow_sidebar");
+let nav_dashboard = document.getElementById("nav_dashboard");
+let sidebar = document.getElementById("sidebar");
+let wrapper = document.getElementById("wrapper");
+let count3 = 0;
+function dropdow_nav(){
+    if(count3==0){
+        wrapper.classList.add("wrapper_max");
+        sidebar.classList.add("sidebar_min");
+        count3=1;
+    }
+    else{
+        wrapper.classList.remove("wrapper_max");
+        sidebar.classList.remove("sidebar_min");
+        count3 = 0;
+    }
+}
+btn_dropdow_sidebar.addEventListener('click', dropdow_nav, true);
+
 //Ventana Modal
 let btnOpen = document.getElementById("open");
 let btnClose = document.getElementById("close");

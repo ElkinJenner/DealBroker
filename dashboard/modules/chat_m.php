@@ -20,7 +20,7 @@
          <!--Mensaje-->
         <div class="mensajes_chat">
             <figure class="mensajes_chat_autor">
-                <img class="author_img" src="../img/person4.jpg">
+                <img class="author_img" src="../upload/img/person4.jpg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
                     <path d="M20 6L9 17l-5-5"></path>
                 </svg>
@@ -34,7 +34,7 @@
         <!--Mensaje-->
         <div class="mensajes_chat">
             <figure class="mensajes_chat_autor">
-                <img class="author_img" src="../img/person1.jpg">
+                <img class="author_img" src="../upload/img/person1.jpg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
                     <path d="M20 6L9 17l-5-5"></path>
                 </svg>

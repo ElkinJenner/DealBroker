@@ -1,6 +1,5 @@
 <?php
 $usu = $_POST["usuario"];
-$foto = $_POST["FotoPerfil"];
 $pas = $_POST["contrasena"];
 
 $con = Db::connect();
@@ -11,13 +10,12 @@ $row = mysqli_num_rows($result);
 if($row > 0){
     session_start();
     $_SESSION['usuario']= $usu;
-    $_SESSION['FotoPerfil']= $foto;
     header("Location: ../dashboard/");
 }
 else{
     echo '
 	    <div class="notifacion_bottom bg_danger">
-                <p class="color_w t_c f_weight"><i class="bx bx-user-x"></i>Usuario incorrecto</p>
+                <p class="color_w t_c f_weight"><i class="bx bx-user-x"></i>Acceso denegado</p>
         </div>
 	';
 }
