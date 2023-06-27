@@ -14,14 +14,12 @@ require_once "../action/conexion.php";
 <body>
     <main class="main_dashboard">
         <!--Contenido Izquierda-->
-        <aside class="sidebar" id="sidebar">
-            <?php include "inc/nav.php" ?>
-        </aside>
+        <?php include "inc/nav.php" ?>
         <!--Contenido Derecha-->
         <aside class="wrapper" id="wrapper">
             <?php include "inc/header.php" ?>
             <main class="contender_dashboard">
-                <div class="container">
+                <div class="container container_dashboard">
                     <aside class="column">
                         <div class="column-12">
                         <?php require_once "modules/chat_m.php" ?>

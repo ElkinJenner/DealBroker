@@ -14,9 +14,7 @@ require_once "../action/conexion.php";
 <body>
     <main class="main_dashboard">
         <!--Contenido Izquierda-->
-        <aside class="sidebar" id="sidebar">
-            <?php include "inc/nav.php" ?>
-        </aside>
+        <?php include "inc/nav.php" ?>
         <!--Contenido Derecha-->
         <aside class="wrapper" id="wrapper">
             <?php include "inc/header.php" ?>

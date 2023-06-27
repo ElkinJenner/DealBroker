@@ -4,7 +4,7 @@
 * @website https://dealbroker.ga/
 **/
 
-function curso(){
+function cuenta(){
 	$data= array();
 	$con = Db::connect();
 	$query = $con->query("select * from CarreraCurso where CategoriaCurso is NULL ");

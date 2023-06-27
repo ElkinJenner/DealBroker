@@ -17,9 +17,7 @@ $UserStaff = $_GET["user"];
 <body>
     <main class="main_dashboard">
         <!--Contenido Izquierda-->
-        <aside class="sidebar" id="sidebar">
-            <?php include "inc/nav.php" ?>
-        </aside>
+        <?php include "inc/nav.php" ?>
         <!--Contenido Derecha-->
         <aside class="wrapper" id="wrapper">
             <?php include "inc/header.php" ?>
@@ -57,7 +55,7 @@ $UserStaff = $_GET["user"];
                      
                                 <br><h6 class="color_w f_weight">CARGO</h6>
 
-                                <label class="bg_d color_w">
+                                <label class="color_w">
                                     <input id="categoria" name="NomCargo" type="radio" value="<?php echo $row['NomCargo'];?>" checked="">
                                     <i class="bg_s"></i><?php echo $row['NomCargo'];?>
                                 </label> 

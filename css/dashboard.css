@@ -180,7 +180,6 @@ body.light_mode .bline{
 .title_dashboard{
     padding: 0rem 0rem 1rem 1rem;
     margin: 0rem 0rem 0.5rem;
-    width: 98%;
     display: grid;
     position: relative;
     z-index: 1;

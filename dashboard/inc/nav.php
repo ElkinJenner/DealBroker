@@ -1,3 +1,4 @@
+<aside class="sidebar" id="sidebar">
 <nav class="nav_dashboard" id="nav_dashboard">
     <ul>
         <code class="color_w">MENU</code>
@@ -15,3 +16,4 @@
 <ol class="dropdow_sidebar" id="btn_dropdow_sidebar">
     <a class="color_w bx f_r bx-first-page"></a>
 </ol>
+</aside>
