@@ -1,5 +1,6 @@
 <?php
 require_once "../action/ValidarSesion.php";
+require_once "../action/conexion.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">

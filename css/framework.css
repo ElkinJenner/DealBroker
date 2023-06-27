@@ -54,6 +54,7 @@
     --color_secundary: #569aff;
     --color_tercer: #6c5ecf;
     --color_cuarto: #ff6a8f;
+    --color_quinto: #50cd89;
     --color_panel: #151521;
     --color_navpanel: #191928;
     --color_subpanel: #1f2937;
@@ -225,10 +226,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 
 
 /*------Colores de Dashboarad ---*/
-.color_1{color: var(--color_primary)!important;}
-.color_2{color: var(--color_secundary)!important;}
-.color_3{color: var(--color_tercer)!important;}
-.color_4{color: var(--color_cuarto)!important}
+
 .color_panel{color: var(--color_panel)!important}
 .color_subpanel {color: var(--color_subpanel) !important}
 .bg_p1{background: #d53d3c!important;}
@@ -241,10 +239,6 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bgcolor_4{background: var(--color_cuarto)!important;}
 .bgcolor_panel{background: var(--color_panel)!important;}
 .bgcolor_subpanel{background: var(--color_subpanel)!important;}
-.bg_degr1{
-    background-image:
-    radial-gradient(circle at 50% 50%, #ffff72 0, #ffff66 16.67%, #fff15b 33.33%, #ffd351 50%, #e8b648 66.67%, #d29c40 83.33%, #bd8639 100%);
-}
 
 /*------
 COLUMNAS
@@ -253,7 +247,7 @@ COLUMNAS
 .column {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: auto;
 }
 .column-12 {width: 100%;}

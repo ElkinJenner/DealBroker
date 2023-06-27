@@ -3,7 +3,7 @@ require_once "../action/ValidarSesion.php";
 require_once "../action/conexion.php";
 ?>
 <?php
-$UserI = (isset($_GET['usuario'])) ? $_GET['usuario'] : 0;
+$UserStaff = $_GET["user"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,75 +30,66 @@ $UserI = (isset($_GET['usuario'])) ? $_GET['usuario'] : 0;
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> MI CUENTA / DASHBOARD</code>
                     </article>
                     <div class="widgets">
-                        <form class="form_register form_login">
+                        <form class="form_register form_login" action="" method="POST">
                             <article class="column">
                             <?php
                             $con = Db::connect();
-                            $cuenta= $con->query("SELECT * FROM staff WHERE Usuario='$UserI'");
-                            if($cuenta->rowCount()>0){
-                                $datos=$cuenta->fetch();
-                            ?>
+                            $cuenta = "SELECT * FROM staff WHERE Usuario = '$UserStaff'";
+                            $resultado = mysqli_query($con, $cuenta);
+
+                            while($row=mysqli_fetch_assoc($resultado)){ ?>
+                           
        
                             <div class="column-6">
-                                <img class="img200" src="../upload/img/<?php echo $datos['FotoPerfil'];?>"><br>
+                                <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>"><br>
                             </div>
 
                             <div class="column-6">
                                 <small class="color_w">Nombres Completos</small>
-                                <input type="text" value="<?php echo $datos['Nombres'];?>">
+                                <input type="text" value="<?php echo $row['Nombres'];?>">
 
                                 <small class="color_w">Usuario</small>
-                                <input type="text" value="<?php echo $datos['Usuario'];?>">
-
-                                <small class="color_w">Email</small>
-                                <input type="email" value="<?php echo $datos['Email'];?>" >
+                                <input type="text" value="<?php echo $row['Usuario'];?>">
+                                
                             </div>
                             
-                           <?php
-                           }
-                          
-                           ?>
-
                             <div class="column-6">
                      
                                 <br><h6 class="color_w f_weight">CARGO</h6>
 
-                                <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Informes" checked="">
-                                    <i class="bg_s"></i>Computer programming
-                                </label>
+                                <label class="bg_d color_w">
+                                    <input id="categoria" name="NomCargo" type="radio" value="<?php echo $row['NomCargo'];?>" checked="">
+                                    <i class="bg_s"></i><?php echo $row['NomCargo'];?>
+                                </label> 
 
-                                <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Reclamo">
-                                    <i class="bg_s"></i>Database Designer
-                                </label>
+                                <?php
+                                $con = Db::connect();
+                                $CargoCheck = $row['NomCargo'];
+                                $cargo = "SELECT * FROM cargo WHERE NomCargo != '$CargoCheck'";
+                                $resultado_cargo = mysqli_query($con, $cargo);
+                                while($r_cargo=mysqli_fetch_assoc($resultado_cargo)){ ?>
 
-                                <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Soy Colaborador">
-                                    <i class="bg_s"></i>3D Designer
+                                 <label class="color_w">
+                                    <input id="categoria" name="NomCargo" type="radio" value="<?php echo $r_cargo['NomCargo'];?>">
+                                    <i class="bg_s"></i><?php echo $r_cargo['NomCargo'];?>
                                 </label>
-
-                                <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Quiero colaborar con ustedes!">
-                                    <i class="bg_s"></i>System Analyst
-                                </label>
-                                    
-                                <label class="color_w">
-                                    <input id="categoria" name="categoria" type="radio" value="Otro">
-                                    <i class="bg_s"></i>Otro
-                                </label>
+                                
+                                 <?php } mysqli_free_result($resultado_cargo);?>
                             </div>
 
                     
 
                             <div class="column-6">
+                                
                                 <small class="color_w">Contraseña</small>
-                                <input class="input"  type="password" name="contrasena">
+                                <input class="input"  type="password" name="contrasena" value="<?php echo $row['Contrasena'];?>">
 
                                  <small class="color_w">Repetir Contraseña</small>
-                                <input class="input" type="password" name="contrasena">
+                                <input class="input" type="password" name="contrasena" value="<?php echo $row['Contrasena'];?>">
+                                
                             </div>
 
+                            <?php } mysqli_free_result($resultado);?>
                      
 
                             <div class="column-2">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 20-06-2023 a las 15:03:56
+-- Tiempo de generación: 27-06-2023 a las 17:32:42
 -- Versión del servidor: 5.7.36
 -- Versión de PHP: 7.4.26
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `adquisicion` (
 
 DROP TABLE IF EXISTS `avatar`;
 CREATE TABLE IF NOT EXISTS `avatar` (
-  `FotoAvatar` varchar(200) NOT NULL,
+  `FotoAvatar` varchar(100) NOT NULL,
   `TipoGenero` varchar(100) NOT NULL,
   PRIMARY KEY (`FotoAvatar`),
   KEY `TipoGenero` (`TipoGenero`)
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `avatar` (
 
 DROP TABLE IF EXISTS `cargo`;
 CREATE TABLE IF NOT EXISTS `cargo` (
-  `NomCargo` varchar(200) NOT NULL,
+  `NomCargo` varchar(100) NOT NULL,
   PRIMARY KEY (`NomCargo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `cargo` (
 
 DROP TABLE IF EXISTS `categoriaprod`;
 CREATE TABLE IF NOT EXISTS `categoriaprod` (
-  `NombreCategoria` varchar(100) NOT NULL,
+  `NombreCategoria` varchar(50) NOT NULL,
   PRIMARY KEY (`NombreCategoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -82,9 +82,9 @@ CREATE TABLE IF NOT EXISTS `categoriaprod` (
 DROP TABLE IF EXISTS `chat`;
 CREATE TABLE IF NOT EXISTS `chat` (
   `IdChat` int(11) NOT NULL AUTO_INCREMENT,
-  `FechaChat` timestamp NOT NULL,
-  `MensajeChat` varchar(500) NOT NULL,
   `IdPlayer` int(11) NOT NULL,
+  `FechaChat` datetime NOT NULL,
+  `MensajeChat` varchar(500) NOT NULL,
   PRIMARY KEY (`IdChat`),
   KEY `IdPlayer` (`IdPlayer`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -98,12 +98,10 @@ CREATE TABLE IF NOT EXISTS `chat` (
 DROP TABLE IF EXISTS `chatstaff`;
 CREATE TABLE IF NOT EXISTS `chatstaff` (
   `IdChatStaff` int(11) NOT NULL AUTO_INCREMENT,
-  `Nombres` varchar(200) NOT NULL,
-  `FotoPerfil` varchar(100) NOT NULL,
+  `IdStaff` int(11) NOT NULL,
   `MensajeStaff` varchar(500) NOT NULL,
   PRIMARY KEY (`IdChatStaff`),
-  KEY `Nombres` (`Nombres`),
-  KEY `FotoPerfil` (`FotoPerfil`)
+  KEY `IdStaff` (`IdStaff`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -114,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `chatstaff` (
 
 DROP TABLE IF EXISTS `estado`;
 CREATE TABLE IF NOT EXISTS `estado` (
-  `EstadoProducto` varchar(100) NOT NULL,
+  `EstadoProducto` varchar(50) NOT NULL,
   PRIMARY KEY (`EstadoProducto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -133,25 +131,51 @@ CREATE TABLE IF NOT EXISTS `genero` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `monedas`
+-- Estructura de tabla para la tabla `menu`
 --
 
-DROP TABLE IF EXISTS `monedas`;
-CREATE TABLE IF NOT EXISTS `monedas` (
-  `PaqMoneda` int(11) NOT NULL,
-  PRIMARY KEY (`PaqMoneda`)
+DROP TABLE IF EXISTS `menu`;
+CREATE TABLE IF NOT EXISTS `menu` (
+  `ModoMenu` varchar(100) NOT NULL,
+  PRIMARY KEY (`ModoMenu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `plataforma`
+-- Estructura de tabla para la tabla `modovista`
 --
 
-DROP TABLE IF EXISTS `plataforma`;
-CREATE TABLE IF NOT EXISTS `plataforma` (
-  `ModoVista` varchar(200) NOT NULL,
-  PRIMARY KEY (`ModoVista`)
+DROP TABLE IF EXISTS `modovista`;
+CREATE TABLE IF NOT EXISTS `modovista` (
+  `Modo` varchar(100) NOT NULL,
+  PRIMARY KEY (`Modo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `monedas`
+--
+
+DROP TABLE IF EXISTS `monedas`;
+CREATE TABLE IF NOT EXISTS `monedas` (
+  `CantMoneda` int(11) NOT NULL,
+  PRIMARY KEY (`CantMoneda`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `navegacion`
+--
+
+DROP TABLE IF EXISTS `navegacion`;
+CREATE TABLE IF NOT EXISTS `navegacion` (
+  `IdStaff` int(11) NOT NULL,
+  `ModoMenu` varchar(100) NOT NULL,
+  KEY `IdStaff` (`IdStaff`),
+  KEY `ModoMenu` (`ModoMenu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -162,21 +186,16 @@ CREATE TABLE IF NOT EXISTS `plataforma` (
 
 DROP TABLE IF EXISTS `players`;
 CREATE TABLE IF NOT EXISTS `players` (
-  `CodPlayer` varchar(200) NOT NULL,
-  `Nombres` varchar(200) NOT NULL,
-  `FotoPlayer` varchar(200) NOT NULL,
+  `IdPlayer` int(11) NOT NULL AUTO_INCREMENT,
+  `FechaRegistro` datetime NOT NULL,
+  `Nombres` varchar(100) NOT NULL,
+  `Usuario` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Contrasena` varchar(50) NOT NULL,
+  `FotoPlayer` varchar(100) NOT NULL,
   `Descripción` varchar(500) NOT NULL,
-  `IdPlayer` int(11) NOT NULL,
-  `IdResultPR` int(200) NOT NULL,
-  `IdResultReto` int(200) NOT NULL,
-  `IdAdquisicion` int(200) NOT NULL,
-  PRIMARY KEY (`CodPlayer`),
-  KEY `FotoPlayer` (`FotoPlayer`),
-  KEY `IdPlayer` (`IdPlayer`),
-  KEY `IdResultPR` (`IdResultPR`),
-  KEY `IdResultReto` (`IdResultReto`),
-  KEY `IdAdquisicion` (`IdAdquisicion`),
-  KEY `Nombres` (`Nombres`)
+  PRIMARY KEY (`IdPlayer`),
+  KEY `FotoPlayer` (`FotoPlayer`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -189,32 +208,13 @@ DROP TABLE IF EXISTS `preguntas`;
 CREATE TABLE IF NOT EXISTS `preguntas` (
   `IdPregunta` int(11) NOT NULL AUTO_INCREMENT,
   `IdPlayer` int(11) NOT NULL,
-  `NomPregunta` varchar(500) NOT NULL,
-  `NomRespuesta` varchar(200) NOT NULL,
-  `ValidacionR` tinyint(1) NOT NULL,
-  `PaqMoneda` int(11) NOT NULL,
+  `NomPregunta` varchar(100) NOT NULL,
+  `IdRespuesta` int(11) NOT NULL,
+  `CantMoneda` int(11) NOT NULL,
   PRIMARY KEY (`IdPregunta`),
   KEY `IdPlayer` (`IdPlayer`),
-  KEY `NomRespuesta` (`NomRespuesta`),
-  KEY `ValidacionR` (`ValidacionR`),
-  KEY `PaqMoneda` (`PaqMoneda`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `registros`
---
-
-DROP TABLE IF EXISTS `registros`;
-CREATE TABLE IF NOT EXISTS `registros` (
-  `IdRegistro` int(11) NOT NULL AUTO_INCREMENT,
-  `Nombres` varchar(200) NOT NULL,
-  `Usuario` varchar(100) NOT NULL,
-  `Email` varchar(100) NOT NULL,
-  `FechaRegistro` datetime NOT NULL,
-  `Contrasena` varchar(100) NOT NULL,
-  PRIMARY KEY (`IdRegistro`)
+  KEY `PaqMoneda` (`CantMoneda`),
+  KEY `IdRespuesta` (`IdRespuesta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -225,8 +225,28 @@ CREATE TABLE IF NOT EXISTS `registros` (
 
 DROP TABLE IF EXISTS `respuestas`;
 CREATE TABLE IF NOT EXISTS `respuestas` (
-  `NomRespuesta` varchar(200) NOT NULL,
-  PRIMARY KEY (`NomRespuesta`)
+  `IdRespuesta` int(11) NOT NULL AUTO_INCREMENT,
+  `NomRespuesta` varchar(100) NOT NULL,
+  PRIMARY KEY (`IdRespuesta`),
+  KEY `NomRespuesta` (`NomRespuesta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `resultplayers`
+--
+
+DROP TABLE IF EXISTS `resultplayers`;
+CREATE TABLE IF NOT EXISTS `resultplayers` (
+  `IdPlayer` int(11) NOT NULL,
+  `IdResultPR` int(11) NOT NULL,
+  `IdResultReto` int(11) NOT NULL,
+  `IdAdquisicion` int(11) NOT NULL,
+  KEY `IdPlayer` (`IdPlayer`),
+  KEY `IdResultPR` (`IdResultPR`),
+  KEY `IdResultReto` (`IdResultReto`),
+  KEY `IdAdquisicion` (`IdAdquisicion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -239,11 +259,10 @@ DROP TABLE IF EXISTS `resultpr`;
 CREATE TABLE IF NOT EXISTS `resultpr` (
   `IdResultPR` int(11) NOT NULL AUTO_INCREMENT,
   `IdPregunta` int(11) NOT NULL,
-  `ValidacionR` tinyint(1) NOT NULL,
-  `MonedaObtenida` double NOT NULL,
+  `RespuestaResp` int(11) NOT NULL,
+  `MonedaObtenida` int(11) NOT NULL,
   PRIMARY KEY (`IdResultPR`),
-  KEY `IdPregunta` (`IdPregunta`),
-  KEY `ValidacionR` (`ValidacionR`)
+  KEY `IdPregunta` (`IdPregunta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -254,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `resultpr` (
 
 DROP TABLE IF EXISTS `resultreto`;
 CREATE TABLE IF NOT EXISTS `resultreto` (
-  `IdResultReto` int(11) NOT NULL,
+  `IdResultReto` int(11) NOT NULL AUTO_INCREMENT,
   `IdReto` int(11) NOT NULL,
   PRIMARY KEY (`IdResultReto`),
   KEY `IdReto` (`IdReto`)
@@ -269,12 +288,12 @@ CREATE TABLE IF NOT EXISTS `resultreto` (
 DROP TABLE IF EXISTS `retos`;
 CREATE TABLE IF NOT EXISTS `retos` (
   `IdReto` int(11) NOT NULL AUTO_INCREMENT,
-  `NomReto` varchar(200) NOT NULL,
-  `FotoReto` varchar(200) NOT NULL,
+  `NomReto` varchar(100) NOT NULL,
+  `FotoReto` varchar(100) NOT NULL,
   `DescReto` varchar(500) NOT NULL,
-  `PaqMoneda` int(11) NOT NULL,
+  `CantMoneda` int(11) NOT NULL,
   PRIMARY KEY (`IdReto`),
-  KEY `PaqMoneda` (`PaqMoneda`)
+  KEY `PaqMoneda` (`CantMoneda`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -285,15 +304,14 @@ CREATE TABLE IF NOT EXISTS `retos` (
 
 DROP TABLE IF EXISTS `staff`;
 CREATE TABLE IF NOT EXISTS `staff` (
-  `Nombres` varchar(200) NOT NULL,
-  `Usuario` varchar(100) NOT NULL,
-  `NomCargo` varchar(100) NOT NULL,
-  `FotoPerfil` int(200) NOT NULL,
-  `ModoVista` varchar(100) NOT NULL,
+  `IdStaff` int(11) NOT NULL AUTO_INCREMENT,
+  `FotoPerfil` varchar(100) NOT NULL,
+  `Nombres` varchar(100) NOT NULL,
+  `Usuario` varchar(50) NOT NULL,
+  `NomCargo` varchar(50) NOT NULL,
+  `Email` varchar(100) NOT NULL,
   `Contrasena` varchar(100) NOT NULL,
-  PRIMARY KEY (`Nombres`),
-  KEY `Cargo` (`NomCargo`),
-  KEY `ModoVista` (`ModoVista`),
+  PRIMARY KEY (`IdStaff`),
   KEY `NomCargo` (`NomCargo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -306,17 +324,31 @@ CREATE TABLE IF NOT EXISTS `staff` (
 DROP TABLE IF EXISTS `tienda`;
 CREATE TABLE IF NOT EXISTS `tienda` (
   `IdProducto` int(11) NOT NULL AUTO_INCREMENT,
-  `NombreProducto` varchar(200) NOT NULL,
-  `NombreCategoria` varchar(100) NOT NULL,
-  `FotoProducto` varchar(200) NOT NULL,
+  `FotoProducto` varchar(100) NOT NULL,
+  `NombreProducto` varchar(100) NOT NULL,
   `CodProducto` varchar(50) NOT NULL,
-  `EstadoProducto` varchar(100) NOT NULL,
+  `NombreCategoria` varchar(50) NOT NULL,
   `Stock` int(11) NOT NULL,
-  `DescrProducto` int(11) NOT NULL,
-  `PrecioMoneda` decimal(10,0) NOT NULL,
+  `EstadoProducto` varchar(50) NOT NULL,
+  `DescrProducto` varchar(500) NOT NULL,
+  `PrecioMoneda` int(11) NOT NULL,
   PRIMARY KEY (`IdProducto`),
-  KEY `NombreCategoria` (`NombreCategoria`),
-  KEY `EstadoProducto` (`EstadoProducto`)
+  KEY `EstadoProducto` (`EstadoProducto`),
+  KEY `NombreCategoria` (`NombreCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `vista`
+--
+
+DROP TABLE IF EXISTS `vista`;
+CREATE TABLE IF NOT EXISTS `vista` (
+  `IdStaff` int(11) NOT NULL,
+  `Modo` varchar(100) NOT NULL,
+  KEY `IdStaff` (`IdStaff`),
+  KEY `Modo` (`Modo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -327,69 +359,85 @@ CREATE TABLE IF NOT EXISTS `tienda` (
 -- Filtros para la tabla `adquisicion`
 --
 ALTER TABLE `adquisicion`
-  ADD CONSTRAINT `adquisicion_ibfk_1` FOREIGN KEY (`IdProducto`) REFERENCES `tienda` (`IdProducto`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `adquisicion_ibfk_1` FOREIGN KEY (`IdProducto`) REFERENCES `tienda` (`IdProducto`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `avatar`
 --
 ALTER TABLE `avatar`
-  ADD CONSTRAINT `avatar_ibfk_1` FOREIGN KEY (`TipoGenero`) REFERENCES `genero` (`TipoGenero`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `avatar_ibfk_1` FOREIGN KEY (`TipoGenero`) REFERENCES `genero` (`TipoGenero`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `chat`
 --
 ALTER TABLE `chat`
-  ADD CONSTRAINT `chat_ibfk_1` FOREIGN KEY (`IdPlayer`) REFERENCES `registros` (`IdRegistro`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `chat_ibfk_1` FOREIGN KEY (`IdPlayer`) REFERENCES `players` (`IdPlayer`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `chatstaff`
 --
 ALTER TABLE `chatstaff`
-  ADD CONSTRAINT `chatstaff_ibfk_1` FOREIGN KEY (`Nombres`) REFERENCES `staff` (`Nombres`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `chatstaff_ibfk_1` FOREIGN KEY (`IdStaff`) REFERENCES `staff` (`IdStaff`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `navegacion`
+--
+ALTER TABLE `navegacion`
+  ADD CONSTRAINT `navegacion_ibfk_1` FOREIGN KEY (`ModoMenu`) REFERENCES `menu` (`ModoMenu`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `navegacion_ibfk_2` FOREIGN KEY (`IdStaff`) REFERENCES `staff` (`IdStaff`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `players`
 --
 ALTER TABLE `players`
-  ADD CONSTRAINT `players_ibfk_1` FOREIGN KEY (`IdPlayer`) REFERENCES `registros` (`IdRegistro`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `players_ibfk_2` FOREIGN KEY (`FotoPlayer`) REFERENCES `avatar` (`FotoAvatar`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `players_ibfk_3` FOREIGN KEY (`IdAdquisicion`) REFERENCES `adquisicion` (`IdAdquisicion`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `players_ibfk_4` FOREIGN KEY (`IdResultReto`) REFERENCES `resultreto` (`IdResultReto`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `players_ibfk_5` FOREIGN KEY (`IdResultPR`) REFERENCES `resultpr` (`IdResultPR`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `players_ibfk_1` FOREIGN KEY (`FotoPlayer`) REFERENCES `avatar` (`FotoAvatar`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `preguntas`
 --
 ALTER TABLE `preguntas`
-  ADD CONSTRAINT `preguntas_ibfk_1` FOREIGN KEY (`IdPlayer`) REFERENCES `registros` (`IdRegistro`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `preguntas_ibfk_2` FOREIGN KEY (`NomRespuesta`) REFERENCES `respuestas` (`NomRespuesta`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `preguntas_ibfk_3` FOREIGN KEY (`PaqMoneda`) REFERENCES `monedas` (`PaqMoneda`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `preguntas_ibfk_1` FOREIGN KEY (`IdPlayer`) REFERENCES `players` (`IdPlayer`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `preguntas_ibfk_3` FOREIGN KEY (`CantMoneda`) REFERENCES `monedas` (`CantMoneda`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `preguntas_ibfk_4` FOREIGN KEY (`IdRespuesta`) REFERENCES `respuestas` (`IdRespuesta`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `resultplayers`
+--
+ALTER TABLE `resultplayers`
+  ADD CONSTRAINT `resultplayers_ibfk_1` FOREIGN KEY (`IdPlayer`) REFERENCES `players` (`IdPlayer`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `resultplayers_ibfk_2` FOREIGN KEY (`IdResultPR`) REFERENCES `resultpr` (`IdResultPR`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `resultreto`
 --
 ALTER TABLE `resultreto`
-  ADD CONSTRAINT `resultreto_ibfk_1` FOREIGN KEY (`IdReto`) REFERENCES `retos` (`IdReto`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `resultreto_ibfk_1` FOREIGN KEY (`IdReto`) REFERENCES `retos` (`IdReto`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `retos`
 --
 ALTER TABLE `retos`
-  ADD CONSTRAINT `retos_ibfk_1` FOREIGN KEY (`PaqMoneda`) REFERENCES `monedas` (`PaqMoneda`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `retos_ibfk_1` FOREIGN KEY (`CantMoneda`) REFERENCES `monedas` (`CantMoneda`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `staff`
 --
 ALTER TABLE `staff`
-  ADD CONSTRAINT `staff_ibfk_1` FOREIGN KEY (`ModoVista`) REFERENCES `plataforma` (`ModoVista`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `staff_ibfk_2` FOREIGN KEY (`NomCargo`) REFERENCES `cargo` (`NomCargo`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `staff_ibfk_1` FOREIGN KEY (`NomCargo`) REFERENCES `cargo` (`NomCargo`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tienda`
 --
 ALTER TABLE `tienda`
-  ADD CONSTRAINT `tienda_ibfk_1` FOREIGN KEY (`EstadoProducto`) REFERENCES `estado` (`EstadoProducto`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `tienda_ibfk_2` FOREIGN KEY (`NombreCategoria`) REFERENCES `categoriaprod` (`NombreCategoria`) ON DELETE CASCADE ON UPDATE NO ACTION;
+  ADD CONSTRAINT `tienda_ibfk_1` FOREIGN KEY (`NombreCategoria`) REFERENCES `categoriaprod` (`NombreCategoria`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `tienda_ibfk_2` FOREIGN KEY (`EstadoProducto`) REFERENCES `estado` (`EstadoProducto`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `vista`
+--
+ALTER TABLE `vista`
+  ADD CONSTRAINT `vista_ibfk_1` FOREIGN KEY (`IdStaff`) REFERENCES `staff` (`IdStaff`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `vista_ibfk_2` FOREIGN KEY (`Modo`) REFERENCES `modovista` (`Modo`) ON DELETE NO ACTION ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

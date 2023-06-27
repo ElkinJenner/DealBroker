@@ -57,7 +57,6 @@ body.light_mode .color_d{
 body.light_mode .bline{
     border: 1px solid #f3f6fd;
 }
-
 .switch_content {
     margin-left: auto;
     width: 50px;
@@ -170,7 +169,8 @@ body.light_mode .bline{
 .nav_dashboard ul li:hover:nth-child(2) i{background: var(--color_secundary);}
 .nav_dashboard ul li:hover:nth-child(3) i{background: var(--color_tercer);}
 .nav_dashboard ul li:hover:nth-child(4) i{background: var(--color_cuarto);}
-.nav_dashboard ul li:hover:nth-child(5) i{background: var(--color_secundary);}
+.nav_dashboard ul li:hover:nth-child(5) i{background: var(--color_quinto);}
+.nav_dashboard ul li:hover:nth-child(6) i { background: var(--color_primary);}
 
 .bline{
     border: 1px solid var(--color_default);

@@ -1,5 +1,6 @@
 <?php
 require_once "../action/ValidarSesion.php";
+require_once "../action/conexion.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -41,7 +42,7 @@ require_once "../action/ValidarSesion.php";
                             </article>
 
                             <div class="table_item perfil_admin m_c">
-                                <img src="../img/person2.jpg">
+                                <img src="../upload/img/person2.jpg">
                                 <h6 class="color_w">John Marcos Valderrama</h6>
                             </div>
                         </div>
