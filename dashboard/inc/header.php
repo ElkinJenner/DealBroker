@@ -24,7 +24,7 @@
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
                         <ul>
-                            <li><a href="cuenta.php?&user=<?php echo $_SESSION['usuario']; ?>"><i class="bx bx-user"></i> Mi Cuenta</a></li>
+                            <li><a href="cuenta.php">"><i class="bx bx-user"></i> Mi Cuenta</a></li>
                             <li><a href=""><i class="bx bx-wrench"></i> Configuración</a></li>
                             <li><a href="../action/LogoutAdmin.php"><i class="bx bx-power-off"></i> Cerrar Sesión</a></li>
                         </ul>
