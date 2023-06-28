@@ -3,7 +3,7 @@ require_once "../action/ValidarSesion.php";
 require_once "../action/conexion.php";
 ?>
 <?php
-$UserStaff = $_GET["user"];
+$UserStaff = $_SESSION["usuario"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
