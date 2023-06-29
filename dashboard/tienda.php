@@ -26,73 +26,74 @@ require_once "../action/conexion.php";
                         <button class="bg_verify color_w" id="open"><i class="bx bx-plus"></i></button>
                     </article>
                     <aside class="column">
+                        <!--Product Item-->
                         <div class="column-3">
-                            <article class="product_item">
-                                <figure class="bgcolor_1">
-                                    <img src="../upload/img/products/playera.png">
+                            <article class="product_item bg_def">
+                                <figure class="bg_def">
+                                    <img src="../upload/img/products/computadora.png">
                                 </figure>
-                                <div class="acciones"><i class="color_w bx bx-dots-vertical"></i></div>
-                                <div class="description bg_def">
-                                    <h5 class="f_weight t_c color_w"> Playera Trust me</h5>
+                                 <!--Btn Acciones product-->
+                                <div class="acciones" id="acciones"><i class="color_w bx bx-dots-vertical"></i></div>
+                                <!--Product Acciones-->
+                                <div class="product_action hidden bg_def" id="product_action">
+                                    <ul>
+                                        <li><a href="product_edit"><i class="color_w bx bx-pencil"></i> Editar</a></li>
+                                        <li><a href="product_edit"><i class="color_w bx bx-trash"></i> Eliminar</a></li>
+                                    </ul>
+                                </div>
+                                <div class="description">
+                                    <h5 class="t_t f_weight color_w"> Computadora 16x16</h5>
                                     <div class="precio_products">
                                          <img src="../img/icons/moneda_icon.png"> 
-                                        <h6 class="f_weight  color_w">
-                                           15 monedas
-                                        </h6>
+                                        <small class="f_weight color_w">15 mon</small>
                                     </div>
                                 </div>
                             </article>
                         </div>
 
                         <div class="column-3">
-                            <article class="product_item">
-                                <figure class="bgcolor_3">
-                                    <img src="../upload/img/products/facemask.png">
+                            <article class="product_item bg_def">
+                                <figure class="bg_def">
+                                    <img src="../upload/img/products/central.png">
                                 </figure>
-                                <div class="acciones"><i class="color_w bx bx-dots-vertical"></i></div>
-                                <div class="description bg_def">
-                                    <h5 class="f_weight t_c color_w"> Mascarilla anti-covid</h5>
+                                <!--Btn Acciones product-->
+                                <div class="acciones" id="acciones"><i class="color_w bx bx-dots-vertical"></i></div>
+                                <!--Product Acciones-->
+                                <div class="product_action hidden bg_def" id="product_action">
+                                    <ul>
+                                        <li><a href="product_edit"><i class="color_w bx bx-pencil"></i> Editar</a></li>
+                                        <li><a href="product_edit"><i class="color_w bx bx-trash"></i> Eliminar</a></li>
+                                    </ul>
+                                </div>
+                                <div class="description">
+                                    <h5 class="f_weight t_t color_w">Central Park</h5>
                                     <div class="precio_products">
                                          <img src="../img/icons/moneda_icon.png"> 
-                                        <h6 class="f_weight  color_w">
-                                           5 monedas
-                                        </h6>
+                                        <small class="f_weight color_w">30000 mon</small>
                                     </div>
                                 </div>
                             </article>
                         </div>
 
                         <div class="column-3">
-                            <article class="product_item">
-                                <figure class="bgcolor_4">
+                            <article class="product_item bg_def">
+                                <figure class="bg_default">
                                     <img src="../upload/img/products/house.png">
                                 </figure>
-                                <div class="acciones"><i class="color_w bx bx-dots-vertical"></i></div>
-                                <div class="description bg_def">
-                                    <h5 class="f_weight t_c color_w"> Casa - Propiedad</h5>
-                                    <div class="precio_products">
-                                         <img src="../img/icons/moneda_icon.png"> 
-                                        <h6 class="f_weight  color_w">
-                                           20000 monedas
-                                        </h6>
-                                    </div>
+                                <!--Btn Acciones product-->
+                                <div class="acciones" id="acciones"><i class="color_w bx bx-dots-vertical"></i></div>
+                                <!--Product Acciones-->
+                                <div class="product_action hidden bg_def" id="product_action">
+                                    <ul>
+                                        <li><a href="product_edit"><i class="color_w bx bx-pencil"></i> Editar</a></li>
+                                        <li><a href="product_edit"><i class="color_w bx bx-trash"></i> Eliminar</a></li>
+                                    </ul>
                                 </div>
-                            </article>
-                        </div>
-
-                        <div class="column-3">
-                            <article class="product_item">
-                                <figure class="bgcolor_1">
-                                    <img src="../upload/img/products/playera.png">
-                                </figure>
-                                <div class="acciones"><i class="color_w bx bx-dots-vertical"></i></div>
-                                <div class="description bg_def">
-                                    <h5 class="f_weight t_c color_w"> Playera Trust me</h5>
+                                <div class="description">
+                                    <h5 class="f_weight t_t color_w"> Propiedad Zona Sur</h5>
                                     <div class="precio_products">
-                                         <img src="../img/icons/moneda_icon.png"> 
-                                        <h6 class="f_weight  color_w">
-                                           15 monedas
-                                        </h6>
+                                        <img src="../img/icons/moneda_icon.png"> 
+                                        <small class="f_weight  color_w">20000 mon</small>
                                     </div>
                                 </div>
                             </article>

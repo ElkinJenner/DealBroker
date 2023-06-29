@@ -31,10 +31,10 @@ require_once "../action/conexion.php";
                     <!--Ventana Modal-->
                     <div class="modal_d bg_panel hidden" id="modal">
                         <article class="color_def title_dashboard">
-                        <h6 class="f_weight font_m color_w">STAFF</h6>
-                        <code class="f_weight font_m"><span class="bx bx-dice-2"></span> STAFF / DASHBOARD</code>
-                         <button class="bg_danger color_w" id="close"><i class="bx bx-x"></i></button>
-                    </article>
+                            <h6 class="f_weight font_m color_w">STAFF</h6>
+                            <code class="f_weight font_m"><span class="bx bx-dice-2"></span> STAFF / DASHBOARD</code>
+                            <button class="bg_danger color_w" id="close"><i class="bx bx-x"></i></button>
+                        </article>
                         <form class="form_register form_login" method="POST" enctype="multipart/form-data" action="../action/registrarStaff.php" methode>
                             <article class="column">
 

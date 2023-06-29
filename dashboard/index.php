@@ -29,7 +29,7 @@ require_once "../action/conexion.php";
                         <div class="column-6">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h6 class="font_d f_weight color_w">GRÁFICA DE USUARIOS ( PLAYERS )</h6>
+                                    <h6 class="font_m f_weight color_w">GRÁFICA DE USUARIOS ( PLAYERS )</h6>
                                 </div><br>
                                <canvas id="linechart"></canvas>
                             </article>
@@ -37,7 +37,7 @@ require_once "../action/conexion.php";
                         <div class="column-6">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h6 class="font_d f_weight color_w">PLAYERS TOTAL</h6>
+                                    <h6 class="font_m f_weight color_w">PLAYERS TOTAL</h6>
                                 </div><br>
                                 <canvas id="barchart"></canvas>
                             </article>
@@ -45,7 +45,7 @@ require_once "../action/conexion.php";
                         <div class="column-4">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h6 class="font_d f_weight color_w"> MONEDAS TOTALES</h6>
+                                    <h6 class="font_m f_weight color_w"> MONEDAS TOTALES</h6>
                                 </div>
                                 <div class="monedas_totales">
                                          <img class="img100 m_c" src="../img/icons/monedas_icon.png"> 
@@ -64,7 +64,7 @@ require_once "../action/conexion.php";
                         <div class="column-8">
                             <article class="widgets bg_def">
                                 <div class="widgets_head">
-                                    <h6 class="font_d f_weight color_w">RANKING PLAYERS</h6>
+                                    <h6 class="font_m f_weight color_w">RANKING PLAYERS</h6>
                                 </div>
                                 <div class="table_item perfil_admin m_c">
                                     <img src="../upload/img/person2.jpg">

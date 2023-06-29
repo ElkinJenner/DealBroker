@@ -2,7 +2,7 @@
     <div class="container container_dashboard">
         <article class="header_contender-left">
             <div class="contender_buscador">
-                <input type="search" placeholder="Buscar">
+                <input type="search" id="buscar">
             </div>
         </article>
 
@@ -20,15 +20,21 @@
 
                         while($row=mysqli_fetch_assoc($resultado)){ ?>
                         <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>">
-                         <?php } mysqli_free_result($resultado);?>
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
+                        
                         <ul>
-                            <li><a href="cuenta.php">"><i class="bx bx-user"></i> Mi Cuenta</a></li>
+                            <figure class="perfil_admin m_c">
+                                <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>">
+                                <small class="color_w"><?php echo $row['Nombres'];?><br>
+                                <div class="small">@<?php echo $row['Usuario'];?></div></small>
+                            </figure>
+                            <li><a href="cuenta.php"><i class="bx bx-user"></i> Mi Cuenta</a></li>
                             <li><a href=""><i class="bx bx-wrench"></i> Configuración</a></li>
                             <li><a href="../action/LogoutAdmin.php"><i class="bx bx-power-off"></i> Cerrar Sesión</a></li>
                         </ul>
                     </div>
+                    <?php } mysqli_free_result($resultado);?>
                 </li>
             </ul>
          </article>

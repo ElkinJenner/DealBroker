@@ -54,9 +54,6 @@ body.light_mode .bg_chat, body.light_mode .bg_chat::placeholder{
 body.light_mode .color_d{
     color: var(--color_white);
 }
-body.light_mode .bline{
-    border: 1px solid #f3f6fd;
-}
 .switch_content {
     margin-left: auto;
     width: 50px;
@@ -82,7 +79,9 @@ body.light_mode .bline{
     transition: transform 0.5s, background-color 0.5s;
     will-change: transform;
 }
-
+/*-------
+1. PANEL DE ADMINISTRACIÓN
+-------*/
 .main_dashboard{
     display: flex;
 }
@@ -129,8 +128,7 @@ body.light_mode .bline{
     margin: 4rem 1rem 1rem 0.5rem;
 }
 .nav_dashboard ul code{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0.5rem;
     display: block;
 }
 .nav_dashboard ul li{
@@ -140,13 +138,9 @@ body.light_mode .bline{
 .nav_dashboard ul li a{
     display: flex;
     cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #b0b1c2;
     padding: 0.2rem;
-}
-.nav_dashboard ul li:hover{
-    background: var(--color_default);
-    border-radius: 0.45rem;
 }
 .nav_dashboard ul li a:hover{
     color: var(--color_white);
@@ -171,22 +165,17 @@ body.light_mode .bline{
 .nav_dashboard ul li:hover:nth-child(4) i{background: var(--color_cuarto);}
 .nav_dashboard ul li:hover:nth-child(5) i{background: var(--color_quinto);}
 .nav_dashboard ul li:hover:nth-child(6) i { background: var(--color_primary);}
-
-.bline{
-    border: 1px solid var(--color_default);
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
+/*-------
+2. TITULOS Y COMPONENTES DE HEADER DEL PANEL
+-------*/
 .title_dashboard{
     padding: 0rem 0rem 1rem 1rem;
-    margin: 0rem 0rem 0.5rem;
+    margin: 0rem 0rem 0.2rem;
     display: grid;
     position: relative;
     z-index: 1;
 }
-.title_dashboard code{
-    color: #565674;
-}
+.title_dashboard code{color: #565674;}
 .title_dashboard button{
     position: absolute;
     right: 0;
@@ -197,6 +186,10 @@ body.light_mode .bline{
 .perfil_admin{
     display: inline-flex;
     cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
+}
+.dropdow_menu .perfil_admin{
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid#5969818c;
 }
 .perfil_admin img {
     width: 45px;
@@ -342,8 +335,10 @@ body.light_mode .bline{
 .modal_d {
     position: absolute;
     top: 0;
+    max-width: 98%;
     z-index: 1;
     min-height: 100vh;
+    transition: transform 1s ease-out;
 }
 .table{
     padding: 0.8rem;
@@ -380,22 +375,22 @@ body.light_mode .bline{
     right: 20px;
     transform: scale(1);
     margin: 0rem 0.2rem;
-    box-shadow: 0 0 1.25rem rgb(31 45 61 / 9%);
-    padding: 0;
-    border-radius: 0.5rem 0.5rem 0.7em 0.7em;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 0.4rem 0.4rem 0.6em 0.6em;
     z-index: 100;
+    transition: transform 1s ease-out;
 }
 .dropdow_menu ul {
     display: grid;
     margin: 0.4rem;
     transition: all 0.3s ease-in-out;
 }
-.dropdow_menu ul li:last-child{
-border-top: 1px solid #5969818c;
-}
 .dropdow_menu ul li a{
-    font-size: 1.05rem;
-    font-family: var(--font_dashboard);
+    font-size: 1.0rem;
+}
+.dropdow_menu ul li:hover {
+    background: var(--color_dhover);
 }
 .dropdow_sidebar{
     position: absolute;
@@ -411,33 +406,60 @@ border-top: 1px solid #5969818c;
     font-size: 2.4rem;
 }
 .product_item{
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.4rem;
+    padding: 0.5rem;
     position: relative;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 .acciones{
     position: absolute;
     cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
     top: 0;
     right: 0;
-    width: 40px;
-    margin: 1rem;
+    width: 30px;
+    margin: 0.5rem;
     font-size: 2rem;
+    background: var(--color_default);
+}
+.acciones:hover{
+    background: #212e48;
 }
 .product_item figure{
-    box-shadow: 0 0 0.95rem rgba(237, 241, 245, 0.308);
-    border-radius: 3rem 3rem 0rem 0rem;
+    margin: 0.4rem;
+    border-radius: 1rem;
 }
 .description{
-    padding: 0.5rem 0rem 2rem;
-    border-radius: 0rem 0rem 2rem 2rem;
+    padding: 0.5rem 1rem 1rem;
 }
 .precio_products{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
 }
 .precio_products img{
-    width: 30px;
+    width: 22px;
+    height: 22px;
     margin-right: 0.4rem;
+}
+.product_action{
+    position: absolute;
+    top: 0%;
+    right: 30px;
+    transform: scale(1);
+    margin: 0rem 0.2rem;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 0.4rem 0.4rem 0.6em 0.6em;
+    transition: transform 1s ease-out;
+}
+.product_action ul li{
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+.product_action ul li a{
+    font-size: 1.1rem;
+    color: var(--color_white);
+}
+.product_action ul li:hover{
+    background: var(--color_dhover);
 }

@@ -58,6 +58,7 @@
     --color_panel: #151521;
     --color_navpanel: #191928;
     --color_subpanel: #1f2937;
+    --color_dhover: #2b2b40;
     --color_chat: #29293c;
     --color_inputs: #212130;
     --color_default: #1f1f2f;
@@ -176,8 +177,10 @@ h5 {font-size: 1.8rem; line-height: 2.2rem; font-weight: 100;}
 h6 {font-size: 1.45rem;}
 p {font-size: 1.5rem; letter-spacing: 1px;}
 small {font-size: 1.3rem; font-weight: 100;}
+.small{font-size: 1.15rem;}
 code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .title_g{font-size: 10rem;}
+.t_t{text-transform: uppercase;}
 
 .font_m {font-family: var(--font_m);}
 .font_s {font-family: var(--font_s); font-weight: 100;}
@@ -362,11 +365,13 @@ input[type="search"]{
     border: none;
     flex: 1;
     outline: none;
-    padding: 0.7rem;
+    padding: 0.4rem;
     font-size: 1.4rem;
     font-family: var(--font_m);
-    border-radius: 1rem;
-    background-color: var(--color_default);
+    font-weight: 100;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    border: 1px solid var(--color_chat);
     color: var(--color_white);
     background-image: url(../img/icons/buscador_icono.png);
     background-size: 22px;
@@ -374,7 +379,7 @@ input[type="search"]{
     background-position: 96%;
 }
 input[type="search"]::placeholder{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 100;
     color: var(--color_sext);
 }
