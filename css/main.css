@@ -8,11 +8,11 @@
 /*-------
 1. HEADERS
 -------*/
-.header_sticky {position: sticky; width: 100%; top: 0; padding-bottom: 1rem;}
+.header_sticky {position: sticky; width: 100%; top: 0; padding-bottom: 0.5rem; background: var(--color_body);}
 .header_contender-left{float: left;}
 .header_contender-right {float: right;}
 .header_contender-right ul {display: flex;}
-.header_contender-right ul {margin-top:2rem; display: flex;}
+.header_contender-right ul {margin-top:1rem; display: flex;}
 .header_contender-right ul li a {
     padding: 0rem 0.5rem 0.2rem;
     margin: 0.5rem;
@@ -30,7 +30,7 @@
     margin-right: 1rem;
 }
 .navegacion_contender_right{
-    cursor: pointer;
+    cursor: var(--cursor_hand);
     margin-top: 2rem;
     float: right;
     border-radius: 10%;
@@ -202,7 +202,7 @@
     position: absolute;
     right: 1em;
     top: 1em;
-    cursor: pointer;
+    cursor: var(--cursor_hand);
 }
 
 .content_item_faq {
@@ -291,8 +291,18 @@
     margin-bottom: 2rem;
 }
 .contender_buscador {
-    min-width: 600px;
     margin-top: 2rem;
+    min-width: 500px;
+    width: 100%;
+    display: flex;
+    background: var(--color_input);
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    font-family: var(--font_dashboard);
+}
+.btn_search {
+    padding: 10px 10px 10px 15px;
+    color: var(--color_menu);
 }
 .contender_dashboard{
     margin-top: 0.5rem;
@@ -330,7 +340,8 @@
     border-radius: 2rem;
 }
 .article_staff h5 {
-    font-size: 1.48rem;
+    font-size: 1.45rem;
+    text-transform: uppercase;
 }
 .redes_s{
     margin-top: 1rem;
@@ -347,7 +358,6 @@
     width: 100%;
     max-width: 450px;
     font-weight: 100;
-    font-family: var(--font_m);
 }
 .form_login small {
     color: var(--color_labels);
@@ -367,19 +377,19 @@
 .form_login input[type="email"],
 .form_login input[type="password"],
 .form_login button {
+    font-family: var(--font_dashboard);
     width: 100%;
     margin: 0.3em 0;
     border-radius: 0.3rem;
     padding: 0.5em 1em 0.3em 1em;
     color: var(--color_labels);
-    border: 2px solid var(--color_inputs);
-    background: var(--color_inputs);
+    border: 2px solid var(--color_input);
     font-size: 1.5rem;
 }
 .form_login input[type="text"]:focus,
 .form_login input[type="email"]:focus,
 .form_login input[type="password"]:focus{
-    background: #363650;
+    /*background: #363650;*/
     color: #b0b1c2;
 }
 .form_login button {
@@ -469,7 +479,7 @@ footer {
     font-family: var(--font_m);
     height: 62px;
     padding: 1rem;
-    cursor: pointer;
+    cursor: var(--cursor_hand);
 }
 .copyright{
     border-top: 2px solid hsla(0, 0%, 100%, 0.1);

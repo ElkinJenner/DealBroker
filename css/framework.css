@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'Air Semibold';
-    src: url('../fonts/Air-Semibold.ttf') format('truetype');
+    src: url('../fonts/Calculative.ttf') format('truetype');
     font-style: normal;
     font-weight: 100;
 }
@@ -23,20 +23,15 @@
     font-weight: 100;
 }
 @font-face {
-    font-family: 'ACTexto-Medium';
-    src: url('../fonts/ACTexto-Medium.otf') format('opentype');
+    font-family: 'ACTexto Medium';
+    src: url('../fonts/ACTexto-Medium.otf') format('truetype');
     font-style: normal;
-    font-weight: 100;
-}
-@font-face {
-    font-family: 'Roboto Medium';
-    src: url('../fonts/Roboto-Medium.otf') format('truetype');
-    font-style: normal;
-    font-weight: 100;
+    font-weight: normal;
 }
 
 
 :root {
+    /*-- Colores --*/
     --color_white:#fff;
     --color_gris: #CCC;
     --color_dark: #000;
@@ -50,24 +45,41 @@
     --color_quin: #ffd452;
     --color_sext:#aeafaf;
     --color_sep: #62aea4;
-    --color_primary: #ff7551;
-    --color_secundary: #569aff;
-    --color_tercer: #6c5ecf;
-    --color_cuarto: #ff6a8f;
-    --color_quinto: #50cd89;
+
     --color_panel: #151521;
     --color_navpanel: #191928;
     --color_subpanel: #1f2937;
     --color_dhover: #2b2b40;
     --color_chat: #29293c;
-    --color_inputs: #212130;
+    --color_input: #212130;
     --color_default: #1f1f2f;
     --color_labels: #565674;
+
+    --color_primary: #ff7551;
+    --color_secondary: #569aff;
+    --color_tercer: #6c5ecf;
+    --color_cuarto: #ff6a8f;
+    --color_quinto: #50cd89;
+
+    --color_body: #11101d;
+    --color_sidebar: #1e1e2d;
+    --color_menu: #b8b7bb;
+    --color_submenu: #1f1f2f;
+    --color_input: #212130;
+    --color_border: #282833;
+
+    
+    /*-- Fonts --*/
+    --font_body: 'Air Semibold';
+    --font_dashboard: 'ACTexto Medium';
     --font_m: 'TT Marxiana Trial Grotesque';
     --font_s: 'TT Firs Neue Trial Bold';
-    --font_t: 'Air Semibold';
     --font_r: 'Ds-Digit';
-    --font_dashboard: 'ACTexto-Medium';
+
+    /*-- Cursors --*/
+    --cursor_default: url(../img/icons/cursor_default.svg) 10 2, default;
+    --cursor_hand: url(../img/icons/cursor_hand.svg) 10 2, auto;
+    --cursor_text: url(../img/icons/cursor4.png) 10 2, text;
 }
 *,
 ::after,
@@ -102,10 +114,10 @@
 GENERALES
 ------ */
 body {
-    font-family: var(--font_t);
+    font-family: var(--font_body);
     position: relative;
     background: var(--color_main);
-    cursor: url(../img/icons/cursor_default.svg) 10 2, default;
+    cursor: var(--cursor_default);
 }
 header {
     width: 100%;
@@ -134,7 +146,7 @@ section{
 .underline{text-decoration: underline;}
 li{list-style: none;}
 a{text-decoration: none;
-    cursor: url(../img/icons/cursor_hand.svg) 10 2, auto;
+    cursor: var(--cursor_hand);
     color: var(--color_sec);
     font-family: var(--font_m);
     text-transform: uppercase;
@@ -207,6 +219,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .color_sx{color: var(--color_sext);}
 .color_sp{ color: var(--color_sep);}
 
+.bg_none{background: transparent!important;}
 .bg_w {background: var(--color_white);}
 .bg_g {background: var(--color_gris);}
 .bg_d {background: var(--color_dark);}
@@ -236,10 +249,11 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bg_p2{background: #2e8fdc!important;}
 .bg_p3{background: #868686!important;}
 .bg_p4{background: #bfb361!important;}
-.bgcolor_1{background: var(--color_primary)!important;}
-.bgcolor_2{background: var(--color_secundary)!important;}
-.bgcolor_3{background: var(--color_tercer)!important;}
-.bgcolor_4{background: var(--color_cuarto)!important;}
+.bg_primary{background: var(--color_primary)!important;}
+.bg_secondary{background: var(--color_secondary)!important;}
+.bg_tercer{background: var(--color_tercer)!important;}
+.bg_cuarto{background: var(--color_cuarto)!important;}
+.bg_quinto{background: var(--color_quinto) !important;}
 .bgcolor_panel{background: var(--color_panel)!important;}
 .bgcolor_subpanel{background: var(--color_subpanel)!important;}
 
@@ -266,15 +280,15 @@ COLUMNAS
 .column-2 {width: 16.666667%;}
 .column-1 {width: 8.333333333333334%;}
 
-.subcolumn{
+.column_2{
     display: flex;
     flex-flow: row wrap;
 }
-.subcolumn .left{
+.column_2 .left{
     float: left;
     width: 50%;
 }
-.subcolumn .right {
+.column_2 .right {
     float: right;
     width: 50%;
 }
@@ -352,36 +366,26 @@ textarea{
     width: 100%;
     border: 1px solid;
     border-radius: 0.3rem;
-    background: transparent;
+    background: var(--color_default);
     padding: 1rem;
     font-family: var(--font_m);
     font-size: 30px;
     padding-left: 1.8rem;
     margin-bottom: 1rem;
-    cursor: url(../img/icons/cursor4.png) 10 2, text;
+    cursor: var(--cursor_text);
 }
 input[type="search"]{
-    width: 100%;
+    background: inherit;
+    color: var(--color_menu);
+    width: 90%;
     border: none;
-    flex: 1;
+    font: inherit;
     outline: none;
-    padding: 0.4rem;
-    font-size: 1.4rem;
-    font-family: var(--font_m);
-    font-weight: 100;
-    border-radius: 0.4rem;
-    background-color: transparent;
-    border: 1px solid var(--color_chat);
-    color: var(--color_white);
-    background-image: url(../img/icons/buscador_icono.png);
-    background-size: 22px;
-    background-repeat: no-repeat;
-    background-position: 96%;
 }
 input[type="search"]::placeholder{
     font-size: 1.3rem;
     font-weight: 100;
-    color: var(--color_sext);
+    color: var(--color_menu);
 }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,

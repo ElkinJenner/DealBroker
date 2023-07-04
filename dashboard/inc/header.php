@@ -1,8 +1,11 @@
-<header class="header_sticky bg_panel">
+<header class="header_sticky">
     <div class="container container_dashboard">
         <article class="header_contender-left">
-            <div class="contender_buscador">
-                <input type="search" id="buscar">
+          <div class="contender_buscador">
+                <div class="btn_search">
+                    <i class="bx bx-search"></i>
+                </div>
+                <input type="search" id="buscar" placeholder="Buscar">
             </div>
         </article>
 
@@ -22,7 +25,6 @@
                         <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>">
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
-                        
                         <ul>
                             <figure class="perfil_admin m_c">
                                 <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>">

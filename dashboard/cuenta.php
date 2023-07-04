@@ -27,7 +27,7 @@ $UserStaff = $_SESSION["usuario"];
                         <h6 class="f_weight font_m color_w">MI CUENTA</h6>
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> MI CUENTA / DASHBOARD</code>
                     </article>
-                    <div class="widgets">
+                    <div class="widgets bg_none">
                         <form class="form_register form_login" action="" method="POST">
                             <article class="column">
                             <?php
