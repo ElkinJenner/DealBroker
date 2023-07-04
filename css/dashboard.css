@@ -49,6 +49,7 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
     transition: all .3s;
+    /*box-shadow: var(--box_shadow);*/
     border-right: 1px solid var(--color_border);
 }
 .wrapper_max{
