@@ -20,7 +20,12 @@ require_once "../action/conexion.php";
             <?php include "inc/header.php" ?>
             <main class="contender_dashboard">
                 <div class="container container_dashboard">
-                    <aside class="column">
+                     <!--Titulo panel-->
+                    <article class="color_def title_dashboard">
+                        <h6 class="f_weight font_m color_w">MENSAJES</h6>
+                        <code class="f_weight font_m"><span class="bx bx-home-alt"></span> MENSAJES / DASHBOARD</code>
+                    </article>
+                    <aside class="column_2">
                         <div class="column-12">
                         <?php require_once "modules/chat_m.php" ?>
                     </div>
