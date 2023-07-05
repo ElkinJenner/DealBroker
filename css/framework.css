@@ -359,6 +359,7 @@ label>i:before {
 }
 input[type="text"],
 input[type="email"],
+input[type="file"],
 input[type="password"],
 input[type="url"],
 select,
@@ -394,6 +395,47 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
+.file_content{
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 96%;
+    height: 200px;
+    border: 2px dashed var(--color_border);
+    border-radius: 0.5rem;
+  }
+.file-select {
+    position: absolute;
+    width: 150px;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: var(--cursor_hand);
+  }
+  
+  .file-select::before {
+    background-color: var(--color_secondary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: 'Seleccionar';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+  }
+
 select{
 cursor: pointer;
 }
