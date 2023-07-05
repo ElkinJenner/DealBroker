@@ -39,6 +39,15 @@ require_once "../action/conexion.php";
                             <article class="column">
 
                             <div class="column-6">
+                                <small class="color_w">Fotografia</small>
+                                <article class="file_content">
+                                    <div class="file-select" id="FotoPerfil">
+                                        <input type="file" name="FotoPerfil">
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="column-6">
                                 <small class="color_w">Nombres Completos</small>
                                 <input type="text" name="Nombres">
                             </div>
