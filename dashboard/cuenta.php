@@ -48,6 +48,9 @@ $UserStaff = $_SESSION["usuario"];
 
                                 <small class="color_w">Usuario</small>
                                 <input type="text" value="<?php echo $row['Usuario'];?>">
+
+                                <small class="color_w">Email</small>
+                                <input type="text" value="<?php echo $row['Email'];?>">
                                 
                             </div>
                             
