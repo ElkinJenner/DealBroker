@@ -30,21 +30,21 @@ require_once "../action/conexion.php";
                         <div class="left">
                             <aside class="column">
                                 <div class="column-6">
-                                    <article class="widgets">
+                                    <article class="widgets widgets_h">
                                         <img src="../img/a1.jpg">
                                     </article>
 
-                                    <article class="widgets">
+                                    <article class="widgets widgets_h">
                                         <img src="../img/a2.jpg">
                                     </article>
                                 </div>
 
                                 <div class="column-6">
-                                    <article class="widgets">
+                                    <article class="widgets widgets_h">
                                        <img src="../img/a3.jpg">
                                     </article>
 
-                                     <article class="widgets">
+                                     <article class="widgets widgets_h">
                                        <img src="../img/a4.jpg">
                                     </article>
 
@@ -52,7 +52,7 @@ require_once "../action/conexion.php";
                             </aside>
                         </div>
                         <div class="right">
-                            <article class="widgets last_child bg_def">
+                            <article class="widgets widgets_h last_child">
                                 <img src="../img/b1.jpg">
                             </article>
                         </div> 

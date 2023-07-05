@@ -240,7 +240,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bg_sx{background: var(--color_sext);}
 .bg_sp{background: var(--color_sep);}
 .filter_i{filter: invert(1);}
-
+.border_n{border: none!important;}
 
 /*------Colores de Dashboarad ---*/
 
@@ -385,7 +385,7 @@ input[type="search"]{
     outline: none;
 }
 input[type="search"]::placeholder{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 100;
     color: var(--color_menu);
 }
@@ -403,39 +403,26 @@ input[type="search"]::-webkit-search-results-decoration {
     height: 200px;
     border: 2px dashed var(--color_border);
     border-radius: 0.5rem;
+    display: grid;
+    align-content: center;
+    text-align: center;
   }
-.file-select {
+  .file_content p{
+    color: var(--color_gris);
+  }
+  .file_content span{
+    color: var(--color_secondary);
+  }
+.file_content input[type="file"] {
     position: absolute;
-    width: 150px;
-    margin: 0 auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    cursor: var(--cursor_hand);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        opacity: 0;
+        cursor: var(--cursor_hand);
   }
-  
-  .file-select::before {
-    background-color: var(--color_secondary);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    content: 'Seleccionar';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  
-  .file-select input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-  }
-
 select{
 cursor: pointer;
 }
@@ -503,6 +490,8 @@ ESPACIOS Y TAMAÑOS
 ------ */
 .p_1{padding: 1rem;}
 .p_2{padding: 2rem;}
+.mt_cero{margin-top: 0rem!important;}
+.p_cero{padding: 0rem!important;}
 .pt_cero{padding-top: 0rem!important;}
 .pt_5{padding-top: 5rem;}
 .pt_10{padding-top: 10rem;}

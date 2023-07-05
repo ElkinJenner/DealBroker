@@ -154,14 +154,16 @@ body{
     text-transform: capitalize;
 }
 .widgets{
-    padding: 2rem;
     margin-right: 1.5rem;
     margin-bottom:1.5rem;
     border-radius: 0.5rem;
     background: var(--color_sidebar);
-    height: 100%;
 }
-.column .widgets{
+.widgets_h{
+height: 100%;
+padding: 1rem;
+}
+.column .widgets_h{
     height: 48.6%;
 }
 .widgets.last_child{
@@ -170,7 +172,7 @@ body{
 .widgets_head{
     display: flex;
     align-items: center;
-    padding: 0.5rem 0rem 1rem 0rem;
+    padding: 1rem;
     top: 0;
     left: 0;
     z-index: 1;
@@ -180,7 +182,7 @@ body{
     align-items: center;
     overflow-y: auto;
     height: 420px;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 .widgets_body::-webkit-scrollbar-track {
     background: var(--color_default);
@@ -188,7 +190,12 @@ body{
 .widgets_footer{
     display: flex;
     height: 90px;
+    padding: 1rem;
+    margin-top: 2rem;
 }
+/*-------
+3. CHAT ONLINE Y MENSAJERIA
+-------*/
 .chat_widgets{
     display: flex;
     align-items: center;
@@ -200,16 +207,10 @@ body{
 .chat_widgets input{
     width: 100%;
     border: 0;
-    border-radius: 20px;
     font-size: 18px;
-    margin-left: -10px;
-    padding: 12px 40px;
-    font-weight: 500;
     font-family: var(--font_dashboard);
-    background-image: url(../img/icons/chat_icono.svg);
-    background-repeat: no-repeat;
-    background-size: 24px;
-    background-position: 8px;
+    height: 90px;
+    color: var(--color_white);
 }
 .chat_widgets input::placeholder{
     font-size: 18px;
@@ -223,11 +224,19 @@ body{
     background-position: center;
     width: 20px;
     height: 20px;
-    background-color: var(--color_secundary);
+    background-color: var(--color_secondary);
     padding: 12px;
     border-radius: 50%;
     right: 16px;
-    top: 25px;
+    top: -5px;
+}
+li.mensajes_chat{
+    margin: 0;
+    padding: 1rem;
+}
+li.mensajes_chat:hover{
+background: var(--color_chat);
+cursor: var(--cursor_hand);
 }
 .mensajes_chat{
     display: flex;
@@ -258,6 +267,12 @@ body{
     border-radius: 50%;
     object-fit: cover;
 }
+.mensaje_chat_lista{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 80%;
+}
 .mensajes_chat_word{
     line-height: 1.4em;
     display: block;
@@ -265,7 +280,7 @@ body{
     border-radius: 1rem;
     width: 100%;
 }
-.mensajes_chat_word h6,
+.mensaje_chat_lista h6, .mensajes_chat_word h6,
 .mensajes_chat_word span{
     font-family: var(--font_t);
     font-weight: 100;
@@ -281,15 +296,9 @@ body{
     float: right;
     margin-top: 1rem;
 }
-.pie_chart{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-.pie_chart img{
-    margin-right: 0.5rem;
-}
+/*-------
+4. VENTANAS Y TABLAS
+-------*/
 .modal_d {
     position: absolute;
     top: 0;
@@ -363,6 +372,9 @@ body{
     color: #5969818c;
     font-size: 2.4rem;
 }
+/*-------
+5. TIENDA ONLINE/ PRODUCTOS
+-------*/
 .product_item{
     position: relative;
     margin-left: 1.5rem;
@@ -375,7 +387,6 @@ body{
     background: var(--color_default);
     list-style: none;
     position: relative;
-    padding: 1rem;
 }
 .acciones:has(:checked) {
     --opacity: 1;
@@ -428,8 +439,8 @@ body{
     margin: 0rem 0.2rem;
     background: var(--color_tercer);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-    border-radius: 0.4rem 0.4rem 0.6em 0.6em;
+    padding: 0.5em;
+    border-radius: 0.4rem;
 }
 .product_action ul {
     overflow: hidden;

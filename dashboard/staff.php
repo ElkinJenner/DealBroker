@@ -36,63 +36,64 @@ require_once "../action/conexion.php";
                             <button class="bg_danger color_w" id="close"><i class="bx bx-x"></i></button>
                         </article>
                         <form class="form_register form_login" method="POST" enctype="multipart/form-data" action="../action/registrarStaff.php" methode>
-                            <article class="column">
+                            <aside class="column_2">
 
-                            <div class="column-6">
-                                <small class="color_w">Fotografia</small>
-                                <article class="file_content">
-                                    <div class="file-select" id="FotoPerfil">
-                                        <input type="file" name="FotoPerfil">
+                            <div class="left">
+                                <aside class="column">
+
+                                    <div class="column-12">
+                                        <small class="color_w">Fotografia</small>
+                                        <article class="file_content">
+                                                <input type="file" name="FotoPerfil">
+                                                <p><i class="color_w bx bx-image-add"></i> Arrastra una imagen hasta aquí o <span> Sube archivo</span></p>
+                                        </article>
+                                    
+                                        <br><h6 class="color_w f_weight">CARGO</h6>
+                                        <?php
+                                        $con = Db::connect();
+                                        $cargo = "SELECT * FROM cargo";
+                                        $resultado_cargo = mysqli_query($con, $cargo);
+                                        while($r_cargo=mysqli_fetch_assoc($resultado_cargo)){ ?>
+
+                                        <label class="color_w">
+                                            <input id="categoria" name="NomCargo" type="radio" value="<?php echo $r_cargo['NomCargo'];?>">
+                                            <i class="bg_s"></i><?php echo $r_cargo['NomCargo'];?>
+                                        </label>
+                                        
+                                        <?php } mysqli_free_result($resultado_cargo);?>
                                     </div>
-                                </article>
+
+                                </aside>
                             </div>
 
-                            <div class="column-6">
-                                <small class="color_w">Nombres Completos</small>
-                                <input type="text" name="Nombres">
+                            <div class="right">
+                                <aside class="column">
+
+                                    <div class="column-12">
+                                        
+                                         <small class="color_w">Nombres Completos</small>
+                                        <input type="text" name="Nombres">
+
+                                        <small class="color_w">Usuario</small>
+                                        <input type="text" name="Usuario">
+
+                                        <small class="color_w">Email</small>
+                                        <input type="text" name="Email">
+
+                                        <small class="color_w">Contraseña</small>
+                                        <input class="input"  type="password" name="Contrasena">
+
+                                        <small class="color_w">Repetir Contraseña</small>
+                                        <input class="input" type="password" name="Contrasena">
+                                    </div>
+
+                                    <div class="column-4">
+                                        <button class="bg_verify color_w" type="submit"><i class="bx bx-check"></i> REGISTRAR</button>
+                                    </div>
+                                </aside>
                             </div>
 
-                            <div class="column-6">
-                                <small class="color_w">Usuario</small>
-                                <input type="text" name="Usuario">
-                            </div>
-
-                            <div class="column-6">
-                     
-                                <br><h6 class="color_w f_weight">CARGO</h6>
-                                <?php
-                                $con = Db::connect();
-                                $cargo = "SELECT * FROM cargo";
-                                $resultado_cargo = mysqli_query($con, $cargo);
-                                while($r_cargo=mysqli_fetch_assoc($resultado_cargo)){ ?>
-
-                                 <label class="color_w">
-                                    <input id="categoria" name="NomCargo" type="radio" value="<?php echo $r_cargo['NomCargo'];?>">
-                                    <i class="bg_s"></i><?php echo $r_cargo['NomCargo'];?>
-                                </label>
-                                
-                                 <?php } mysqli_free_result($resultado_cargo);?>
-                            </div>
-
-                            <div class="column-6">
-                                <small class="color_w">Email</small>
-                                <input type="text" name="Email">
-                            </div>
-
-                            <div class="column-6">
-                                <small class="color_w">Contraseña</small>
-                                <input class="input"  type="password" name="Contrasena">
-                            </div>
-
-                            <div class="column-6">
-                                <small class="color_w">Repetir Contraseña</small>
-                                <input class="input" type="password" name="Contrasena">
-                            </div>
-
-                            <div class="column-2">
-                                <button class="bg_verify color_w" type="submit"><i class="bx bx-check"></i> REGISTRAR</button>
-                            </div>
-                            </article>
+                            </aside>
                         </form>
                     </div>
                 </div>
