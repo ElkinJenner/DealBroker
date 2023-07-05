@@ -51,31 +51,18 @@ require_once "../action/conexion.php";
                             <div class="column-6">
                      
                                 <br><h6 class="color_w f_weight">CARGO</h6>
+                                <?php
+                                $con = Db::connect();
+                                $cargo = "SELECT * FROM cargo";
+                                $resultado_cargo = mysqli_query($con, $cargo);
+                                while($r_cargo=mysqli_fetch_assoc($resultado_cargo)){ ?>
 
-                                <label class="color_w">
-                                    <input id="categoria" name="NomCargo" type="radio" value="Informes" checked="">
-                                    <i class="bg_s"></i>Computer programming
+                                 <label class="color_w">
+                                    <input id="categoria" name="NomCargo" type="radio" value="<?php echo $r_cargo['NomCargo'];?>">
+                                    <i class="bg_s"></i><?php echo $r_cargo['NomCargo'];?>
                                 </label>
-
-                                <label class="color_w">
-                                    <input id="categoria" name="NomCargo" type="radio" value="Reclamo">
-                                    <i class="bg_s"></i>Database Designer
-                                </label>
-
-                                <label class="color_w">
-                                    <input id="categoria" name="NomCargo" type="radio" value="Soy Colaborador">
-                                    <i class="bg_s"></i>3D Designer
-                                </label>
-
-                                <label class="color_w">
-                                    <input id="categoria" name="NomCargo" type="radio" value="Quiero colaborar con ustedes!">
-                                    <i class="bg_s"></i>System Analyst
-                                </label>
-                                    
-                                <label class="color_w">
-                                    <input id="categoria" name="NomCargo" type="radio" value="Otro">
-                                    <i class="bg_s"></i>Otro
-                                </label>
+                                
+                                 <?php } mysqli_free_result($resultado_cargo);?>
                             </div>
 
                             <div class="column-6">
