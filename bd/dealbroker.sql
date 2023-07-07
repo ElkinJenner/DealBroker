@@ -99,6 +99,7 @@ DROP TABLE IF EXISTS `chatstaff`;
 CREATE TABLE IF NOT EXISTS `chatstaff` (
   `IdChatStaff` int(11) NOT NULL AUTO_INCREMENT,
   `IdStaff` int(11) NOT NULL,
+  `FechaChat` datetime NOT NULL,
   `MensajeStaff` varchar(500) NOT NULL,
   PRIMARY KEY (`IdChatStaff`),
   KEY `IdStaff` (`IdStaff`)

@@ -43,6 +43,10 @@ require_once "../action/conexion.php";
                                     $Perfilpropio = $_SESSION['usuario'];
                                     $Staff = "SELECT * FROM Staff WHERE Usuario !='$Perfilpropio' ";
                                     $resultado_Staff = mysqli_query($con, $Staff);
+
+                                    if(mysqli_num_rows($resultado_Staff)<1) {
+                                        echo "<br><h6 class='f_weight t_c color_w'>Lista vacia</h6><br>";
+                                    }
                                     while($r_Staff=mysqli_fetch_assoc($resultado_Staff)){ ?>
 
                                      <li class="mensajes_chat">

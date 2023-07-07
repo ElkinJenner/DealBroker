@@ -40,27 +40,6 @@ function dropdow_nav(){
 }
 btn_dropdow_sidebar.addEventListener('click', dropdow_nav, true);
 
-//Acciones product
-//let action_p = document.getElementById("acciones");
-let action_p = document.querySelectorAll('#acciones');
-//let product_action = document.querySelectorAll('#product_action');
-let product_action = document.getElementById("product_action");
-let count_p_a = 0;
-
-function product_item() {
-    if (count_p_a == 0) {
-        product_action.classList.remove("hidden");
-        count_p_a = 1;
-  }
-    else {
-        product_action.classList.add("hidden");
-        count_p_a = 0;
-    }
-}
-action_p.forEach((action_p) =>{
-    action_p.addEventListener('click', product_item, true);
-});
-
 //Ventana Modal
 let btnOpen = document.getElementById("open");
 let btnClose = document.getElementById("close");
@@ -79,3 +58,13 @@ function modale(){
 }
 btnOpen.addEventListener('click', modale, true);
 btnClose.addEventListener('click', modale, true);
+
+//Envio chat
+function mandarmens() {
+    let mensStaff = document.getElementById("MensajeStaff").value;
+    let contChat = document.querySelector("#MensajeEnviado");
+    contChat.innerHTML += `
+    ${mensStaff}
+    `
+    return false;
+}

@@ -32,6 +32,10 @@
                     $con = Db::connect();
                     $Categoria = "SELECT * FROM CategoriaProd";
                     $resultado_Categoria = mysqli_query($con, $Categoria);
+
+                    if(mysqli_num_rows($resultado_Categoria)<1) {
+                        echo "<h6 class='f_weight color_w'>Aun no hay categorias añadidas</h6><br>";
+                    }
                     while($r_Categoria=mysqli_fetch_assoc($resultado_Categoria)){ ?>
 
                     <label class="color_w">
@@ -51,6 +55,9 @@
                     $con = Db::connect();
                     $Estado = "SELECT * FROM Estado";
                     $resultado_Estado = mysqli_query($con, $Estado);
+                    if(mysqli_num_rows($resultado_Estado)<1) {
+                        echo "<br><h6 class='f_weight color_w'>Aun no hay datos registrados</h6><br>";
+                    }
                     while($r_Estado=mysqli_fetch_assoc($resultado_Estado)){ ?>
 
                     <label class="color_w">
