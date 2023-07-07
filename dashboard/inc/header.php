@@ -27,7 +27,7 @@
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
                         <ul>
                             <figure class="perfil_admin m_c">
-                                <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>">
+                                <img class="img300" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>">
                                 <small class="color_w"><?php echo $row['Nombres'];?><br>
                                 <div class="small">@<?php echo $row['Usuario'];?></div></small>
                             </figure>

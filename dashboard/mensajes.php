@@ -38,30 +38,28 @@ require_once "../action/conexion.php";
                                 </div>
                                 <div class="widgets_body p_cero">
                                     <!--Lista de staff -->
-                                    <li class="mensajes_chat">
+                                    <?php
+                                    $con = Db::connect();
+                                    $Perfilpropio = $_SESSION['usuario'];
+                                    $Staff = "SELECT * FROM Staff WHERE Usuario !='$Perfilpropio' ";
+                                    $resultado_Staff = mysqli_query($con, $Staff);
+                                    while($r_Staff=mysqli_fetch_assoc($resultado_Staff)){ ?>
+
+                                     <li class="mensajes_chat">
                                         <figure class="mensajes_chat_autor">
-                                            <img class="author_img" src="../upload/img/person1.jpg">
+                                            <img class="author_img" src="../upload/profiles/<?php echo $r_Staff['FotoPerfil'];?>">
                                         </figure>
                                         <div class="mensaje_chat_lista">
                                             <summary>
-                                                <h6 class="color_w">Elkin Jenner Rivera</h6>
-                                                <span class="color_w">elkinjenner@dealbroker.io</span>
+                                                <h6 class="color_w"><?php echo $r_Staff['Nombres'];?></h6>
+                                                <span class="color_w"><?php echo $r_Staff['Email'];?></span>
                                             </summary>
                                             <summary><span class="color_w">5 hrs</span></summary>
                                         </div>
                                     </li>
-                                    <li class="mensajes_chat">
-                                        <figure class="mensajes_chat_autor">
-                                            <img class="author_img" src="../upload/img/person4.jpg">
-                                        </figure>
-                                        <div class="mensaje_chat_lista">
-                                            <summary>
-                                                <h6 class="color_w">Marco Antonio Farfán</h6>
-                                                <span class="color_w">marco@dealbroker.io</span>
-                                            </summary>
-                                            <summary><span class="color_w">5 hrs</span></summary>
-                                        </div>
-                                    </li>
+
+                                    <?php } mysqli_free_result($resultado_Staff);?>
+
                                 </div>
                             </article>
 

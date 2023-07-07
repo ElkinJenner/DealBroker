@@ -504,6 +504,8 @@ ESPACIOS Y TAMAÑOS
 .m_t2{margin-top: 2rem;}
 .border{border: 2px solid;}
 .b_r{border-radius: 0.75rem;}
+.b_r_15{border-radius: 15%;}
+.b_r_25{border-radius: 25%;}
 .b_r_50{border-radius: 50%;}
 .f_l{float: left;}
 .f_r{float: right;}

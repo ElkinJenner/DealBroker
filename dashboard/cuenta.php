@@ -38,30 +38,25 @@ $UserStaff = $_SESSION["usuario"];
                             while($row=mysqli_fetch_assoc($resultado)){ ?>
                            
        
-                            <div class="column-6">
-                                <img class="img300" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>"><br>
+                            <div class="column-3">
+                                <img class="img400 p_1 b_r_15" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>"><br>
                             </div>
 
-                            <div class="column-6">
+                            
+                            <div class="column-5">
+                            
                                 <small class="color_w">Nombres Completos</small>
                                 <input type="text" value="<?php echo $row['Nombres'];?>">
 
                                 <small class="color_w">Usuario</small>
-                                <input type="text" value="<?php echo $row['Usuario'];?>">
+                                <input type="text" value="<?php echo $row['Usuario'];?>"><br>
 
-                                <small class="color_w">Email</small>
-                                <input type="text" value="<?php echo $row['Email'];?>">
-                                
-                            </div>
-                            
-                            <div class="column-6">
-                     
-                                <br><h6 class="color_w f_weight">CARGO</h6>
+                                <br><small class="color_w">Profesión</small><br><br>
 
                                 <label class="color_w">
                                     <input id="categoria" name="NomCargo" type="radio" value="<?php echo $row['NomCargo'];?>" checked="">
                                     <i class="bg_s"></i><?php echo $row['NomCargo'];?>
-                                </label> 
+                                </label><br>
 
                                 <?php
                                 $con = Db::connect();
@@ -73,30 +68,27 @@ $UserStaff = $_SESSION["usuario"];
                                  <label class="color_w">
                                     <input id="categoria" name="NomCargo" type="radio" value="<?php echo $r_cargo['NomCargo'];?>">
                                     <i class="bg_s"></i><?php echo $r_cargo['NomCargo'];?>
-                                </label>
+                                </label><br>
                                 
                                  <?php } mysqli_free_result($resultado_cargo);?>
                             </div>
 
-                    
+                            <div class="column-4">
 
-                            <div class="column-6">
+                               
+                                <small class="color_w">Email</small>
+                                <input type="text" value="<?php echo $row['Email'];?>">
                                 
                                 <small class="color_w">Contraseña</small>
                                 <input class="input"  type="password" name="contrasena" value="<?php echo $row['Contrasena'];?>">
-
-                                 <small class="color_w">Repetir Contraseña</small>
-                                <input class="input" type="password" name="contrasena" value="<?php echo $row['Contrasena'];?>">
                                 
+                                <div class="column-4">
+                                    <button class="bg_verify color_w" type="submit"><i class="bx bx-save"></i> GUARDAR</button>
+                                </div>
+
                             </div>
 
                             <?php } mysqli_free_result($resultado);?>
-                     
-
-                            <div class="column-2">
-                                <button class="bg_verify color_w" type="submit"><i class="icon-checkmark"></i> GUARDAR</button>
-                            </div>
-                
 
                             </article>
                         </form>

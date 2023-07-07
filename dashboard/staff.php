@@ -27,7 +27,7 @@ require_once "../action/conexion.php";
                     </article>
                     <aside class="column" >
                         <?php
-                        $staff = "SELECT * FROM staff";
+                        $staff = "SELECT * FROM staff ";
                         $con = Db::connect();
                         $resultado = mysqli_query($con, $staff);
                         while($row=mysqli_fetch_assoc($resultado)){ ?>
