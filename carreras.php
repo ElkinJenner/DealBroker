@@ -21,7 +21,7 @@
                     <div class="column-3">
                         <article class="article_perfil">
                             <figure>
-                                <img src="img/person1.jpg">
+                                <img src="upload/profiles/person1.jpg">
                             </figure>
                                 <h4 class="f_weight color_w">Elkin Jenner Rivera</h4>
                                 <h6 class="f_weight color_c">Programador - Fullstack Developer </h6>
@@ -31,7 +31,7 @@
                     <div class="column-3">
                         <article class="article_perfil">
                             <figure>
-                                <img src="img/person2.jpg">
+                                <img src="upload/profiles/person2.jpg">
                             </figure>
                                 <h4 class="f_weight color_w">Ulises Miranda Vega</h4>
                                 <h6 class="f_weight color_c">Programador - Database Developer </h6>
@@ -41,7 +41,7 @@
                     <div class="column-3">
                         <article class="article_perfil">
                             <figure>
-                                <img src="img/person3.jpg">
+                                <img src="upload/profiles/person3.jpg">
                             </figure>
                                 <h4 class="f_weight color_w">Luis Gabriel Tiznado</h4>
                                 <h6 class="f_weight color_c">Programador - Javascript Developer </h6>
@@ -51,7 +51,7 @@
                     <div class="column-3">
                         <article class="article_perfil">
                             <figure>
-                                <img src="img/person4.jpg">
+                                <img src="upload/profiles/person4.jpg">
                             </figure>
                                 <h4 class="f_weight color_w">Marco Antonio Farfán</h4>
                                 <h6 class="f_weight color_c">Programador - Frontend Developer </h6>

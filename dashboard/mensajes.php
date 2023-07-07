@@ -37,6 +37,7 @@ require_once "../action/conexion.php";
                                     </div>
                                 </div>
                                 <div class="widgets_body p_cero">
+                                    <!--Lista de staff -->
                                     <li class="mensajes_chat">
                                         <figure class="mensajes_chat_autor">
                                             <img class="author_img" src="../upload/img/person1.jpg">
@@ -45,6 +46,18 @@ require_once "../action/conexion.php";
                                             <summary>
                                                 <h6 class="color_w">Elkin Jenner Rivera</h6>
                                                 <span class="color_w">elkinjenner@dealbroker.io</span>
+                                            </summary>
+                                            <summary><span class="color_w">5 hrs</span></summary>
+                                        </div>
+                                    </li>
+                                    <li class="mensajes_chat">
+                                        <figure class="mensajes_chat_autor">
+                                            <img class="author_img" src="../upload/img/person4.jpg">
+                                        </figure>
+                                        <div class="mensaje_chat_lista">
+                                            <summary>
+                                                <h6 class="color_w">Marco Antonio Farfán</h6>
+                                                <span class="color_w">marco@dealbroker.io</span>
                                             </summary>
                                             <summary><span class="color_w">5 hrs</span></summary>
                                         </div>

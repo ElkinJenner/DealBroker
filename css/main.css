@@ -366,6 +366,7 @@
 .form_login h5{
     color: var(--color_labels);
     font-family: var(--font_dashboard);
+    font-size: 1.7rem;
 }
 .form_login label{
     color: var(--color_labels);
@@ -376,6 +377,7 @@
 .form_login input[type="text"],
 .form_login input[type="email"],
 .form_login input[type="password"],
+.form_login textarea,
 .form_login button {
     font-family: var(--font_dashboard);
     width: 100%;
@@ -410,7 +412,7 @@
     max-width: inherit;
     margin: 0 auto;
 }
-.form_register input{
+.form_register input, .form_register textarea{
     width: 96%!important;
 }
 .form_register label {

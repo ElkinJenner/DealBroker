@@ -33,7 +33,7 @@
 :root {
     /*-- Colores --*/
     --color_white:#fff;
-    --color_gris: #CCC;
+    --color_gris: #ebebeb;
     --color_dark: #000;
     --color_danger: #FF0000;
     --color_alert: #FF0;
@@ -190,7 +190,7 @@ h5 {font-size: 1.8rem; line-height: 2.2rem; font-weight: 100;}
 h6 {font-size: 1.45rem;}
 p {font-size: 1.5rem; letter-spacing: 1px;}
 small {font-size: 1.3rem; font-weight: 100;}
-.small{font-size: 1.15rem;}
+.small{font-size: 1.15rem!important;}
 code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .title_g{font-size: 10rem;}
 .t_t{text-transform: uppercase;}
@@ -222,7 +222,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 
 .bg_none{background: transparent!important;}
 .bg_w {background: var(--color_white);}
-.bg_g {background: var(--color_gris);}
+.bg_g {background: var(--color_gris)!important;}
 .bg_d {background: var(--color_dark);}
 .bg_danger {background: var(--color_danger);}
 .bg_alert {background: var(--color_alert);}
@@ -406,6 +406,7 @@ input[type="search"]::-webkit-search-results-decoration {
     display: grid;
     align-content: center;
     text-align: center;
+    padding: 1rem;
   }
   .file_content p{
     color: var(--color_gris);
@@ -436,8 +437,10 @@ textarea::placeholder {
 }
 textarea {
     height: 12rem;
-    font-size: 30px;
+    font-size: 1.3;
     color: var(--color_white);
+    outline: none;
+    border: none;
 }
 ol.lista_enumerada{
     display: block;

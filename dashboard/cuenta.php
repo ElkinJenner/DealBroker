@@ -39,7 +39,7 @@ $UserStaff = $_SESSION["usuario"];
                            
        
                             <div class="column-6">
-                                <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>"><br>
+                                <img class="img300" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>"><br>
                             </div>
 
                             <div class="column-6">

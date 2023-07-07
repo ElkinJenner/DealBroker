@@ -22,7 +22,7 @@
                         $resultado = mysqli_query($con, $cuenta);
 
                         while($row=mysqli_fetch_assoc($resultado)){ ?>
-                        <img class="img300" src="../upload/img/<?php echo $row['FotoPerfil'];?>">
+                        <img class="img300" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>">
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
                         <ul>

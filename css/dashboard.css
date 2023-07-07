@@ -232,7 +232,7 @@ padding: 1rem;
 }
 li.mensajes_chat{
     margin: 0;
-    padding: 1rem;
+    padding: 0.4rem 1rem;
 }
 li.mensajes_chat:hover{
 background: var(--color_chat);
