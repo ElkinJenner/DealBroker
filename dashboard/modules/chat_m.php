@@ -7,7 +7,7 @@
         <?php
         $con = Db::connect();
         $Perfilpropio = $_SESSION['Usuario'];
-        $ChatStaff = "SELECT * FROM ChatStaff c INNER JOIN Staff s ON c.Idstaff = s.IdStaff ";
+        $ChatStaff = "SELECT * FROM ChatStaff c INNER JOIN Staff s ON c.Idstaff = s.IdStaff ORDER BY IdChatStaff ASC";
         $resultado_chatS = mysqli_query($con, $ChatStaff);
 
         if(mysqli_num_rows($resultado_chatS)<1) {
@@ -40,7 +40,7 @@
             <div class="mensajes_chat_word left bg_chat">
                 <h6 class="color_w"><?php echo $r_chatS['Nombres'];?></h6>
                 <span class="color_w"><?php echo $r_chatS['MensajeStaff'];?></span> 
-                <small class="color_t"><?php echo $r_chatS['FechaChat'];?></small>
+                <small class="color_s"><?php echo $r_chatS['FechaChat'];?></small>
             </div>
 
             <figure class="mensajes_chat_autor left">
