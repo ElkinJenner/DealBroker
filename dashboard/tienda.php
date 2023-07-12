@@ -43,8 +43,8 @@ require_once "../action/conexion.php";
                                     <!--Contenido a mostrar-->
                                     <div class="product_action">
                                     <ul>
-                                        <li><a href="product_edit.php"><i class="color_w bx bx-pencil"></i> Editar</a></li>
-                                        <li><a href=""><i class="color_w bx bx-trash"></i> Eliminar</a></li>
+                                        <li><a href="product_edit.php"><i class="bx bx-pencil"></i> Editar</a></li>
+                                        <li><a href=""><i class="bx bx-trash"></i> Eliminar</a></li>
                                     </ul>
                                 </div>
                                 <!--Fin de Contenido a mostrar-->
@@ -76,8 +76,8 @@ require_once "../action/conexion.php";
                                     <!--Contenido a mostrar-->
                                     <div class="product_action">
                                     <ul>
-                                        <li><a href=""><i class="color_w bx bx-pencil"></i> Editar</a></li>
-                                        <li><a href=""><i class="color_w bx bx-trash"></i> Eliminar</a></li>
+                                        <li><a href=""><i class="bx bx-pencil"></i> Editar</a></li>
+                                        <li><a href=""><i class="bx bx-trash"></i> Eliminar</a></li>
                                     </ul>
                                 </div>
                                 <!--Fin de Contenido a mostrar-->
@@ -109,8 +109,8 @@ require_once "../action/conexion.php";
                                     <!--Contenido a mostrar-->
                                     <div class="product_action">
                                     <ul>
-                                        <li><a href=""><i class="color_w bx bx-pencil"></i> Editar</a></li>
-                                        <li><a href=""><i class="color_w bx bx-trash"></i> Eliminar</a></li>
+                                        <li><a href=""><i class="bx bx-pencil"></i> Editar</a></li>
+                                        <li><a href=""><i class="bx bx-trash"></i> Eliminar</a></li>
                                     </ul>
                                 </div>
                                 <!--Fin de Contenido a mostrar-->

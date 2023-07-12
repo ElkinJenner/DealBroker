@@ -44,27 +44,17 @@ btn_dropdow_sidebar.addEventListener('click', dropdow_nav, true);
 let btnOpen = document.getElementById("open");
 let btnClose = document.getElementById("close");
 let modal = document.getElementById("modal");
-let count_m=0;
+let count_m = 0;
 
-function modale(){
-    if (count_m ==0){
+function modale() {
+    if (count_m == 0) {
         modal.classList.remove("hidden");
-        count_m =1;
+        count_m = 1;
     }
-    else{
+    else {
         modal.classList.add("hidden");
-        count_m =0;
+        count_m = 0;
     }
 }
 btnOpen.addEventListener('click', modale, true);
 btnClose.addEventListener('click', modale, true);
-
-//Envio chat
-function mandarmens() {
-    let mensStaff = document.getElementById("MensajeStaff").value;
-    let contChat = document.querySelector("#MensajeEnviado");
-    contChat.innerHTML += `
-    ${mensStaff}
-    `
-    return false;
-}

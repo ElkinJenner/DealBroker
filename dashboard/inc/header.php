@@ -33,7 +33,7 @@
                             </figure>
                             <li><a href="cuenta.php"><i class="bx bx-user"></i> Mi Cuenta</a></li>
                             <li><a href=""><i class="bx bx-wrench"></i> Configuración</a></li>
-                            <li><a href="../action/LogoutAdmin.php"><i class="bx bx-power-off"></i> Cerrar Sesión</a></li>
+                            <li><a id="btnCerrarS"><i class="bx bx-power-off"></i> Cerrar Sesión</a></li>
                         </ul>
                     </div>
                     <?php } mysqli_free_result($resultado);?>
@@ -42,3 +42,39 @@
          </article>
     </div>
 </header>
+<!--Ventana Modal CRUD-->
+<div class="modal_crud hidden" id="modal_c">
+    <aside class="modal_crud_contenedor bg_w">
+        <div class="modal_crud_contenedor_h">
+            <h5 class="font_d f_weight color_m">¿Estas seguro que desea salir?</h5>
+        </div>
+        <div class="modal_crud_contenedor_f">
+            <date_add class="left">
+                <a href="../action/LogoutAdmin.php">Sí</a>
+            </date_add>
+            <date_add class="right">
+                <a href="" id="btnCancelar">No</a>
+            </date_add>
+        </div>
+    </aside>
+</div>
+<script>
+    //Ventana Modal Salir
+    let btnCerrarS = document.getElementById("btnCerrarS");
+    let btnCancelar = document.getElementById("btnCancelar");
+    let modal_c = document.getElementById("modal_c");
+    let count_c = 0;
+
+    function salirSession() {
+        if (count_c == 0) {
+            modal_c.classList.remove("hidden");
+            count_c = 1;
+        }
+        else {
+            modal_c.classList.add("hidden");
+            count_c = 0;
+        }
+    }
+    btnCerrarS.addEventListener('click', salirSession, true);
+    btnCancelar.addEventListener('click', salirSession, true);
+</script>

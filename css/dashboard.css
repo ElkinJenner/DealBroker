@@ -308,6 +308,38 @@ cursor: var(--cursor_hand);
     min-height: 100vh;
     transition: transform 1s ease-out;
 }
+.modal_crud{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.modal_crud_contenedor{
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal_crud_contenedor_h{
+    padding: 2rem;
+    border-bottom: 1px solid #CCC;
+}
+.modal_crud_contenedor_f{
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+.modal_crud_contenedor_f .left, .modal_crud_contenedor_f .right{
+    width: 50%;
+    padding: 0.8rem;
+}
+.modal_crud_contenedor_f .left{
+    border-right: 1px solid #CCC;
+}
 .table{
     padding: 0.8rem;
     text-align: center;
@@ -438,7 +470,7 @@ cursor: var(--cursor_hand);
     right: 30px;
     transform: scale(1);
     margin: 0rem 0.2rem;
-    background: var(--color_tercer);
+    background: var(--color_white);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
     padding: 0.5em;
     border-radius: 0.4rem;
@@ -453,8 +485,8 @@ cursor: var(--cursor_hand);
 }
 .product_action ul li a{
     font-size: 1.1rem;
-    color: var(--color_white);
+    color: var(--color_dark);
 }
 .product_action ul li:hover{
-    background: rgb(77, 70, 136);
+    background: rgb(240, 239, 239);
 }
