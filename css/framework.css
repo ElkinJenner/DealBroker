@@ -226,7 +226,7 @@ code{font-size: 0.95rem; font-family: var(--font_m); font-weight: 100;}
 .bg_d {background: var(--color_dark);}
 .bg_danger {background: var(--color_danger);}
 .bg_alert {background: var(--color_alert);}
-.bg_verify{background: var(--color_verify);}
+.bg_verify{background: var(--color_verify)!important;}
 .bg_def{background: var(--color_default);}
 .bg_navp{background: var(--color_navpanel);}
 .bg_panel{background: var(--color_panel);}
@@ -573,4 +573,5 @@ picture img{max-width: 94%;}
 .img200{max-width: 200px;}
 .img250{max-width: 250px;}
 .img300{max-width: 300px;}
+.img350{max-width: 350px;}
 .img400{max-width: 400px;}

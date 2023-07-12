@@ -23,12 +23,12 @@
                 <form class="form_login" method="POST" autocomplete="off">
                     <article>
                         <h5>Usuario</h5>
-                        <input type="text" name="usuario" id="usuario">
+                        <input type="text" name="Usuario" id="usuario">
                     </article>
                 
                     <article>
                         <h5>Contraseña</h5>
-                        <input type="password" name="contrasena" id="contrasena">
+                        <input type="password" name="Contrasena" id="contrasena">
                     </article>
                 
                     <article>
@@ -38,7 +38,7 @@
             </aside>
         </div>
         <?php
-            if(isset($_POST['usuario']) && isset($_POST['contrasena'])){
+            if(isset($_POST['Usuario']) && isset($_POST['Contrasena'])){
                 require_once "../action/LoginAdmin.php";
             }
         ?>

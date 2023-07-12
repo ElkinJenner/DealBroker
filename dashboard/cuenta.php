@@ -3,7 +3,7 @@ require_once "../action/ValidarSesion.php";
 require_once "../action/conexion.php";
 ?>
 <?php
-$UserStaff = $_SESSION["usuario"];
+$UserStaff = $_SESSION["Usuario"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,7 +28,7 @@ $UserStaff = $_SESSION["usuario"];
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> MI CUENTA / DASHBOARD</code>
                     </article>
                     <div class="widgets bg_none">
-                        <form class="form_register form_login" action="" method="POST">
+                        <form class="form_register form_login" action="../action/editStaff.php" method="POST">
                             <article class="column">
                             <?php
                             $con = Db::connect();
@@ -39,17 +39,18 @@ $UserStaff = $_SESSION["usuario"];
                            
        
                             <div class="column-3">
-                                <img class="img400 p_1 b_r_15" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>"><br>
+                                <input type="hidden" name="FotoPerfil" value="<?php echo $row['FotoPerfil'];?>">
+                                <img class="img350 p_1 b_r_15" src="<?php echo $row['FotoPerfil'];?>"><br>
                             </div>
 
                             
                             <div class="column-5">
                             
                                 <small class="color_w">Nombres Completos</small>
-                                <input type="text" value="<?php echo $row['Nombres'];?>">
+                                <input type="text" name="Nombres" value="<?php echo $row['Nombres'];?>">
 
                                 <small class="color_w">Usuario</small>
-                                <input type="text" value="<?php echo $row['Usuario'];?>"><br>
+                                <input type="text" name="Usuario" value="<?php echo $row['Usuario'];?>"><br>
 
                                 <br><small class="color_w">Profesión</small><br><br>
 
@@ -77,10 +78,10 @@ $UserStaff = $_SESSION["usuario"];
 
                                
                                 <small class="color_w">Email</small>
-                                <input type="text" value="<?php echo $row['Email'];?>">
+                                <input type="text" name="Email" value="<?php echo $row['Email'];?>">
                                 
                                 <small class="color_w">Contraseña</small>
-                                <input class="input"  type="password" name="contrasena" value="<?php echo $row['Contrasena'];?>">
+                                <input class="input"  type="password" name="Contrasena" value="<?php echo $row['Contrasena'];?>">
                                 
                                 <div class="column-4">
                                     <button class="bg_verify color_w" type="submit"><i class="bx bx-save"></i> GUARDAR</button>
@@ -92,6 +93,7 @@ $UserStaff = $_SESSION["usuario"];
 
                             </article>
                         </form>
+                  
                     </div>
                 </div>
             </main>

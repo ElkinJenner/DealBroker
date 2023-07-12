@@ -17,17 +17,17 @@
                     <div class="perfil_admin" id="dropdow_toogle">
                         <?php
                         $con = Db::connect();
-                        $cuentePropia = $_SESSION['usuario'];
+                        $cuentePropia = $_SESSION['Usuario'];
                         $cuenta = "SELECT * FROM staff WHERE Usuario = '$cuentePropia' ";
                         $resultado = mysqli_query($con, $cuenta);
 
                         while($row=mysqli_fetch_assoc($resultado)){ ?>
-                        <img class="img300" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>">
+                        <img class="img300" src="<?php echo $row['FotoPerfil'];?>">
                     </div>
                     <div class="dropdow_menu bg_def hidden" id="dropdow_menu">
                         <ul>
                             <figure class="perfil_admin m_c">
-                                <img class="img300" src="../upload/profiles/<?php echo $row['FotoPerfil'];?>">
+                                <img class="img300" src="<?php echo $row['FotoPerfil'];?>">
                                 <small class="color_w"><?php echo $row['Nombres'];?><br>
                                 <div class="small">@<?php echo $row['Usuario'];?></div></small>
                             </figure>

@@ -50,6 +50,10 @@ require_once "../action/conexion.php";
                                     $con = Db::connect();
                                     $Categoria = "SELECT * FROM CategoriaProd";
                                     $resultado_Categoria = mysqli_query($con, $Categoria);
+
+                                    if(mysqli_num_rows($resultado_Categoria)<1) {
+                                        echo "<br><h6 class='f_weight color_w'>No se ha registrado ninguna categoria</h6><br>";
+                                    }
                                     while($r_Categoria=mysqli_fetch_assoc($resultado_Categoria)){ ?>
 
                                     <label class="color_w">

@@ -1,6 +1,6 @@
 <?php
-$usu = $_POST["usuario"];
-$pas = $_POST["contrasena"];
+$usu = $_POST["Usuario"];
+$pas = $_POST["Contrasena"];
 
 $con = Db::connect();
 $query = "SELECT * FROM Staff WHERE Usuario = '$usu' AND Contrasena = '$pas'";
@@ -9,7 +9,7 @@ $row = mysqli_num_rows($result);
 
 if($row > 0){
     session_start();
-    $_SESSION['usuario']= $usu;
+    $_SESSION['Usuario']= $usu;
     header("Location: ../dashboard/");
 }
 else{

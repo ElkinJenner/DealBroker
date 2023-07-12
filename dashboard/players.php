@@ -40,7 +40,7 @@ require_once "../action/conexion.php";
                             </article>
 
                             <div class="table_item perfil_admin m_c">
-                                <img src="../upload/img/person2.jpg">
+                                <img src="../upload/profiles/person2.jpg">
                                 <h6 class="color_w">John Marcos Valderrama</h6>
                             </div>
                         </div>

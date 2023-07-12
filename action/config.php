@@ -4,6 +4,31 @@
 * @website https://dealbroker.ga/
 **/
 
+/* ---Registrar -- */
+
+function registrarChat(){
+	require_once "conexion.php";
+
+	$data= array();
+	$con = Db::connect();
+
+	$IdStaff  = $_POST["IdStaff"];
+	$FechaChat = $_POST["FechaChat"];
+	$MensajeStaff = $_POST["MensajeStaff"];
+
+	$insertar = "INSERT INTO ChatStaff(IdStaff, FechaChat, MensajeStaff) VALUES('$IdStaff', '$FechaChat', '$MensajeStaff')";
+	$resultadoChat = mysqli_query($con, $insertar);
+	if($resultadoChat){
+		$data[]=$resultadoChat;
+		echo"<script>window.location.href = '../dashboard/mensajes.php'</script>";
+	}
+	else{
+		echo "No se logro conectar";
+	}
+
+	return $data;
+}
+
 function cuenta(){
 	$data= array();
 	$con = Db::connect();

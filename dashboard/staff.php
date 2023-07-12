@@ -38,7 +38,7 @@ require_once "../action/conexion.php";
                         <div class="column-3">
                             <article class="article_perfil article_staff bg_def">
                                 <figure>
-                                <img src="../upload/profiles/<?php echo $row['FotoPerfil'];?>">
+                                <img src="<?php echo $row['FotoPerfil'];?>">
                                 </figure>
                                 <h5 class="f_weight color_w"><?php echo $row['Nombres'];?></h5>
                                 <small class="f_weight color_w"><?php echo $row['NomCargo'];?></small>

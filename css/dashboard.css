@@ -250,6 +250,7 @@ cursor: var(--cursor_hand);
     top: 0;
     left: 0;
 }
+.mensajes_chat_word, .mensajes_chat_autor.left {margin-left: 12px;}
 .mensajes_chat_autor svg {
     width: 16px;
     padding: 2px;
@@ -277,7 +278,7 @@ cursor: var(--cursor_hand);
     line-height: 1.4em;
     display: block;
     padding: 1rem 1rem 0rem 1rem;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     width: 100%;
 }
 .mensaje_chat_lista h6, .mensajes_chat_word h6,

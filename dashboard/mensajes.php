@@ -40,7 +40,7 @@ require_once "../action/conexion.php";
                                     <!--Lista de staff -->
                                     <?php
                                     $con = Db::connect();
-                                    $Perfilpropio = $_SESSION['usuario'];
+                                    $Perfilpropio = $_SESSION['Usuario'];
                                     $Staff = "SELECT * FROM Staff WHERE Usuario !='$Perfilpropio' ";
                                     $resultado_Staff = mysqli_query($con, $Staff);
 
@@ -51,7 +51,7 @@ require_once "../action/conexion.php";
 
                                      <li class="mensajes_chat">
                                         <figure class="mensajes_chat_autor">
-                                            <img class="author_img" src="../upload/profiles/<?php echo $r_Staff['FotoPerfil'];?>">
+                                            <img class="author_img" src="<?php echo $r_Staff['FotoPerfil'];?>">
                                         </figure>
                                         <div class="mensaje_chat_lista">
                                             <summary>
