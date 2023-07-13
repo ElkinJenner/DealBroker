@@ -37,7 +37,7 @@ require_once "../action/conexion.php";
                                 <div class="acciones">
                                 <!--Boton-->
                                     <a class="btn_acciones">
-                                        <i class="color_w bx bx-dots-vertical"></i>
+                                        <i class="bx bx-dots-vertical"></i>
                                         <input type="radio" name="selector" class="input_check">
                                     </a>
                                     <!--Contenido a mostrar-->
