@@ -28,7 +28,7 @@ $UserStaff = $_SESSION["Usuario"];
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> MI CUENTA / DASHBOARD</code>
                     </article>
                     <div class="widgets bg_none">
-                        <form class="form_register form_login" action="../action/editStaff.php" method="POST">
+                        <form class="form_register form_login" method="POST" autocomplete="off">
                             <article class="column">
                             <?php
                             $con = Db::connect();
@@ -84,7 +84,7 @@ $UserStaff = $_SESSION["Usuario"];
                                 <input class="input"  type="password" name="Contrasena" value="<?php echo $row['Contrasena'];?>">
                                 
                                 <div class="column-4">
-                                    <button class="bg_verify color_w" type="submit"><i class="bx bx-save"></i> GUARDAR</button>
+                                    <button class="bg_s color_w" type="submit"><i class="bx bx-save"></i> GUARDAR</button>
                                 </div>
 
                             </div>
@@ -93,12 +93,19 @@ $UserStaff = $_SESSION["Usuario"];
 
                             </article>
                         </form>
+                       
                   
                     </div>
                 </div>
             </main>
         </aside>
     </main>
+     <!--Mandar al Action para registrar-->
+        <?php
+            if(isset($_POST['Nombres']) && isset($_POST['Usuario']) && isset($_POST['NomCargo']) && isset($_POST['Contrasena'])){
+            require_once "../action/editStaff.php";
+            }
+         ?>
     <?php include "inc/footer.php" ?>
 </body>
 </html>

@@ -59,6 +59,12 @@ require_once "../action/conexion.php";
             </main>
         </aside>
     </main>
+    <!--Mandar al Action para registrar-->
+    <?php
+        if(isset($_POST['NomCargo']) && isset($_POST['Nombres']) && isset($_POST['Usuario']) && isset($_POST['Contrasena'])){
+            require_once "../action/registrarStaff.php";
+        }
+    ?>
     <?php include "inc/footer.php" ?>
 </body>
 </html>

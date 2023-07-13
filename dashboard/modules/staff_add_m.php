@@ -6,7 +6,7 @@
         <button class="bg_danger color_w" id="close"><i class="bx bx-x"></i></button>
     </article>
 
-    <form class="form_register form_login" method="POST" enctype="multipart/form-data">
+    <form class="form_register form_login" method="POST" enctype="multipart/form-data" autocomplete="off">
         <aside class="column_2">
             <div class="left">
                 <aside class="column">
@@ -62,9 +62,3 @@
         </aside>
     </form>
 </div>
-<!--Mandar al Action para registrar-->
-<?php
-    if(isset($_POST['NomCargo']) && isset($_POST['Nombres']) && isset($_POST['Usuario']) && isset($_POST['Contrasena'])){
-        require_once "../action/registrarStaff.php";
-    }
-?>

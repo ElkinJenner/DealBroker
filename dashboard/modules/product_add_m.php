@@ -66,9 +66,6 @@
                     </label>
                     <?php } mysqli_free_result($resultado_Estado);?>
                     <br>
-
-
-
                     <small class="color_w">Precio</small>
                     <input type="text" name="Stock">
                                     
