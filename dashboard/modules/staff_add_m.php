@@ -17,7 +17,8 @@
                             <p><i class="color_w bx bx-image-add"></i> Arrastra una imagen hasta aquí o <span> Sube archivo</span></p>
                         </article>
                                     
-                        <br><h6 class="color_w f_weight">CARGO</h6>
+                        <br>
+                        <small class="color_w f_weight">Profesión</small><br><br>
                         <?php
                         $con = Db::connect();
                         $cargo = "SELECT * FROM cargo";

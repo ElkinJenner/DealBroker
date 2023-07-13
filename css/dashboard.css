@@ -194,7 +194,24 @@ padding: 1rem;
     margin-top: 2rem;
 }
 /*-------
-3. CHAT ONLINE Y MENSAJERIA
+3. STAFF
+-------*/
+.staff_admin{
+    width: 96%;
+}
+.staff_admin img{
+    max-width: 380px;
+    padding: 1rem;
+    border-radius: 1.7rem;
+}
+.staff_admin .file_content{
+    border: none;
+    margin-top: 0rem;
+    height: 120px;
+}
+
+/*-------
+4. CHAT ONLINE Y MENSAJERIA
 -------*/
 .chat_widgets{
     display: flex;
@@ -298,7 +315,7 @@ cursor: var(--cursor_hand);
     margin-top: 1rem;
 }
 /*-------
-4. VENTANAS Y TABLAS
+5. VENTANAS Y TABLAS
 -------*/
 .modal_d {
     position: absolute;
@@ -406,7 +423,7 @@ cursor: var(--cursor_hand);
     font-size: 2.4rem;
 }
 /*-------
-5. TIENDA ONLINE/ PRODUCTOS
+6. TIENDA ONLINE/ PRODUCTOS
 -------*/
 .product_item{
     position: relative;

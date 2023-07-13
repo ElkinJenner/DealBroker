@@ -39,8 +39,14 @@ $UserStaff = $_SESSION["Usuario"];
                            
        
                             <div class="column-3">
-                                <input type="hidden" name="FotoPerfil" value="<?php echo $row['FotoPerfil'];?>">
-                                <img class="img350 p_1 b_r_15" src="<?php echo $row['FotoPerfil'];?>"><br>
+                                <figure class="staff_admin">
+                                    <img class="m_c" src="<?php echo $row['FotoPerfil'];?>">
+                                <article class="file_content">
+                                    <input type="file" name="FotoPerfil" value="<?php echo $row['FotoPerfil'];?>">
+                                    <p><i class="color_w bx bx-image-add"></i> Arrastra una imagen hasta aquí o <span> Sube archivo</span></p>
+                                </article>
+
+                                </figure>
                             </div>
 
                             
@@ -54,22 +60,31 @@ $UserStaff = $_SESSION["Usuario"];
 
                                 <br><small class="color_w">Profesión</small><br><br>
 
-                                <label class="color_w">
-                                    <input id="categoria" name="NomCargo" type="radio" value="<?php echo $row['NomCargo'];?>" checked="">
-                                    <i class="bg_s"></i><?php echo $row['NomCargo'];?>
-                                </label><br>
+                               
 
                                 <?php
                                 $con = Db::connect();
                                 $CargoCheck = $row['NomCargo'];
-                                $cargo = "SELECT * FROM cargo WHERE NomCargo != '$CargoCheck'";
+                                $cargo = "SELECT * FROM cargo";
                                 $resultado_cargo = mysqli_query($con, $cargo);
                                 while($r_cargo=mysqli_fetch_assoc($resultado_cargo)){ ?>
 
-                                 <label class="color_w">
+                                <?php if($r_cargo['NomCargo'] != $row['NomCargo']){?>
+                                
+                                <label class="color_w">
                                     <input id="categoria" name="NomCargo" type="radio" value="<?php echo $r_cargo['NomCargo'];?>">
                                     <i class="bg_s"></i><?php echo $r_cargo['NomCargo'];?>
                                 </label><br>
+
+                                <?php }else{?>
+                                
+                                 <label class="color_w">
+                                    <input id="categoria" name="NomCargo" type="radio" value="<?php echo $row['NomCargo'];?>" checked="">
+                                    <i class="bg_s"></i><?php echo $row['NomCargo'];?>
+                                </label><br>
+                                
+                                <?php }?>
+
                                 
                                  <?php } mysqli_free_result($resultado_cargo);?>
                             </div>

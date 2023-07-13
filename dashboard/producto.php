@@ -36,7 +36,6 @@ require_once "../action/conexion.php";
                     <form class="form_register form_login" method="POST" enctype="multipart/form-data">
                         <aside class="column">
                                 <div class="column-3">
-                                    <small class="color_w">Foto de Producto</small>
                                     <img class="m_c img350 p_1 b_r_15" src="<?php echo $rowPr['FotoProducto'];?>">
                                     <article class="file_content">
                                         <input type="file" name="FotoProducto" value="<?php echo $rowPr['FotoProducto'];?>">
@@ -49,14 +48,16 @@ require_once "../action/conexion.php";
                                     <input type="text" name="NombreProducto" value="<?php echo $rowPr['NombreProducto'];?>">
 
                                     <small class="color_w">Descripción del producto</small>
-                                    <textarea name="DescProducto" value="<?php echo $rowPr['DescrProducto'];?>"> <?php echo $rowPr['DescrProducto'];?> </textarea>
+                                    <textarea name="DescProducto" value="<?php echo $rowPr['DescrProducto'];?>"><?php echo $rowPr['DescrProducto'];?> </textarea>
 
                                     <small class="color_w">Código</small>
                                     <input type="text" name="CodProducto" value="<?php echo $rowPr['CodProducto'];?>"><br>
 
                                     <br><small class="color_w">Categoria</small><br><br>
+
                                     <?php
                                     $con = Db::connect();
+                                    $CategoriaPropia = $rowPr['NombreCategoria'];
                                     $Categoria = "SELECT * FROM CategoriaProd";
                                     $resultado_Categoria = mysqli_query($con, $Categoria);
 
@@ -65,10 +66,23 @@ require_once "../action/conexion.php";
                                     }
                                     while($r_Categoria=mysqli_fetch_assoc($resultado_Categoria)){ ?>
 
-                                    <label class="color_w">
-                                        <input id="categoria" name="NombreCategoria" type="radio" value="<?php echo $r_Categoria['NombreCategoria'];?>">
-                                        <i class="bg_s"></i><?php echo $r_Categoria['NombreCategoria'];?>
+                                        <?php if($r_Categoria['NombreCategoria'] != $CategoriaPropia){?>
+                                            <label class="color_w">
+                                                <input id="categoria" name="NombreCategoria" type="radio" value="<?php echo $r_Categoria['NombreCategoria'];?>">
+                                                <i class="bg_s"></i><?php echo $r_Categoria['NombreCategoria'];?>
+                                            </label><br>
+
+                                        <?php }else{?>
+
+                                        <label class="color_w">
+                                        <input id="categoria" name="NombreCategoria" type="radio" value="<?php echo $rowPr['NombreCategoria'];?>" checked>
+                                        <i class="bg_s"></i><?php echo $rowPr['NombreCategoria'];?>
                                     </label><br>
+
+                                            
+                                    <?php }?>
+
+                                    
                                     <?php } mysqli_free_result($resultado_Categoria);?>
                                 </div>
 
@@ -77,14 +91,33 @@ require_once "../action/conexion.php";
                                     <input type="text" name="Stock" value="<?php echo $rowPr['Stock'];?>">
 
                                     <br><small class="color_w">Estado</small><br>
-                                    <label class="color_w">
-                                        <input id="EstadoProducto" name="EstadoProducto" type="radio">
-                                        <i class="bg_s"></i>Activo
-                                    </label>
-                                    <label class="color_w">
-                                        <input id="EstadoProducto" name="EstadoProducto" type="radio">
-                                        <i class="bg_s"></i>Inactivo
-                                    </label><br>
+
+                                    <?php
+                                    $con = Db::connect();
+                                    $Estado = "SELECT * FROM Estado";
+                                    $Resultado_Estado = mysqli_query($con, $Estado);
+
+                                    if(mysqli_num_rows($Resultado_Estado)<1) {
+                                        echo "<br><h6 class='f_weight color_w'>No se ha registrado ningun Estado</h6><br>";
+                                    }
+                                    while($r_Estado=mysqli_fetch_assoc($Resultado_Estado)){ ?>
+                                    
+                                    <?php if($r_Estado['EstadoProducto'] != $rowPr['EstadoProducto']){?>
+                                        <label class="color_w">
+                                            <input id="EstadoProducto" name="EstadoProducto" type="radio" value="<?php echo $r_Estado['EstadoProducto'];?>">
+                                            <i class="bg_s"></i> <?php echo $r_Estado['EstadoProducto'];?>
+                                        </label>
+                                    <?php }else{?>
+                                         <label class="color_w">
+                                            <input id="EstadoProducto" name="EstadoProducto" type="radio" checked value="<?php echo $rowPr['EstadoProducto'];?>">
+                                            <i class="bg_s"></i> <?php echo $rowPr['EstadoProducto'];?>
+                                        </label>
+                                    <?php }?>
+
+
+                                    <?php } mysqli_free_result($Resultado_Estado);?>
+
+                                    <br>
 
                                     <small class="color_w">Precio</small>
                                     <input type="text" name="Stock" value="<?php echo $rowPr['PrecioMoneda'];?>">
