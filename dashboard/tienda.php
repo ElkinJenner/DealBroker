@@ -30,6 +30,15 @@ require_once "../action/conexion.php";
                         <?php require_once "modules/product_add_m.php" ?>
                     </aside>
                     <aside class="column">
+                    <?php
+                        $Productos = "SELECT * FROM Tienda";
+                        $con = Db::connect();
+                        $resultadoProd = mysqli_query($con, $Productos);
+                        if(mysqli_num_rows($resultadoProd)<1) {
+                        echo "<br> <h5 class='p_1 font_d f_weight color_w'> Aún no hay productos registrados </h5>";
+                        }
+                        while($row_Pr=mysqli_fetch_assoc($resultadoProd)){ ?>
+
                         <!--Product Item-->
                         <div class="column-3">
                             <article class="product_item bg_def">
@@ -43,97 +52,39 @@ require_once "../action/conexion.php";
                                     <!--Contenido a mostrar-->
                                     <div class="product_action">
                                     <ul>
-                                        <li><a href="product_edit.php"><i class="bx bx-pencil"></i> Editar</a></li>
+                                        <li><a href="producto.php?id=<?php echo $row_Pr["IdProducto"];?>"><i class="bx bx-pencil"></i> Editar</a></li>
                                         <li><a href=""><i class="bx bx-trash"></i> Eliminar</a></li>
                                     </ul>
                                 </div>
                                 <!--Fin de Contenido a mostrar-->
                                 </div>
                                 <figure class="bg_def">
-                                    <img src="../upload/products/computadora.png">
+                                    <img src="<?php echo $row_Pr['FotoProducto'];?>">
                                 </figure>
                                 
                                 <div class="description">
-                                    <h5 class="t_t f_weight color_w"> Computadora 16x16</h5>
+                                    <h5 class="t_t f_weight color_w"><?php echo $row_Pr['NombreProducto'];?></h5>
                                     <div class="precio_products">
                                          <img src="../img/icons/moneda_icon.png"> 
-                                        <small class="f_weight color_w">15 mon</small>
+                                        <small class="f_weight color_w"> <?php echo $row_Pr['PrecioMoneda'];?> mon</small>
                                     </div>
                                 </div>
                             </article>
+                            <!--Fin Product Item-->
                         </div>
+                        <?php } mysqli_free_result($resultadoProd);?>
 
-                        <div class="column-3">
-                            <article class="product_item bg_def">
-                                 <!--Acciones product-->
-                                <div class="acciones">
-                                <!--Boton-->
-                                    <a class="btn_acciones">
-                                        <i class="color_w bx bx-dots-vertical"></i>
-                                        <input type="radio" name="selector" class="input_check">
-                                    </a>
-
-                                    <!--Contenido a mostrar-->
-                                    <div class="product_action">
-                                    <ul>
-                                        <li><a href=""><i class="bx bx-pencil"></i> Editar</a></li>
-                                        <li><a href=""><i class="bx bx-trash"></i> Eliminar</a></li>
-                                    </ul>
-                                </div>
-                                <!--Fin de Contenido a mostrar-->
-                                </div>
-                                <!--Fin Acciones product-->
-                                <figure class="bg_def">
-                                    <img src="../upload/products/central.png">
-                                </figure>
-                                <div class="description">
-                                    <h5 class="f_weight t_t color_w">Central Park</h5>
-                                    <div class="precio_products">
-                                         <img src="../img/icons/moneda_icon.png"> 
-                                        <small class="f_weight color_w">30000 mon</small>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="column-3">
-                            <article class="product_item bg_def">
-                                <!--Acciones product-->
-                                <div class="acciones">
-                                <!--Boton-->
-                                    <a class="btn_acciones">
-                                        <i class="color_w bx bx-dots-vertical"></i>
-                                        <input type="radio" name="selector" class="input_check">
-                                    </a>
-
-                                    <!--Contenido a mostrar-->
-                                    <div class="product_action">
-                                    <ul>
-                                        <li><a href=""><i class="bx bx-pencil"></i> Editar</a></li>
-                                        <li><a href=""><i class="bx bx-trash"></i> Eliminar</a></li>
-                                    </ul>
-                                </div>
-                                <!--Fin de Contenido a mostrar-->
-                                </div>
-                                <!--Fin Acciones product-->
-                                <figure class="bg_default">
-                                    <img src="../upload/products/house.png">
-                                </figure>
-                                <div class="description">
-                                    <h5 class="f_weight t_t color_w"> Propiedad Zona Sur</h5>
-                                    <div class="precio_products">
-                                        <img src="../img/icons/moneda_icon.png"> 
-                                        <small class="f_weight  color_w">20000 mon</small>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-           
                     </aside>
                 </div>
             </main>
         </aside>
     </main>
+    <!--Mandar al Action para registrar-->
+    <?php
+        if(isset($_POST['NombreProducto']) && isset($_POST['NombreCategoria']) && isset($_POST['EstadoProducto']) && isset($_POST['Stock'])){
+            require_once "../action/registrarProducto.php";
+        }
+    ?>
     <?php include "inc/footer.php" ?>
 </body>
 </html>

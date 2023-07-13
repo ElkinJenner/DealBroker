@@ -24,26 +24,35 @@ require_once "../action/conexion.php";
                         <h6 class="f_weight font_m color_w">PRODUCTO</h6>
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> TIENDA / DASHBOARD</code>
                     </article>
-                         <form class="form_register form_login" method="POST" enctype="multipart/form-data" action="../action/registrarStaff.php" methode>
-                            <aside class="column">
+                    <!--Obtener Id de cada producto-->
+                    <?php
+                    $con = Db::connect();
+                    $IdPr = $_GET["id"];
+                    $productoE = "SELECT * FROM Tienda WHERE IdProducto = '$IdPr'";
+                    $resultadoEPr = mysqli_query($con, $productoE);
+                    
+                    while($rowPr=mysqli_fetch_assoc($resultadoEPr)){ ?>
+
+                    <form class="form_register form_login" method="POST" enctype="multipart/form-data">
+                        <aside class="column">
                                 <div class="column-3">
                                     <small class="color_w">Foto de Producto</small>
+                                    <img class="m_c img350 p_1 b_r_15" src="<?php echo $rowPr['FotoProducto'];?>">
                                     <article class="file_content">
-                                        <input type="file" name="FotoProducto">
+                                        <input type="file" name="FotoProducto" value="<?php echo $rowPr['FotoProducto'];?>">
                                         <small><h5 class="color_w bx bx-image-add"></h5> <br> Arrastra una imagen aquí o <br><span> Sube archivo</span></small>
                                     </article>
-                                    <small class="small">Formatos aceptados: JPG-PNG-GIF / Escala de 400x400 px</small>
                                 </div>
 
                                 <div class="column-5">
                                     <small class="color_w">Nombre del producto</small>
-                                    <input type="text" name="NombreProducto">
+                                    <input type="text" name="NombreProducto" value="<?php echo $rowPr['NombreProducto'];?>">
 
                                     <small class="color_w">Descripción del producto</small>
-                                    <textarea></textarea>
+                                    <textarea name="DescProducto" value="<?php echo $rowPr['DescrProducto'];?>"> <?php echo $rowPr['DescrProducto'];?> </textarea>
 
                                     <small class="color_w">Código</small>
-                                    <input type="text" name="CodProducto"><br>
+                                    <input type="text" name="CodProducto" value="<?php echo $rowPr['CodProducto'];?>"><br>
 
                                     <br><small class="color_w">Categoria</small><br><br>
                                     <?php
@@ -65,7 +74,7 @@ require_once "../action/conexion.php";
 
                                 <div class="column-4">
                                     <small class="color_w">Stock</small>
-                                    <input type="text" name="Stock">
+                                    <input type="text" name="Stock" value="<?php echo $rowPr['Stock'];?>">
 
                                     <br><small class="color_w">Estado</small><br>
                                     <label class="color_w">
@@ -78,15 +87,16 @@ require_once "../action/conexion.php";
                                     </label><br>
 
                                     <small class="color_w">Precio</small>
-                                    <input type="text" name="Stock">
+                                    <input type="text" name="Stock" value="<?php echo $rowPr['PrecioMoneda'];?>">
                                     
                                     <div class="column-4">
-                                        <button class="bg_verify color_w" type="submit"><i class="bx bx-save"></i> REGISTRAR</button>
+                                        <button class="color_w" type="submit"><i class="bx bx-save"></i> ACTUALIZAR</button>
                                     </div>
                                 </div>
 
                             </aside>
                         </form>
+                        <?php } mysqli_free_result($resultadoEPr);?>  
                 </div>
             </main>
         </aside>

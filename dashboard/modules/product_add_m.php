@@ -6,7 +6,7 @@
         <button class="bg_danger color_w" id="close"><i class="bx bx-x"></i></button>
     </article>
 
-        <form class="form_register form_login" method="POST" enctype="multipart/form-data" action="../action/registrarStaff.php" methode>
+        <form class="form_register form_login" method="POST" enctype="multipart/form-data" autocomplete="off">
             <aside class="column">
                 <div class="column-3">
                     <small class="color_w">Foto de Producto</small>
@@ -22,7 +22,7 @@
                     <input type="text" name="NombreProducto">
 
                     <small class="color_w">Descripción del producto</small>
-                    <textarea name="DescProducto"></textarea>
+                    <textarea name="DescrProducto"></textarea>
 
                     <small class="color_w">Código</small>
                     <input type="text" name="CodProducto"><br>
@@ -51,7 +51,7 @@
 
                     <br><small class="color_w">Estado</small><br>
 
-                     <?php
+                    <?php
                     $con = Db::connect();
                     $Estado = "SELECT * FROM Estado";
                     $resultado_Estado = mysqli_query($con, $Estado);
@@ -67,7 +67,7 @@
                     <?php } mysqli_free_result($resultado_Estado);?>
                     <br>
                     <small class="color_w">Precio</small>
-                    <input type="text" name="Stock">
+                    <input type="text" name="PrecioMoneda">
                                     
                     <div class="column-4">
                         <button class="bg_verify color_w" type="submit"><i class="bx bx-save"></i> REGISTRAR</button>
@@ -75,5 +75,5 @@
                 </div>
 
             </aside>
-        </form>               
+        </form>            
     </div>

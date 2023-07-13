@@ -31,7 +31,7 @@ require_once "../action/conexion.php";
                         $con = Db::connect();
                         $resultado = mysqli_query($con, $staff);
                         if(mysqli_num_rows($resultado)<1) {
-                        echo "<h3> Aún no hay datos registrados  </h3>";
+                        echo "<br> <h5 class='p_1 font_d f_weight color_w'> Aún no hay datos registrados</h5>";
                         }
                         while($row=mysqli_fetch_assoc($resultado)){ ?>
 
