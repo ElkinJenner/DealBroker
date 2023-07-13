@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="column-4">
-                        <button class="bg_verify color_w" type="submit"><i class="bx bx-check"></i> REGISTRAR</button>
+                        <button class="bg_verify color_w" type="submit"><i class="bx bx-save"></i> REGISTRAR</button>
                     </div>
                 </aside>
             </div>

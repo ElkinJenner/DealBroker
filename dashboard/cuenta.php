@@ -43,7 +43,7 @@ $UserStaff = $_SESSION["Usuario"];
                                     <img class="m_c" src="<?php echo $row['FotoPerfil'];?>">
                                 <article class="file_content">
                                     <input type="file" name="FotoPerfil" value="<?php echo $row['FotoPerfil'];?>">
-                                    <p><i class="color_w bx bx-image-add"></i> Arrastra una imagen hasta aquí o <span> Sube archivo</span></p>
+                                    <small><h5 class="color_w bx bx-image-add"></h5> <br> Arrastra una imagen aquí o <span> <br> Sube archivo</span></small>
                                 </article>
 
                                 </figure>
