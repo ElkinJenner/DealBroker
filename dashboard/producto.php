@@ -1,14 +1,18 @@
 <?php
 require_once "../action/ValidarSesion.php";
 require_once "../action/conexion.php";
-?>
+$con = Db::connect();
+$IdPr = $_GET["id"];
+$productoE = "SELECT * FROM Tienda WHERE IdProducto = '$IdPr'";
+$resultadoEPr = mysqli_query($con, $productoE);
+while($rowPr=mysqli_fetch_assoc($resultadoEPr)){ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto | Dashboard</title>
+    <title><?php echo $rowPr['NombreProducto'];?> | Producto</title>
     <?php include "inc/link.php" ?>
 </head>
 <body>
@@ -25,14 +29,6 @@ require_once "../action/conexion.php";
                         <code class="f_weight font_m"><span class="bx bx-dice-2"></span> TIENDA / DASHBOARD</code>
                     </article>
                     <!--Obtener Id de cada producto-->
-                    <?php
-                    $con = Db::connect();
-                    $IdPr = $_GET["id"];
-                    $productoE = "SELECT * FROM Tienda WHERE IdProducto = '$IdPr'";
-                    $resultadoEPr = mysqli_query($con, $productoE);
-                    
-                    while($rowPr=mysqli_fetch_assoc($resultadoEPr)){ ?>
-
                     <form class="form_register form_login" method="POST" enctype="multipart/form-data">
                         <aside class="column">
                                 <div class="column-3">
@@ -48,7 +44,7 @@ require_once "../action/conexion.php";
                                     <input type="text" name="NombreProducto" value="<?php echo $rowPr['NombreProducto'];?>">
 
                                     <small class="color_w">Descripción del producto</small>
-                                    <textarea name="DescProducto" value="<?php echo $rowPr['DescrProducto'];?>"><?php echo $rowPr['DescrProducto'];?> </textarea>
+                                    <textarea name="DescrProducto" value="<?php echo $rowPr['DescrProducto'];?>"><?php echo $rowPr['DescrProducto'];?> </textarea>
 
                                     <small class="color_w">Código</small>
                                     <input type="text" name="CodProducto" value="<?php echo $rowPr['CodProducto'];?>"><br>
@@ -120,7 +116,7 @@ require_once "../action/conexion.php";
                                     <br>
 
                                     <small class="color_w">Precio</small>
-                                    <input type="text" name="Stock" value="<?php echo $rowPr['PrecioMoneda'];?>">
+                                    <input type="text" name="PrecioMoneda" value="<?php echo $rowPr['PrecioMoneda'];?>">
                                     
                                     <div class="column-4">
                                         <button class="color_w" type="submit"><i class="bx bx-save"></i> ACTUALIZAR</button>
@@ -129,11 +125,18 @@ require_once "../action/conexion.php";
 
                             </aside>
                         </form>
-                        <?php } mysqli_free_result($resultadoEPr);?>  
+                    
                 </div>
             </main>
+            <!--Mandar al Action para registrar-->
+            <?php
+                if(isset($_POST['NombreProducto']) && isset($_POST['DescrProducto']) && isset($_POST['EstadoProducto']) && isset($_POST['NombreCategoria'])){
+                require_once "../action/editProducto.php";
+                }
+            ?>
         </aside>
     </main>
     <?php include "inc/footer.php" ?>
 </body>
 </html>
+<?php } mysqli_free_result($resultadoEPr);?>  

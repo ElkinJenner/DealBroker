@@ -69,6 +69,7 @@
         if (count_c == 0) {
             modal_c.classList.remove("hidden");
             count_c = 1;
+            dropdow_menu.classList.add('hidden');
         }
         else {
             modal_c.classList.add("hidden");
