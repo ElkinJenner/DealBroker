@@ -27,16 +27,16 @@
                     <form class="form_login visible" method="POST" action="../action/LoginPlayer.php" autocomplete="off" id="content_login">
                         <article>
                             <label>Usuario</label>
-                            <input type="text" name="usuario" class="border_n bg_g">
+                            <input type="text" name="usuario">
                         </article>
                     
                         <article>
                             <label>Contraseña</label>
-                            <input type="password" name="contrasena" class="border_n bg_g">
+                            <input type="password" name="contrasena">
                         </article>
                     
                         <article>
-                            <button class="border_n" type="submit">INICIAR SESIÓN</button>
+                            <button type="submit">INICIAR SESIÓN</button>
                         </article>
                     </form>
 
@@ -45,21 +45,21 @@
 
                         <article>
                             <label>Nombres Completos</label>
-                            <input type="text" name="Nombres" class="border_n bg_g">
+                            <input type="text" name="Nombres">
                         </article>
 
                         <article>
                             <label>Usuario</label>
-                            <input type="text" name="usuario" class="border_n bg_g">
+                            <input type="text" name="usuario">
                         </article>
                     
                         <article>
                             <label>Contraseña</label>
-                            <input type="password" name="contrasena" class="border_n bg_g">
+                            <input type="password" name="contrasena">
                         </article>
                     
                         <article>
-                            <button class="border_n" type="submit">REGISTRAR</button>
+                            <button type="submit">REGISTRAR</button>
                         </article>
                     </form>
 

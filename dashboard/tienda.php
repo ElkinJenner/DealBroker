@@ -42,22 +42,19 @@ require_once "../action/conexion.php";
                         <!--Product Item-->
                         <div class="column-3">
                             <article class="product_item bg_def">
-                                 <!--Acciones product-->
-                                <div class="acciones">
-                                <!--Boton-->
-                                    <a class="btn_acciones">
-                                        <i class="bx bx-dots-vertical"></i>
-                                        <input type="radio" name="selector" class="input_check">
-                                    </a>
-                                    <!--Contenido a mostrar-->
-                                    <div class="product_action">
-                                    <ul>
-                                        <li><a href="producto.php?id=<?php echo $row_Pr["IdProducto"];?>"><i class="bx bx-pencil"></i> Editar</a></li>
-                                        <li><a href=""><i class="bx bx-trash"></i> Eliminar</a></li>
+                                <!--Acciones Crud-->
+                                <date_add class="acciones_crud">
+                                        <ul>
+                                        <li><a class="color_w" href="producto.php?id=<?php echo $row_Pr["IdProducto"];?>">
+                                            <i class="bx bx-pencil"></i> </a></li>
+                                        <li><a class="color_w" href=""><i class="bx bx-trash"></i></a></li>
                                     </ul>
-                                </div>
-                                <!--Fin de Contenido a mostrar-->
-                                </div>
+                                </date_add>
+
+                                <date_add class="activo_cuenta">
+                                       <div class="f_l m_1 bg_verify btn_estado color_w">Activo</div>
+                                </date_add>
+
                                 <figure class="bg_def">
                                     <img src="<?php echo $row_Pr['FotoProducto'];?>">
                                 </figure>

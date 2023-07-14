@@ -5,7 +5,7 @@
                     <li onclick="play(1)"><a id="micuenta">MI CUENTA</a></li>
                     <li onclick="play(2)"><a id="players">PLAYERS </a></li>
                     <li onclick="play(3)"><a id="tienda">TIENDA </a></li>
-                    <li onclick="play(4)"><a href="../action/LogoutPlayer.php" id="salir">SALIR </a></li>
+                    <li onclick="play(4)"><a id="salir">SALIR </a></li>
                 </ul>
             </article>
             <article class="navegacion_contender_right navegacion_game">

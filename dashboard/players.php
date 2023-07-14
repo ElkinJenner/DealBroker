@@ -38,9 +38,9 @@ require_once "../action/conexion.php";
                             <article class="players_item bg_def">
                                 <date_add class="activo_cuenta">
                                     <?php if($r_player['TipoGenero']!='Otro'){?>
-                                        <div class="m_1 bg_verify btn_estado color_w">Activo</div>
+                                        <div class="f_r m_1 bg_verify btn_estado color_w">Activo</div>
                                     <?php } else{?>
-                                        <div class="m_1 bg_danger btn_estado color_w">Inactivo</div>
+                                        <div class="f_r m_1 bg_danger btn_estado color_w">Inactivo</div>
                                     <?php } ?>
 
 
